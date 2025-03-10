@@ -1,0 +1,198 @@
+[gd_scene load_steps=6 format=3 uid="uid://drj3iipyr3sks"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4a5y7"]
+size = Vector2(16, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wpatx"]
+size = Vector2(16, 80)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gwds4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf2p2"]
+size = Vector2(2, 8)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ppgfa"]
+
+[node name="drawbridge" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(168, 184)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_4a5y7")
+
+[node name="doorbody" type="RigidBody2D" parent="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/doorbody"]
+position = Vector2(0, -32)
+shape = SubResource("RectangleShape2D_wpatx")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/doorbody"]
+position = Vector2(0, -32)
+scale = Vector2(-15.7872, -79.5234)
+texture = SubResource("PlaceholderTexture2D_gwds4")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="StaticBody2D/doorbody"]
+position = Vector2(0, 4)
+node_a = NodePath("../..")
+node_b = NodePath("..")
+
+[node name="rope" type="RigidBody2D" parent="StaticBody2D/doorbody"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/doorbody/rope"]
+position = Vector2(-9.13609, -68.0408)
+rotation = 0.523599
+shape = SubResource("RectangleShape2D_yf2p2")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/doorbody/rope"]
+position = Vector2(-9.13609, -68.0408)
+rotation = 0.523599
+scale = Vector2(2.00242, 7.98731)
+texture = SubResource("PlaceholderTexture2D_ppgfa")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="StaticBody2D/doorbody/rope"]
+position = Vector2(-7, -71)
+scale = Vector2(0.36, 0.36)
+node_a = NodePath("../..")
+node_b = NodePath("..")
+
+[node name="rope2" type="RigidBody2D" parent="StaticBody2D/doorbody"]
+position = Vector2(-4, 7)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/doorbody/rope2"]
+position = Vector2(-9.13609, -68.0408)
+rotation = 0.523599
+shape = SubResource("RectangleShape2D_yf2p2")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/doorbody/rope2"]
+position = Vector2(-9.13609, -68.0408)
+rotation = 0.523599
+scale = Vector2(2.00242, 7.98731)
+texture = SubResource("PlaceholderTexture2D_ppgfa")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="StaticBody2D/doorbody/rope2"]
+position = Vector2(-7, -72)
+scale = Vector2(0.36, 0.36)
+node_a = NodePath("../../rope")
+node_b = NodePath("..")
+
+[node name="rope3" type="RigidBody2D" parent="StaticBody2D/doorbody"]
+position = Vector2(-8, 14)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/doorbody/rope3"]
+position = Vector2(-9.13609, -68.0408)
+rotation = 0.523599
+shape = SubResource("RectangleShape2D_yf2p2")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/doorbody/rope3"]
+position = Vector2(-9.13609, -68.0408)
+rotation = 0.523599
+scale = Vector2(2.00242, 7.98731)
+texture = SubResource("PlaceholderTexture2D_ppgfa")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="StaticBody2D/doorbody/rope3"]
+position = Vector2(-7, -71)
+scale = Vector2(0.36, 0.36)
+node_a = NodePath("../../rope2")
+node_b = NodePath("..")
+
+[node name="rope4" type="RigidBody2D" parent="StaticBody2D/doorbody"]
+position = Vector2(-12, 21)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/doorbody/rope4"]
+position = Vector2(-9.13609, -68.0408)
+rotation = 0.523599
+shape = SubResource("RectangleShape2D_yf2p2")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/doorbody/rope4"]
+position = Vector2(-9.13609, -68.0408)
+rotation = 0.523599
+scale = Vector2(2.00242, 7.98731)
+texture = SubResource("PlaceholderTexture2D_ppgfa")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="StaticBody2D/doorbody/rope4"]
+position = Vector2(-7, -72)
+scale = Vector2(0.36, 0.36)
+node_a = NodePath("../../rope3")
+node_b = NodePath("..")
+
+[node name="rope5" type="RigidBody2D" parent="StaticBody2D/doorbody"]
+position = Vector2(-16, 28)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/doorbody/rope5"]
+position = Vector2(-9.13609, -68.0408)
+rotation = 0.523599
+shape = SubResource("RectangleShape2D_yf2p2")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/doorbody/rope5"]
+position = Vector2(-9.13609, -68.0408)
+rotation = 0.523599
+scale = Vector2(2.00242, 7.98731)
+texture = SubResource("PlaceholderTexture2D_ppgfa")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="StaticBody2D/doorbody/rope5"]
+position = Vector2(-7, -71)
+scale = Vector2(0.36, 0.36)
+node_a = NodePath("../../rope4")
+node_b = NodePath("..")
+
+[node name="rope6" type="RigidBody2D" parent="StaticBody2D/doorbody"]
+position = Vector2(-20, 35)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/doorbody/rope6"]
+position = Vector2(-9.13609, -68.0408)
+rotation = 0.523599
+shape = SubResource("RectangleShape2D_yf2p2")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/doorbody/rope6"]
+position = Vector2(-9.13609, -68.0408)
+rotation = 0.523599
+scale = Vector2(2.00242, 7.98731)
+texture = SubResource("PlaceholderTexture2D_ppgfa")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="StaticBody2D/doorbody/rope6"]
+position = Vector2(-7, -72)
+scale = Vector2(0.36, 0.36)
+node_a = NodePath("../../rope5")
+node_b = NodePath("..")
+
+[node name="rope7" type="RigidBody2D" parent="StaticBody2D/doorbody"]
+position = Vector2(-24, 42)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/doorbody/rope7"]
+position = Vector2(-9.13609, -68.0408)
+rotation = 0.523599
+shape = SubResource("RectangleShape2D_yf2p2")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/doorbody/rope7"]
+position = Vector2(-9.13609, -68.0408)
+rotation = 0.523599
+scale = Vector2(2.00242, 7.98731)
+texture = SubResource("PlaceholderTexture2D_ppgfa")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="StaticBody2D/doorbody/rope7"]
+position = Vector2(-7, -71)
+scale = Vector2(0.36, 0.36)
+node_a = NodePath("../../rope6")
+node_b = NodePath("..")
+
+[node name="rope8" type="RigidBody2D" parent="StaticBody2D/doorbody"]
+position = Vector2(-28, 49)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/doorbody/rope8"]
+position = Vector2(-9.13609, -68.0408)
+rotation = 0.523599
+shape = SubResource("RectangleShape2D_yf2p2")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/doorbody/rope8"]
+position = Vector2(-9.13609, -68.0408)
+rotation = 0.523599
+scale = Vector2(2.00242, 7.98731)
+texture = SubResource("PlaceholderTexture2D_ppgfa")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="StaticBody2D/doorbody/rope8"]
+position = Vector2(-7, -72)
+scale = Vector2(0.36, 0.36)
+node_a = NodePath("../../rope7")
+node_b = NodePath("..")

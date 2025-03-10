@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://by4ri165pbbxq"]
+
+[ext_resource type="Texture2D" uid="uid://4usfj1xdh5sa" path="res://Assets/Seesaw_Beam.png" id="1_cwat5"]
+[ext_resource type="Texture2D" uid="uid://12kk3cfrovgy" path="res://Assets/Seesaw_Base.png" id="2_smt8p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c76qt"]
+size = Vector2(140, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7rpeg"]
+
+[node name="seesaw" type="Node2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+scale = Vector2(0.291667, 0.5)
+texture = ExtResource("1_cwat5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("RectangleShape2D_c76qt")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, 10)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_smt8p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_7rpeg")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="."]
+position = Vector2(0, 4)
+node_a = NodePath("../RigidBody2D")
+node_b = NodePath("../StaticBody2D")
