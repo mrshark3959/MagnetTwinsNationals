@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://do16m4ver0yfh" path="res://Assets/images/miscellaneous/image (36).png" id="1_dcs6k"]
 [ext_resource type="Texture2D" uid="uid://jw8a5oi3c8xj" path="res://Assets/images/miscellaneous/image (35).png" id="2_0pmkg"]
 [ext_resource type="PackedScene" uid="uid://dmjn3upniv24g" path="res://Scenes/Elevator.tscn" id="2_ljlwq"]
-[ext_resource type="PackedScene" uid="uid://yxadoe3i8u6k" path="res://scenesLevels/magnus.tscn" id="3_da2gq"]
-[ext_resource type="PackedScene" uid="uid://bcifdcq3e47yi" path="res://scenesLevels/tile_map_base.tscn" id="4_2vydx"]
-[ext_resource type="PackedScene" uid="uid://cp7uqkbbb6s1f" path="res://scenesLevels/ferrus.tscn" id="5_tm25r"]
-[ext_resource type="PackedScene" uid="uid://d008hudx4cwjc" path="res://scenesLevels/enviroment_stuff/block.tscn" id="6_1smvs"]
+[ext_resource type="PackedScene" uid="uid://yxadoe3i8u6k" path="res://Scenes/scenesLevels/magnus.tscn" id="3_da2gq"]
+[ext_resource type="PackedScene" uid="uid://bcifdcq3e47yi" path="res://Scenes/scenesLevels/tile_map_base.tscn" id="4_2vydx"]
+[ext_resource type="PackedScene" uid="uid://cp7uqkbbb6s1f" path="res://Scenes/scenesLevels/ferrus.tscn" id="5_tm25r"]
+[ext_resource type="PackedScene" uid="uid://d008hudx4cwjc" path="res://Scenes/scenesLevels/enviroment_stuff/block.tscn" id="6_1smvs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ol7p8"]
 texture = ExtResource("1_dcs6k")

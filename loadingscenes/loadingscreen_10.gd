@@ -2,7 +2,7 @@ extends Control
 
 @export var level_name: String = "Level 10"
 @export var tip_text: String = "Fun Fact: Magnetic levitation is used in maglev trains."
-@export var next_scene: String = 'res://scenesLevels/levels/level_10.tscn'
+@export var next_scene: String = 'res://Scenes/levels/level_10.tscn'
 
 # UI Elements
 @onready var level_label = $levellabel
