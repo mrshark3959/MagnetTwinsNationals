@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://yxadoe3i8u6k" path="res://Scenes/scenesLevels/magnus.tscn" id="2_gtt8i"]
 [ext_resource type="Texture2D" uid="uid://jw8a5oi3c8xj" path="res://Assets/images/miscellaneous/image (35).png" id="2_wwh4f"]
 [ext_resource type="PackedScene" uid="uid://cp7uqkbbb6s1f" path="res://Scenes/scenesLevels/ferrus.tscn" id="5_3akbl"]
-[ext_resource type="PackedScene" uid="uid://d008hudx4cwjc" path="res://Scenes/scenesLevels/enviroment_stuff/block.tscn" id="5_3p486"]
+[ext_resource type="PackedScene" uid="uid://d008hudx4cwjc" path="res://Scenes/enviroment_stuff/block.tscn" id="5_3p486"]
 [ext_resource type="PackedScene" uid="uid://dmjn3upniv24g" path="res://Scenes/Elevator.tscn" id="6_780ga"]
 [ext_resource type="FontFile" uid="uid://bl8cj75xnw7n7" path="res://Assets/fonts/FFFFORWA.TTF" id="7_yx8qj"]
 

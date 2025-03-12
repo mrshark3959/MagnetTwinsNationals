@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dmjn3upniv24g" path="res://Scenes/Elevator.tscn" id="2_now83"]
 [ext_resource type="PackedScene" uid="uid://yxadoe3i8u6k" path="res://Scenes/scenesLevels/magnus.tscn" id="2_sj4aw"]
 [ext_resource type="PackedScene" uid="uid://cp7uqkbbb6s1f" path="res://Scenes/scenesLevels/ferrus.tscn" id="4_v7f6l"]
-[ext_resource type="PackedScene" uid="uid://b1gn6gy10ckcy" path="res://Scenes/scenesLevels/enviroment_stuff/squareblock.tscn" id="6_fgyww"]
+[ext_resource type="PackedScene" uid="uid://b1gn6gy10ckcy" path="res://Scenes/enviroment_stuff/squareblock.tscn" id="6_fgyww"]
 [ext_resource type="PackedScene" uid="uid://by4ri165pbbxq" path="res://Scenes/seesaw.tscn" id="6_g3ev5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f3ldc"]

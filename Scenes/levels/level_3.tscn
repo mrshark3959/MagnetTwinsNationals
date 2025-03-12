@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://yxadoe3i8u6k" path="res://Scenes/scenesLevels/magnus.tscn" id="3_da2gq"]
 [ext_resource type="PackedScene" uid="uid://bcifdcq3e47yi" path="res://Scenes/scenesLevels/tile_map_base.tscn" id="4_2vydx"]
 [ext_resource type="PackedScene" uid="uid://cp7uqkbbb6s1f" path="res://Scenes/scenesLevels/ferrus.tscn" id="5_tm25r"]
-[ext_resource type="PackedScene" uid="uid://d008hudx4cwjc" path="res://Scenes/scenesLevels/enviroment_stuff/block.tscn" id="6_1smvs"]
+[ext_resource type="PackedScene" uid="uid://d008hudx4cwjc" path="res://Scenes/enviroment_stuff/block.tscn" id="6_1smvs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ol7p8"]
 texture = ExtResource("1_dcs6k")

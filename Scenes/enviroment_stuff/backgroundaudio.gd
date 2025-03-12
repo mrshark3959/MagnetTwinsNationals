@@ -9,7 +9,7 @@ func _ready():
 	stop()
 
 func play_music():
-	if not playing and get_tree().current_scene.scene_file_path == "res://scenesLevels/levels/level_1.tscn":
+	if not playing and get_tree().current_scene.scene_file_path == "res://Scenes/levels/level_1.tscn":
 		play()
 		has_started = true 
 
