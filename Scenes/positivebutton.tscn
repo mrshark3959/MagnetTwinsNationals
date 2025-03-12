@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://bvpqrkh4hrlpn"]
 
 [ext_resource type="Script" uid="uid://dmmku5gpdgdha" path="res://Scenes/positivebutton.gd" id="1_6h6tu"]
-[ext_resource type="Texture2D" uid="uid://bgjhi5hcey2co" path="res://Assets/image (38).png" id="2_i8ld8"]
-[ext_resource type="AudioStream" uid="uid://da3lr7vtb5y0r" path="res://Assets/677860__el_boss__ui-button-click-snap.wav" id="3_2v0xo"]
+[ext_resource type="Texture2D" uid="uid://bgjhi5hcey2co" path="res://Assets/images/miscellaneous/image (38).png" id="2_i8ld8"]
+[ext_resource type="AudioStream" uid="uid://da3lr7vtb5y0r" path="res://Assets/audios/677860__el_boss__ui-button-click-snap.wav" id="3_2v0xo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dykam"]
 atlas = ExtResource("2_i8ld8")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://mcymbvxhshk3"]
 
-[ext_resource type="Script" uid="uid://rt1rikx1jfvq" path="res://scripts/block.gd" id="1_xba2e"]
-[ext_resource type="Texture2D" uid="uid://dvhgf1yodp3b3" path="res://Assets/Rubber_Duck.png" id="2_56g6w"]
+[ext_resource type="Script" uid="uid://rt1rikx1jfvq" path="res://Scripts/block.gd" id="1_xba2e"]
+[ext_resource type="Texture2D" uid="uid://dvhgf1yodp3b3" path="res://Assets/images/miscellaneous/Rubber_Duck.png" id="2_56g6w"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6wwbq"]
 radius = 5.49653

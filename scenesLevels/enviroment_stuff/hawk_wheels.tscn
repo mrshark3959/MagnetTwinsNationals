@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dpueibi7ju377"]
 
-[ext_resource type="Texture2D" uid="uid://d052lefm3fqh2" path="res://Assets/wheel.png" id="1_2jhcl"]
-[ext_resource type="Texture2D" uid="uid://dgo502rht3pjw" path="res://Assets/mainbody.png" id="1_td4h3"]
+[ext_resource type="Texture2D" uid="uid://d052lefm3fqh2" path="res://Assets/images/miscellaneous/wheel.png" id="1_2jhcl"]
+[ext_resource type="Texture2D" uid="uid://dgo502rht3pjw" path="res://Assets/images/miscellaneous/mainbody.png" id="1_td4h3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x1r6q"]
 size = Vector2(119.5, 17)

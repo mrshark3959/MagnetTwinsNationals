@@ -1,7 +1,7 @@
 [gd_resource type="SpriteFrames" load_steps=15 format=3 uid="uid://7uhs2rq7tpxx"]
 
-[ext_resource type="Texture2D" uid="uid://ds563nm3woodf" path="res://Sprites (Characters)/Magnus/Idles/Magnus (idles) (blue).png" id="1_1cojl"]
-[ext_resource type="Texture2D" uid="uid://bfheehtyhxky4" path="res://Sprites (Characters)/Magnus/Runs/Magnus (run) (blue).png" id="2_25v04"]
+[ext_resource type="Texture2D" uid="uid://ds563nm3woodf" path="res://Assets/images/sprites (characters)/Magnus/Idles/Magnus (idles) (blue).png" id="1_1cojl"]
+[ext_resource type="Texture2D" uid="uid://bfheehtyhxky4" path="res://Assets/images/sprites (characters)/Magnus/Runs/Magnus (run) (blue).png" id="2_25v04"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_630ne"]
 atlas = ExtResource("1_1cojl")

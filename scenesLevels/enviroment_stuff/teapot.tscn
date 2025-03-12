@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://dasgvtf2tw1de"]
 
-[ext_resource type="Script" uid="uid://rt1rikx1jfvq" path="res://scripts/block.gd" id="1_5xk7e"]
-[ext_resource type="Texture2D" uid="uid://de6o2j1ohvar5" path="res://Assets/Teapot.png" id="2_vxdc6"]
+[ext_resource type="Script" uid="uid://rt1rikx1jfvq" path="res://Scripts/block.gd" id="1_5xk7e"]
+[ext_resource type="Texture2D" uid="uid://de6o2j1ohvar5" path="res://Assets/images/miscellaneous/Teapot.png" id="2_vxdc6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5sqre"]
 size = Vector2(19.3333, 18)
