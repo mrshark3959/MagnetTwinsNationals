@@ -2,7 +2,7 @@ extends Control
 
 @export var level_name: String = "Level 2"
 @export var tip_text: String = "Fun Fact:  William Gilbert was the first person to study and describe magnetism systematically"
-@export var next_scene: String = 'res://Scenes/levels/level_2.tscn'
+@export var next_scene: String = 'res://scenesLevels/levels/level_2.tscn'
 
 # UI Elements
 @onready var level_label = $levellabel

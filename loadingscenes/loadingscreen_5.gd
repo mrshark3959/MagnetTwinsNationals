@@ -3,7 +3,7 @@ extends Control
 @export var level_name: String = "Level 5"
 @export var tip_text: String = "Fun Fact: The strongest magnetic field ever created in a lab was about 
 1200 Tesla (millions of times stronger than Earth's magnetic field)"
-@export var next_scene: String = 'res://Scenes/levels/level_5.tscn'
+@export var next_scene: String = 'res://scenesLevels/levels/level_5.tscn'
 
 @onready var level_label = $levellabel
 @onready var tip_label = $tiplabel

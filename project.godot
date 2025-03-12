@@ -18,8 +18,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Brightness="*res://Scenes/enviroment_stuff/brightness.tscn"
-Backgroundaudio="*res://Scenes/enviroment_stuff/backgroundaudio.tscn"
+Brightness="*res://scenesLevels/enviroment_stuff/brightness.tscn"
+Backgroundaudio="*res://scenesLevels/enviroment_stuff/backgroundaudio.tscn"
 
 [dotnet]
 

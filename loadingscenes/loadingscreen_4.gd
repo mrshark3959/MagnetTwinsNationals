@@ -4,7 +4,7 @@ extends Control
 @export var level_name: String = "Level 4"
 @export var tip_text: String = "Fun Fact: Some animals, like birds, turtles, and bees, can sense Earth's magnetic field. 
 This phenomenon is called magnetoreception."
-@export var next_scene: String = 'res://Scenes/levels/level_4.tscn'
+@export var next_scene: String = 'res://scenesLevels/levels/level_4.tscn'
 
 # UI Elements
 @onready var level_label = $levellabel

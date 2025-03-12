@@ -3,7 +3,7 @@ extends Control
 @export var level_name: String = "Level 3"
 @export var tip_text: String = "Fun Fact: In some ancient stories, Ferrus represents the 'iron' and stability of magnetic forces, 
 while Magnus symbolizes the fiery, dynamic pull of magnetism. "
-@export var next_scene: String = 'res://Scenes/levels/level_3.tscn'
+@export var next_scene: String = 'res://scenesLevels/levels/level_3.tscn'
 
 # UI Elements
 @onready var level_label = $levellabel

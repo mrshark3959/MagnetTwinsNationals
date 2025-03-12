@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://bqqcqj1nj1v8n"]
 
 [ext_resource type="Texture2D" uid="uid://dggnttm4phf8h" path="res://Assets/images/miscellaneous/icon.svg" id="1_241jd"]
-[ext_resource type="PackedScene" uid="uid://yxadoe3i8u6k" path="res://Scenes/magnus.tscn" id="5_iutvc"]
-[ext_resource type="PackedScene" uid="uid://d008hudx4cwjc" path="res://Scenes/enviroment_stuff/block.tscn" id="6_v06fw"]
-[ext_resource type="PackedScene" uid="uid://cp7uqkbbb6s1f" path="res://Scenes/ferrus.tscn" id="9_id52l"]
+[ext_resource type="PackedScene" uid="uid://yxadoe3i8u6k" path="res://scenesLevels/magnus.tscn" id="5_iutvc"]
+[ext_resource type="PackedScene" uid="uid://d008hudx4cwjc" path="res://scenesLevels/enviroment_stuff/block.tscn" id="6_v06fw"]
+[ext_resource type="PackedScene" uid="uid://cp7uqkbbb6s1f" path="res://scenesLevels/ferrus.tscn" id="9_id52l"]
 [ext_resource type="Script" uid="uid://dupka44mlxlim" path="res://trigger_area.gd" id="11_h7yit"]
-[ext_resource type="Texture2D" uid="uid://0aryysln0vla" path="res://icon.svg" id="12_yam4h"]
+[ext_resource type="Texture2D" uid="uid://c7bvobm7kqnp7" path="res://icon.svg" id="12_yam4h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hewr8"]
 size = Vector2(419, 125)
