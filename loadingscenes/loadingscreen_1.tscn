@@ -1,6 +1,6 @@
 [gd_scene load_steps=27 format=3 uid="uid://bf12ek8nuavnt"]
 
-[ext_resource type="Script" path="res://loadingscenes/loadingscreen.gd" id="1_rkxrl"]
+[ext_resource type="Script" uid="uid://dj2qdpl0n2uyl" path="res://loadingscenes/loadingscreen.gd" id="1_rkxrl"]
 [ext_resource type="FontFile" uid="uid://bl8cj75xnw7n7" path="res://Assets/FFFFORWA.TTF" id="2_6fo5j"]
 [ext_resource type="FontFile" uid="uid://dmwkp4emfnhyn" path="res://Assets/editundo.ttf" id="3_ci6mp"]
 [ext_resource type="Texture2D" uid="uid://bv6nj8wob4pab" path="res://loadingscenes/image (39).png" id="4_u0ct3"]
@@ -162,9 +162,9 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kq8mg"]
 _data = {
-"RESET": SubResource("Animation_eoquv"),
-"fade_in": SubResource("Animation_qi1ai"),
-"fade_out": SubResource("Animation_esmfh")
+&"RESET": SubResource("Animation_eoquv"),
+&"fade_in": SubResource("Animation_qi1ai"),
+&"fade_out": SubResource("Animation_esmfh")
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t6tay"]

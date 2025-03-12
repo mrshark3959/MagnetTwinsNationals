@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ccv4iyti8eqgv"]
 
-[ext_resource type="Script" path="res://scenesLevels/levels/resetbutton.gd" id="1_qg3oa"]
+[ext_resource type="Script" uid="uid://b12o8wgcsfjwy" path="res://scenesLevels/levels/resetbutton.gd" id="1_qg3oa"]
 
 [node name="RESETBUTTON" type="Button"]
 offset_left = -144.0

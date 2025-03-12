@@ -1,7 +1,7 @@
 [gd_scene load_steps=38 format=3 uid="uid://cp7uqkbbb6s1f"]
 
-[ext_resource type="Script" path="res://scripts/ferrus.gd" id="1_xle43"]
-[ext_resource type="Script" path="res://trigger.gd" id="2_c6yc8"]
+[ext_resource type="Script" uid="uid://dclft4efymgyg" path="res://scripts/ferrus.gd" id="1_xle43"]
+[ext_resource type="Script" uid="uid://dwmijxvxco0k4" path="res://trigger.gd" id="2_c6yc8"]
 [ext_resource type="SpriteFrames" uid="uid://h7ue3dx2nolj" path="res://MagPulse.tres" id="3_l38um"]
 [ext_resource type="Texture2D" uid="uid://88v2edklehx4" path="res://Sprites (Characters)/Farus/Red/Idle/Farus Idle Red.png" id="4_l4gyv"]
 [ext_resource type="Texture2D" uid="uid://dx3jwnx27megi" path="res://AssetsLEVELS/playerLEVELS/Ferrus/Blue/Color Transition/Farus Transition 2.png" id="6_welt7"]
@@ -322,11 +322,11 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cq6g6"]
 _data = {
-"RESET": SubResource("Animation_s7jlr"),
-"blue_idle": SubResource("Animation_flfjp"),
-"red_idle": SubResource("Animation_ea1bw"),
-"to_blue": SubResource("Animation_ys7m4"),
-"to_red": SubResource("Animation_kj7bd")
+&"RESET": SubResource("Animation_s7jlr"),
+&"blue_idle": SubResource("Animation_flfjp"),
+&"red_idle": SubResource("Animation_ea1bw"),
+&"to_blue": SubResource("Animation_ys7m4"),
+&"to_red": SubResource("Animation_kj7bd")
 }
 
 [node name="Ferrus" type="CharacterBody2D" groups=["Player", "Player2"]]
