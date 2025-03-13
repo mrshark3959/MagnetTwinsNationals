@@ -1,14 +1,14 @@
 [gd_scene load_steps=11 format=3 uid="uid://32psrxovkfs6"]
 
 [ext_resource type="Shader" uid="uid://b3vbe5hmus8n0" path="res://Scenes/scroll.gdshader" id="1_6hb0f"]
-[ext_resource type="Texture2D" uid="uid://88v2edklehx4" path="res://Sprites (Characters)/Farus/Red/Idle/Farus Idle Red.png" id="1_fs8pe"]
-[ext_resource type="Texture2D" uid="uid://bjgxb0leo4m66" path="res://Assets/background_effect (1).png" id="2_7jyqe"]
-[ext_resource type="Texture2D" uid="uid://ds563nm3woodf" path="res://Sprites (Characters)/Magnus/Idles/Magnus (idles) (blue).png" id="2_dq6kf"]
-[ext_resource type="Texture2D" uid="uid://dv488wwklkcbi" path="res://Assets/background(2).png" id="3_mqbl6"]
-[ext_resource type="FontFile" uid="uid://bl8cj75xnw7n7" path="res://Assets/FFFFORWA.TTF" id="3_wcupf"]
+[ext_resource type="Texture2D" uid="uid://88v2edklehx4" path="res://Assets/images/sprites (characters)/Ferrus/Red/Farus Idle Red.png" id="1_fs8pe"]
+[ext_resource type="Texture2D" uid="uid://bjgxb0leo4m66" path="res://Assets/images/background images/background_effect (1).png" id="2_7jyqe"]
+[ext_resource type="Texture2D" uid="uid://ds563nm3woodf" path="res://Assets/images/sprites (characters)/Magnus/Idles/Magnus (idles) (blue).png" id="2_dq6kf"]
+[ext_resource type="Texture2D" uid="uid://dv488wwklkcbi" path="res://Assets/images/background images/background(2).png" id="3_mqbl6"]
+[ext_resource type="FontFile" uid="uid://bl8cj75xnw7n7" path="res://Assets/fonts/FFFFORWA.TTF" id="3_wcupf"]
 [ext_resource type="Script" uid="uid://5nw0ic3xkwj8" path="res://Scenes/button.gd" id="4_f2e82"]
-[ext_resource type="AudioStream" uid="uid://c6uwx8dqju3vl" path="res://Assets/342200__christopherderp__videogame-menu-button-click.wav" id="8_3flus"]
-[ext_resource type="Texture2D" uid="uid://biijnydb27prg" path="res://Assets/image (83).png" id="8_hgmg3"]
+[ext_resource type="AudioStream" uid="uid://c6uwx8dqju3vl" path="res://Assets/audios/342200__christopherderp__videogame-menu-button-click.wav" id="8_3flus"]
+[ext_resource type="Texture2D" uid="uid://biijnydb27prg" path="res://Assets/images/miscellaneous/image (83).png" id="8_hgmg3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hkcsk"]
 shader = ExtResource("1_6hb0f")

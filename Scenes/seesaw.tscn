@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://by4ri165pbbxq"]
 
-[ext_resource type="Texture2D" uid="uid://4usfj1xdh5sa" path="res://Assets/Seesaw_Beam.png" id="1_cwat5"]
-[ext_resource type="Texture2D" uid="uid://12kk3cfrovgy" path="res://Assets/Seesaw_Base.png" id="2_smt8p"]
+[ext_resource type="Texture2D" uid="uid://4usfj1xdh5sa" path="res://Assets/images/miscellaneous/Seesaw_Beam.png" id="1_cwat5"]
+[ext_resource type="Texture2D" uid="uid://12kk3cfrovgy" path="res://Assets/images/miscellaneous/Seesaw_Base.png" id="2_smt8p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c76qt"]
 size = Vector2(140, 20)

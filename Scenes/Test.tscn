@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=3 uid="uid://bqqcqj1nj1v8n"]
+
+[ext_resource type="Script" uid="uid://dupka44mlxlim" path="res://scripts/trigger_area.gd" id="2_mma61"]
+[ext_resource type="Texture2D" uid="uid://0aryysln0vla" path="res://Assets/images/miscellaneous/icon.svg" id="3_ki7sg"]
+[ext_resource type="PackedScene" uid="uid://cp7uqkbbb6s1f" path="res://Scenes/scenesLevels/ferrus.tscn" id="4_rxb08"]
+[ext_resource type="PackedScene" uid="uid://yxadoe3i8u6k" path="res://Scenes/scenesLevels/magnus.tscn" id="5_kq4yt"]
+[ext_resource type="PackedScene" uid="uid://d008hudx4cwjc" path="res://Scenes/enviroment_stuff/block.tscn" id="6_rarx8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hewr8"]
+size = Vector2(419, 125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_som2k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rk6vp"]
+
+[node name="Root" type="Node2D"]
+
+[node name="Floor" type="StaticBody2D" parent="."]
+scale = Vector2(2, 1)
+collision_layer = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(148.5, -0.5)
+shape = SubResource("RectangleShape2D_hewr8")
+debug_color = Color(1, 1, 1, 0.42)
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor"]
+position = Vector2(147, 0)
+scale = Vector2(3.32, 1)
+texture = ExtResource("3_ki7sg")
+
+[node name="TriggerArea" type="Area2D" parent="."]
+position = Vector2(-504, -1)
+script = ExtResource("2_mma61")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerArea"]
+position = Vector2(579, -93)
+shape = SubResource("RectangleShape2D_som2k")
+
+[node name="HiddenBlock" type="StaticBody2D" parent="." groups=["Hidden Block"]]
+position = Vector2(112, -133)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HiddenBlock"]
+shape = SubResource("RectangleShape2D_rk6vp")
+
+[node name="Sprite2D" type="Sprite2D" parent="HiddenBlock"]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("3_ki7sg")
+
+[node name="Ferrus" parent="." instance=ExtResource("4_rxb08")]
+position = Vector2(-24, -172)
+
+[node name="Magnus" parent="." instance=ExtResource("5_kq4yt")]
+position = Vector2(-78, -92)
+
+[node name="Block" parent="." groups=["Blocks"] instance=ExtResource("6_rarx8")]
+position = Vector2(-10, -98)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -117)
+zoom = Vector2(4, 4)
+
+[connection signal="body_entered" from="TriggerArea" to="TriggerArea" method="_on_body_entered"]
+[connection signal="body_exited" from="TriggerArea" to="TriggerArea" method="_on_body_exited"]

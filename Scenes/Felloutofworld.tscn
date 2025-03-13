@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dxkdy0bcpdolj"]
 
-[ext_resource type="Script" uid="uid://bp0lm340ds73o" path="res://scripts/fellout.gd" id="1_uxddh"]
-[ext_resource type="AudioStream" uid="uid://c7vbscwyb3j8y" path="res://Assets/538541__sjonas88__fail-2.wav" id="2_6m2pt"]
+[ext_resource type="Script" uid="uid://b8uemfm7xmxqk" path="res://scripts/fellout.gd" id="1_uxddh"]
+[ext_resource type="AudioStream" uid="uid://c7vbscwyb3j8y" path="res://Assets/audios/538541__sjonas88__fail-2.wav" id="2_6m2pt"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2kojf"]
 

@@ -1,11 +1,11 @@
 [gd_scene load_steps=26 format=3 uid="uid://wg065gqglpoo"]
 
 [ext_resource type="Script" uid="uid://dkg740l4hrc5n" path="res://loadingscenes/loadingscreen_11.gd" id="1_po2pw"]
-[ext_resource type="Texture2D" uid="uid://cdevq6larn8kp" path="res://Assets/image (84).png" id="2_aifus"]
-[ext_resource type="FontFile" uid="uid://bl8cj75xnw7n7" path="res://Assets/FFFFORWA.TTF" id="2_h8qhh"]
-[ext_resource type="Texture2D" uid="uid://0xlvbtaaikdn" path="res://Assets/image (81).png" id="2_iuplm"]
-[ext_resource type="Texture2D" uid="uid://bu55em87kwxa7" path="res://Assets/image (82).png" id="3_dps00"]
-[ext_resource type="AudioStream" uid="uid://7g2se6y2fkjd" path="res://Assets/8-bit-video-game-win-level-sound-version-1-145827.mp3" id="6_jjkin"]
+[ext_resource type="Texture2D" uid="uid://cdevq6larn8kp" path="res://Assets/images/miscellaneous/image (84).png" id="2_aifus"]
+[ext_resource type="FontFile" uid="uid://bl8cj75xnw7n7" path="res://Assets/fonts/FFFFORWA.TTF" id="2_h8qhh"]
+[ext_resource type="Texture2D" uid="uid://0xlvbtaaikdn" path="res://Assets/images/miscellaneous/image (81).png" id="2_iuplm"]
+[ext_resource type="Texture2D" uid="uid://bu55em87kwxa7" path="res://Assets/images/miscellaneous/image (82).png" id="3_dps00"]
+[ext_resource type="AudioStream" uid="uid://7g2se6y2fkjd" path="res://Assets/audios/8-bit-video-game-win-level-sound-version-1-145827.mp3" id="6_jjkin"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fx6p2"]
 atlas = ExtResource("2_iuplm")

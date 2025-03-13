@@ -2,7 +2,7 @@ extends Control
 
 @export var level_name: String = "Level 7"
 @export var tip_text: String = "Fun Fact: Magnetars (neutron stars) have magnetic fields a billion times stronger than Earth’s."
-@export var next_scene: String = 'res://scenesLevels/levels/level_7.tscn'
+@export var next_scene: String = 'res://Scenes/levels/level_7.tscn'
 
 # UI Elements
 @onready var level_label = $levellabel

@@ -1,10 +1,10 @@
 [gd_scene load_steps=27 format=3 uid="uid://bf12ek8nuavnt"]
 
 [ext_resource type="Script" uid="uid://dj2qdpl0n2uyl" path="res://loadingscenes/loadingscreen.gd" id="1_rkxrl"]
-[ext_resource type="FontFile" uid="uid://bl8cj75xnw7n7" path="res://Assets/FFFFORWA.TTF" id="2_6fo5j"]
-[ext_resource type="FontFile" uid="uid://dmwkp4emfnhyn" path="res://Assets/editundo.ttf" id="3_ci6mp"]
+[ext_resource type="FontFile" uid="uid://bl8cj75xnw7n7" path="res://Assets/fonts/FFFFORWA.TTF" id="2_6fo5j"]
+[ext_resource type="FontFile" uid="uid://dmwkp4emfnhyn" path="res://Assets/fonts/editundo.ttf" id="3_ci6mp"]
 [ext_resource type="Texture2D" uid="uid://bv6nj8wob4pab" path="res://loadingscenes/image (39).png" id="4_u0ct3"]
-[ext_resource type="AudioStream" uid="uid://6p4wr0q3mdmh" path="res://Assets/audiomass-output (1).mp3" id="5_ph0xe"]
+[ext_resource type="AudioStream" uid="uid://6p4wr0q3mdmh" path="res://Assets/audios/audiomass-output (1).mp3" id="5_ph0xe"]
 
 [sub_resource type="Animation" id="Animation_eoquv"]
 length = 0.001
@@ -333,7 +333,7 @@ vertical_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_kq8mg")
+&"": SubResource("AnimationLibrary_kq8mg")
 }
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

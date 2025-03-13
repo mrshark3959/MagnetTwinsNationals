@@ -1,10 +1,10 @@
 [gd_scene load_steps=27 format=3 uid="uid://cc254j2ksmvpv"]
 
-[ext_resource type="FontFile" uid="uid://bl8cj75xnw7n7" path="res://Assets/FFFFORWA.TTF" id="1_8ssr2"]
+[ext_resource type="FontFile" uid="uid://bl8cj75xnw7n7" path="res://Assets/fonts/FFFFORWA.TTF" id="1_8ssr2"]
 [ext_resource type="Script" uid="uid://ci23y7r1nymjy" path="res://loadingscenes/loadingscreen_4.gd" id="1_hyqnc"]
-[ext_resource type="FontFile" uid="uid://dmwkp4emfnhyn" path="res://Assets/editundo.ttf" id="2_ixgl8"]
+[ext_resource type="FontFile" uid="uid://dmwkp4emfnhyn" path="res://Assets/fonts/editundo.ttf" id="2_ixgl8"]
 [ext_resource type="Texture2D" uid="uid://bv6nj8wob4pab" path="res://loadingscenes/image (39).png" id="3_lkw26"]
-[ext_resource type="AudioStream" uid="uid://6p4wr0q3mdmh" path="res://Assets/audiomass-output (1).mp3" id="5_uy5xt"]
+[ext_resource type="AudioStream" uid="uid://6p4wr0q3mdmh" path="res://Assets/audios/audiomass-output (1).mp3" id="5_uy5xt"]
 
 [sub_resource type="Animation" id="Animation_eoquv"]
 length = 0.001
