@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0aryysln0vla"
-path="res://.godot/imported/icon.svg-f3d333ee0e401aa402d4eb4ade295c63.ctex"
+uid="uid://d05vibtnbhxh"
+path="res://.godot/imported/Magnus (jump).png-2f572e34b57a8e8e89b617533f405ebc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/images/miscellaneous/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-f3d333ee0e401aa402d4eb4ade295c63.ctex"]
+source_file="res://Assets/images/sprites (characters)/Magnus/Jumps/Magnus (jump).png"
+dest_files=["res://.godot/imported/Magnus (jump).png-2f572e34b57a8e8e89b617533f405ebc.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

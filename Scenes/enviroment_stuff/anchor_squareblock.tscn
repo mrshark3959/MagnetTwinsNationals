@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d5lr6kpbsfmt" path="res://scripts/anchorblock.gd" id="1_rcsdj"]
 [ext_resource type="Texture2D" uid="uid://bnbspcl8d0saj" path="res://Assets/images/miscellaneous/MetalPlatform_3.png" id="2_2kstg"]
-[ext_resource type="Script" uid="uid://bpur6ek1b8865" path="res://Scripts/anchorarea.gd" id="3_m6o7e"]
+[ext_resource type="Script" uid="uid://ntaeivqnu2uu" path="res://scripts/anchorarea.gd" id="3_m6o7e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4sgsv"]
 size = Vector2(8.33333, 8)
