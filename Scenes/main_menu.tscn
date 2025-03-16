@@ -48,7 +48,6 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -1.0
-offset_right = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_ja1qj")
@@ -150,4 +149,5 @@ bus = &"mmusic"
 [connection signal="pressed" from="start" to="start" method="_on_pressed"]
 [connection signal="pressed" from="Settings" to="Settings" method="_on_pressed"]
 [connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
+[connection signal="toggled" from="TextureButton" to="TextureButton" method="_on_toggled"]
 [connection signal="timeout" from="Timer1" to="start" method="_on_timer_1_timeout"]
