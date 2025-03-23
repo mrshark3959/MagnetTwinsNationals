@@ -15,7 +15,7 @@ func _process(delta: float) -> void:
 	if (Input.is_action_just_pressed('e')):
 		positiveMode = !positiveMode
 	if positiveType == positiveMode:
-		set_gravity(4000)
+		set_gravity(2400)
 		if (Input.is_action_pressed("space")):
 			get_node("CollisionShape2D").disabled = false
 			if get_node("Pulse").animation != "pulse":
@@ -30,13 +30,13 @@ func _process(delta: float) -> void:
 			magnetism_sfx.stop()
 		if snapbody is RigidBody2D && Input.is_action_pressed("space"):
 			
-			snapbody.global_transform.origin = global_position
+			snapbody.apply_central_impulse((global_position - snapbody.global_position) * snapbody.mass)
 			snapbody.linear_velocity = Vector2(0,0)
 			get_node("CollisionShape2D").disabled = true
 			
 		else: 
 			if snapbody is RigidBody2D:
-				snapbody.freeze = false
+				snapbody.sleeping =true
 				snapbody.set_collision_layer_value(1, true)
 			snapbody = null
 	else:
@@ -60,7 +60,7 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body is RigidBody2D:
 		magnetism_sfx.play();
-		body.apply_central_impulse(Vector2(0.1, 0.1))
+		#body.apply_central_impulse(Vector2(0.1, 0.1))
 
 
 #func _on_snap_body_entered(body: Node2D) -> void:

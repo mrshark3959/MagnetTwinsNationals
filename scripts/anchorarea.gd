@@ -10,9 +10,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	for i in get_overlapping_areas():
 		if i.is_in_group("Ftrigger") && Input.is_action_pressed("space"):
-			get_parent().sleeping = false
+			get_parent().freeze = false
 			value += 1;
 	if value <= 0:
-		get_parent().sleeping = true
+		get_parent().freeze = true
 	value = 0
 	
