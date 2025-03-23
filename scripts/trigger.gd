@@ -17,15 +17,13 @@ func _process(delta: float) -> void:
 	if positiveType == positiveMode:
 		set_gravity(4000)
 		if (Input.is_action_pressed("space")):
-			set_gravity_space_override_mode(Area2D.SPACE_OVERRIDE_REPLACE)
-			set_linear_damp_space_override_mode(Area2D.SPACE_OVERRIDE_REPLACE)
+			get_node("CollisionShape2D").disabled = false
 			if get_node("Pulse").animation != "pulse":
 				get_node("Pulse").play("pulse")
 				#print("hi")
 			
-			
 		else:
-			set_gravity_space_override_mode(Area2D.SPACE_OVERRIDE_DISABLED)
+			get_node("CollisionShape2D").disabled = true
 			if get_node("Pulse").animation == "pulse":
 				get_node("Pulse").animation = "default"
 				#print("bye") 
@@ -34,8 +32,7 @@ func _process(delta: float) -> void:
 			
 			snapbody.global_transform.origin = global_position
 			snapbody.linear_velocity = Vector2(0,0)
-			set_gravity_space_override_mode(Area2D.SPACE_OVERRIDE_DISABLED)
-			set_linear_damp_space_override_mode(Area2D.SPACE_OVERRIDE_DISABLED)
+			get_node("CollisionShape2D").disabled = true
 			
 		else: 
 			if snapbody is RigidBody2D:
@@ -46,13 +43,14 @@ func _process(delta: float) -> void:
 		set_gravity(-2500)
 		snapbody = null
 		if (Input.is_action_pressed("space")):
-			set_gravity_space_override_mode(Area2D.SPACE_OVERRIDE_REPLACE)
-			set_linear_damp_space_override_mode(Area2D.SPACE_OVERRIDE_REPLACE)
+			get_node("CollisionShape2D").disabled = false
+			
+			
 			if get_node("Pulse").animation != "pulse":
 				get_node("Pulse").play("pulse")
 				#print("hi")
 		else:
-			set_gravity_space_override_mode(Area2D.SPACE_OVERRIDE_DISABLED)
+			get_node("CollisionShape2D").disabled = true
 			if get_node("Pulse").animation == "pulse":
 				get_node("Pulse").animation = "default"
 				#print("bye")
