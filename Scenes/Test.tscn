@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://bqqcqj1nj1v8n"]
 
-[ext_resource type="Script" uid="uid://dupka44mlxlim" path="res://scripts/trigger_area.gd" id="2_mma61"]
+[ext_resource type="Script" uid="uid://dupka44mlxlim" path="res://Scripts/trigger_area.gd" id="2_mma61"]
 [ext_resource type="Texture2D" uid="uid://0aryysln0vla" path="res://Assets/images/miscellaneous/icon.svg" id="3_ki7sg"]
 [ext_resource type="PackedScene" uid="uid://cp7uqkbbb6s1f" path="res://Scenes/scenesLevels/ferrus.tscn" id="4_rxb08"]
 [ext_resource type="PackedScene" uid="uid://yxadoe3i8u6k" path="res://Scenes/scenesLevels/magnus.tscn" id="5_kq4yt"]
