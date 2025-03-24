@@ -60,7 +60,7 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body is RigidBody2D:
 		magnetism_sfx.play();
-		#body.apply_central_impulse(Vector2(0.1, 0.1))
+		body.apply_central_impulse(Vector2(0.1, 0.1))
 
 
 #func _on_snap_body_entered(body: Node2D) -> void:
