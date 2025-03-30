@@ -422,6 +422,8 @@ position = Vector2(-11, -3)
 node_a = NodePath("..")
 
 [node name="freezeit" type="Area2D" parent="." groups=["Player", "Player2"]]
+position = Vector2(0, -1)
+scale = Vector2(4.76701, 0.679999)
 collision_layer = 2
 collision_mask = 2
 
