@@ -10,6 +10,7 @@ func respawn():
 
 	is_respawning = true  # Set the flag to true
 	sound.play()
+	Global.restarts += 1
 	timer.start()  # Start the timer with a 0.2-second delay
 
 func _on_timer_timeout():

@@ -24,6 +24,7 @@ buses/default_bus_layout=""
 
 Brightness="*res://Scenes/enviroment_stuff/brightness.tscn"
 Backgroundaudio="*res://Scenes/enviroment_stuff/backgroundaudio.tscn"
+Global="*res://scripts/Global.gd"
 
 [dotnet]
 

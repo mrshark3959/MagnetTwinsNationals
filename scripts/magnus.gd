@@ -54,6 +54,7 @@ func reset_scene():
 	var current_scene = get_tree().current_scene
 	var scene_path = current_scene.scene_file_path
 	if scene_path:
+		Global.restarts += 1
 		get_tree().reload_current_scene()
 	else:
 		push_warning("Current scene does not have a valid file path.")
