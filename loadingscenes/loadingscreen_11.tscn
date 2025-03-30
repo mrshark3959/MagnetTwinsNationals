@@ -218,3 +218,12 @@ frame_progress = 0.61659
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_jjkin")
 volume_db = -18.0
+
+[node name="Restarts" type="Label" parent="."]
+offset_left = 233.0
+offset_top = 206.0
+offset_right = 533.0
+offset_bottom = 229.0
+scale = Vector2(2.82412, 2.82412)
+theme_override_fonts/font = ExtResource("2_h8qhh")
+text = "Restarts:"
