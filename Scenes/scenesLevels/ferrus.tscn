@@ -335,11 +335,11 @@ collision_layer = 10
 collision_mask = 10
 script = ExtResource("1_xle43")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Player", "Player2"]]
 position = Vector2(0, -12)
 shape = SubResource("RectangleShape2D_w7acl")
 
-[node name="TriggerPositive" type="Area2D" parent="." groups=["Ftrigger"]]
+[node name="TriggerPositive" type="Area2D" parent="." groups=["Ftrigger", "Player", "Player2"]]
 position = Vector2(0, 10)
 scale = Vector2(3.25644, 2.00028)
 collision_layer = 4
@@ -365,7 +365,7 @@ sprite_frames = ExtResource("3_l38um")
 animation = &"pulse"
 autoplay = "default"
 
-[node name="TriggerNegitive" type="Area2D" parent="." groups=["Ftrigger"]]
+[node name="TriggerNegitive" type="Area2D" parent="." groups=["Ftrigger", "Player", "Player2"]]
 position = Vector2(0, 11)
 scale = Vector2(3.25644, 2.00028)
 collision_layer = 8
@@ -415,12 +415,13 @@ volume_db = -5.0
 [node name="PinJoint2D2" type="PinJoint2D" parent="."]
 position = Vector2(9, -2)
 node_a = NodePath("..")
+bias = 0.3
 
 [node name="PinJoint2D" type="PinJoint2D" parent="."]
 position = Vector2(-9, -2)
 node_a = NodePath("..")
 
-[node name="freezeit" type="Area2D" parent="."]
+[node name="freezeit" type="Area2D" parent="." groups=["Player", "Player2"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="freezeit"]
 position = Vector2(0, -2.5)

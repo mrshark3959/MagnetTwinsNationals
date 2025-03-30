@@ -5,11 +5,13 @@ var positiveMode = true;
 @onready var magnetism_sfx: AudioStreamPlayer = $"../magnetism-sfx"
 @onready var pin_joint = $"../PinJoint2D"
 @onready var pin_joint1 = $"../PinJoint2D2"
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if name == 'TriggerNegitive': 
 		positiveType = false;
-
+	pin_joint.node_b = NodePath()  # Remove attached body
+	pin_joint1.node_b = NodePath()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -19,12 +21,15 @@ func _process(delta: float) -> void:
 		set_gravity(2400)
 		if (Input.is_action_pressed("space")):
 			get_node("CollisionShape2D").disabled = false
+		  # Set exact rotation
 			if get_node("Pulse").animation != "pulse":
 				get_node("Pulse").play("pulse")
 				#print("hi")
 			
 		else:
 			get_node("CollisionShape2D").disabled = true
+			pin_joint.node_b = NodePath()  # Remove attached body
+			pin_joint1.node_b = NodePath()
 			if get_node("Pulse").animation == "pulse":
 				get_node("Pulse").animation = "default"
 				#print("bye") 
@@ -56,7 +61,7 @@ func _process(delta: float) -> void:
 				get_node("Pulse").animation = "default"
 				#print("bye")
 	#print(positiveMode==positiveType)
-	if Input.is_action_just_released("space"):
+	if Input.is_action_just_released("space") and  not Input.is_action_pressed("space"):
 		pin_joint.node_b = NodePath()  # Remove attached body
 		pin_joint1.node_b = NodePath()  # Remove second joint
 		print("Detached body")
@@ -64,6 +69,7 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body is RigidBody2D:
 		magnetism_sfx.play();
+		
 		body.apply_central_impulse(Vector2(0.1, 0.1))
 		
 
