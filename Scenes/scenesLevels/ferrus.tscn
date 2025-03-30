@@ -413,18 +413,19 @@ stream = ExtResource("7_g5wsl")
 volume_db = -5.0
 
 [node name="PinJoint2D2" type="PinJoint2D" parent="."]
-position = Vector2(9, -2)
+position = Vector2(11, -3)
 node_a = NodePath("..")
 bias = 0.3
 
 [node name="PinJoint2D" type="PinJoint2D" parent="."]
-position = Vector2(-9, -2)
+position = Vector2(-11, -3)
 node_a = NodePath("..")
 
 [node name="freezeit" type="Area2D" parent="." groups=["Player", "Player2"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="freezeit"]
 position = Vector2(0, -2.5)
+scale = Vector2(0.240001, 0.240001)
 shape = SubResource("RectangleShape2D_x0lhg")
 
 [connection signal="body_entered" from="TriggerPositive" to="TriggerPositive" method="_on_body_entered"]

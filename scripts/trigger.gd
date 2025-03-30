@@ -71,7 +71,14 @@ func _on_body_entered(body: Node2D) -> void:
 		magnetism_sfx.play();
 		
 		body.apply_central_impulse(Vector2(0.1, 0.1))
-		
+		var target_rotation = 0
+		var angular_difference = lerp_angle(body.rotation_degrees, target_rotation, 1)
+
+		# Apply torque to rotate towards 0 degrees
+		#body.apply_torque_impulse(angular_difference * 5)  # Adjust the multiplier for strength
+		#body.apply_central_impulse(Vector2(0.1, 0.1))
+
+		print(body.rotation_degrees)
 
 #func _on_snap_body_entered(body: Node2D) -> void:
 	#if Input.is_action_pressed("space") && snapbody == null && gravity_space_override == Area2D.SPACE_OVERRIDE_REPLACE && positiveType == positiveMode:
