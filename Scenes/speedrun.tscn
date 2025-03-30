@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4k58ofyeycn7"]
+
+[ext_resource type="Script" uid="uid://dslw3veo7tje0" path="res://Scenes/speedrun.gd" id="1_7pu0l"]
+[ext_resource type="FontFile" uid="uid://bl8cj75xnw7n7" path="res://Assets/fonts/FFFFORWA.TTF" id="2_pbg5k"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_7pu0l")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -77.0
+offset_top = 22.0
+offset_right = 81.0
+offset_bottom = 64.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_pbg5k")
+theme_override_font_sizes/font_size = 30
+text = "00:00.00"

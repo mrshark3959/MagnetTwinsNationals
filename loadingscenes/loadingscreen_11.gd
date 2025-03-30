@@ -15,8 +15,8 @@ func _ready():
 	# Preload the next scene into memory
 	var next_scene_resource = ResourceLoader.load(next_scene)
 	print("Time: " + str(time_elapsed_min) + " Minutes " + str(time_elapsed_leftover) + " Seconds ")
-	$Time.set_text("Time: " + str(time_elapsed_min) + " Minutes " + str(time_elapsed_leftover) + " Seconds ")
-
+	$Time.set_text("Time: "  + Global.time_convert(Global.speedrun_time))
+	$Restarts.set_text("Restarts: " + str(Global.restarts))
 	
 
 	# Start timer to transition after 2 seconds
