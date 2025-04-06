@@ -61,7 +61,7 @@ func _process(delta: float) -> void:
 				get_node("Pulse").animation = "default"
 				#print("bye")
 	#print(positiveMode==positiveType)
-	if Input.is_action_just_released("space") and  not Input.is_action_pressed("space"):
+	if Input.is_action_just_released("space") and not Input.is_action_pressed("space"):
 		pin_joint.node_b = NodePath()  # Remove attached body
 		pin_joint1.node_b = NodePath()  # Remove second joint
 		print("Detached body")
