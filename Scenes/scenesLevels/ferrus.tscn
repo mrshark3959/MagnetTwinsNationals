@@ -424,13 +424,13 @@ node_a = NodePath("..")
 
 [node name="freezeit" type="Area2D" parent="." groups=["Player", "Player2"]]
 position = Vector2(0, -1)
-scale = Vector2(4.76701, 0.679999)
+scale = Vector2(4.76701, 0.672245)
 collision_layer = 4
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="freezeit"]
 position = Vector2(-0.046242, -2.5)
-scale = Vector2(0.240001, 8.53413)
+scale = Vector2(0.240001, 0.240001)
 shape = SubResource("RectangleShape2D_x0lhg")
 
 [connection signal="body_entered" from="TriggerPositive" to="TriggerPositive" method="_on_body_entered"]
