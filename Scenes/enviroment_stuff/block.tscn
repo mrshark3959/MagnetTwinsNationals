@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dtan0kje752dc" path="res://Assets/images/miscellaneous/MetalPlatform.png" id="2_3o27a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_edcjv"]
-size = Vector2(24.6667, 6.66667)
+size = Vector2(74, 22)
 
 [node name="Block" type="RigidBody2D"]
 collision_layer = 5
@@ -20,7 +20,6 @@ script = ExtResource("1_8yjf5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -2)
-scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_edcjv")
 
 [node name="Texture" type="Sprite2D" parent="."]
@@ -29,10 +28,3 @@ texture_repeat = 1
 position = Vector2(-4.47035e-06, 0)
 scale = Vector2(2.4375, 2)
 texture = ExtResource("2_3o27a")
-
-[node name="Area2D" type="Area2D" parent="."]
-gravity_space_override = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-0.5, -1.33333)
-shape = SubResource("RectangleShape2D_edcjv")
