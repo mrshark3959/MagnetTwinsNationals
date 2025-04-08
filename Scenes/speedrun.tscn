@@ -1,20 +1,52 @@
-[gd_scene load_steps=3 format=3 uid="uid://b4k58ofyeycn7"]
+[gd_scene load_steps=6 format=3 uid="uid://b4k58ofyeycn7"]
 
 [ext_resource type="Script" uid="uid://dslw3veo7tje0" path="res://Scenes/speedrun.gd" id="1_7pu0l"]
 [ext_resource type="FontFile" uid="uid://bl8cj75xnw7n7" path="res://Assets/fonts/FFFFORWA.TTF" id="2_pbg5k"]
+[ext_resource type="Texture2D" uid="uid://b53is6rw040i3" path="res://Assets/images/miscellaneous/timer-bg1.png" id="2_skdey"]
+[ext_resource type="Texture2D" uid="uid://btmmosscr4mv" path="res://Assets/images/miscellaneous/hamburger-icon.png" id="4_6s30v"]
+[ext_resource type="Texture2D" uid="uid://6x356rtc0na8" path="res://Assets/images/miscellaneous/restart-icon.png" id="4_qhg3y"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_7pu0l")
+
+[node name="Timer BG" type="TextureRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -576.0
+offset_top = 92.0
+offset_right = -399.0
+offset_bottom = 126.0
+grow_horizontal = 2
+texture = ExtResource("2_skdey")
+expand_mode = 1
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -77.0
-offset_top = 22.0
-offset_right = 81.0
-offset_bottom = 64.0
+offset_left = -559.0
+offset_top = 87.0
+offset_right = -428.0
+offset_bottom = 129.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("2_pbg5k")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 25
 text = "00:00.00"
+
+[node name="restart" type="Button" parent="."]
+offset_left = 998.0
+offset_top = 4.0
+offset_right = 1069.0
+offset_bottom = 75.0
+icon = ExtResource("4_qhg3y")
+expand_icon = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1074, 4)
+
+[node name="menus" type="Button" parent="Sprite2D"]
+offset_right = 71.0
+offset_bottom = 71.0
+icon = ExtResource("4_6s30v")
+expand_icon = true

@@ -66,10 +66,10 @@ scale = Vector2(0.680001, 0.680001)
 position = Vector2(-5, 95)
 
 [node name="Label" type="Label" parent="."]
-offset_left = -142.0
-offset_top = -77.0
-offset_right = 38.0
-offset_bottom = -2.0
+offset_left = 67.0
+offset_top = 21.0
+offset_right = 247.0
+offset_bottom = 96.0
 scale = Vector2(0.334517, 0.334517)
 theme_override_fonts/font = ExtResource("9_5evrq")
 text = "(ESC) can restart
