@@ -5,6 +5,10 @@ func pause():
 
 
 
-func _on_resume_ready() -> void:
-	$blur.play("blur")
-	pause()
+
+
+func _on_ready() -> void:
+	get_tree().paused = false
+	
+	
+	
