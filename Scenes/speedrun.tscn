@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b4k58ofyeycn7"]
+[gd_scene load_steps=9 format=3 uid="uid://b4k58ofyeycn7"]
 
 [ext_resource type="Script" uid="uid://dslw3veo7tje0" path="res://Scenes/speedrun.gd" id="1_7pu0l"]
 [ext_resource type="FontFile" uid="uid://bl8cj75xnw7n7" path="res://Assets/fonts/FFFFORWA.TTF" id="2_pbg5k"]
@@ -7,11 +7,15 @@
 [ext_resource type="Texture2D" uid="uid://6x356rtc0na8" path="res://Assets/images/miscellaneous/restart-icon.png" id="4_qhg3y"]
 [ext_resource type="Script" uid="uid://c7d3t452rcmnp" path="res://Scripts/restartb.gd" id="5_4mtow"]
 [ext_resource type="Script" uid="uid://csbkq0h5j6uiv" path="res://Scenes/menus.gd" id="6_qlpbc"]
+[ext_resource type="PackedScene" uid="uid://duphc74iim2wu" path="res://Scenes/enviroment_stuff/pausemenu.tscn" id="8_k6tyk"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
+process_mode = 3
 script = ExtResource("1_7pu0l")
 
 [node name="Timer BG" type="TextureRect" parent="."]
+process_mode = 3
+process_priority = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -49,11 +53,16 @@ script = ExtResource("5_4mtow")
 position = Vector2(1074, 4)
 
 [node name="menus" type="Button" parent="Sprite2D"]
+process_mode = 3
 offset_right = 71.0
 offset_bottom = 71.0
 icon = ExtResource("4_6s30v")
 expand_icon = true
 script = ExtResource("6_qlpbc")
+
+[node name="pause menu" parent="Sprite2D/menus" instance=ExtResource("8_k6tyk")]
+layer = 3
+visible = false
 
 [connection signal="pressed" from="restart" to="restart" method="_on_pressed"]
 [connection signal="pressed" from="Sprite2D/menus" to="Sprite2D/menus" method="_on_pressed"]
