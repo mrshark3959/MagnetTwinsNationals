@@ -36,8 +36,10 @@ func _on_area_exited(area: Area2D) -> void:
 func _freeze_players():
 	for player in get_tree().get_nodes_in_group("Player"):
 		if player.has_method("freeze"):
+			print("Has freeze")
 			player.freeze()
-			
+		else:
+			print("doesnt have freeze")	
 
 func _unfreeze_players():
 	for player in get_tree().get_nodes_in_group("Player"):

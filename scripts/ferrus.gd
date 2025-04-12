@@ -30,10 +30,21 @@ func get_input():
 
 			print("turning red")
 	
-
+var frozen = false
 func _physics_process(_delta):
-	get_input()
-	move_and_collide(velocity*2*_delta)
+	if frozen:
+		velocity = Vector2.ZERO
+	else:
+		get_input()
+
+	move_and_collide(velocity * 2 * _delta)
+
+func freeze():
+	frozen = true
+	velocity = Vector2.ZERO
+
+func unfreeze():
+	frozen = false
 
 func pull_object():
 	pass
@@ -48,7 +59,4 @@ func _process(delta: float) -> void:
 func _on_timer_timeout() -> void:
 	blink()
 
-
-#func _on_texture_animation_looped() -> void:
-	#get_node("Texture").play("Default")
 	
