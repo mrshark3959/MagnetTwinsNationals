@@ -14,9 +14,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 		
-	if Input.is_action_just_pressed('escape'):
-		print("escape is pressed")
-		reset_scene()
+
 
 	# Handle jump.
 	if Input.is_action_just_pressed("w") and is_on_floor():
