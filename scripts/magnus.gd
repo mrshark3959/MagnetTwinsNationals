@@ -9,14 +9,22 @@ const JUMP_VELOCITY = -220.0
 const PUSH_FORCE := .0
 const MIN_PUSH_FORCE := 5.0
 
+
+var frozen = false
 func _physics_process(delta: float) -> void:
+	if frozen:
+		velocity.x = 0
+		# Still apply gravity while frozen so when we unfreeze it feels smooth
+		if not is_on_floor():
+			velocity += get_gravity() * delta
+		move_and_slide()
+		return
+
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-		
-	if Input.is_action_just_pressed('escape'):
-		print("escape is pressed")
-		reset_scene()
+
+
 
 	# Handle jump.
 	if Input.is_action_just_pressed("w") and is_on_floor():
@@ -49,7 +57,16 @@ func _physics_process(delta: float) -> void:
 		if c.get_collider() is RigidBody2D:
 			var push_force = (PUSH_FORCE*velocity.length() / SPEED) + MIN_PUSH_FORCE
 			c.get_collider().apply_central_impulse(-c.get_normal()*push_force)
-			
+var stored_velocity = Vector2.ZERO
+func freeze():
+	frozen = true
+	stored_velocity = velocity
+	_animated_sprite.play("idle_red")
+
+func unfreeze():
+	frozen = false
+	velocity = stored_velocity
+				
 func reset_scene():
 	var current_scene = get_tree().current_scene
 	var scene_path = current_scene.scene_file_path

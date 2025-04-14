@@ -16,6 +16,9 @@ func time_convert(toConv):
 	
  
 func _physics_process(delta):
+	if $"Sprite2D/menus/pause menu".visible == true:
+		return  # Don't update the timer while paused
+		
 	time = float(time) + delta
 	update_ui()
 	

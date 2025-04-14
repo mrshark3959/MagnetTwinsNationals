@@ -81,7 +81,7 @@ position = Vector2(-152, 2)
 scale = Vector2(0.68, 0.68)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(4, 4)
+zoom = Vector2(4.1, 4.1)
 
 [node name="Magnus" parent="." instance=ExtResource("2_gtt8i")]
 position = Vector2(-114, 58)
