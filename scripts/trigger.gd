@@ -34,17 +34,6 @@ func _process(delta: float) -> void:
 				get_node("Pulse").animation = "default"
 				#print("bye") 
 			magnetism_sfx.stop()
-		if snapbody is RigidBody2D && Input.is_action_pressed("space"):
-			
-			snapbody.apply_central_impulse((global_position - snapbody.global_position) * snapbody.mass)
-			snapbody.linear_velocity = Vector2(0,0)
-			get_node("CollisionShape2D").disabled = true
-			
-		else: 
-			if snapbody is RigidBody2D:
-				snapbody.sleeping =true
-				snapbody.set_collision_layer_value(1, true)
-			snapbody = null
 	else:
 		set_gravity(-2500)
 		snapbody = null
@@ -80,11 +69,6 @@ func _on_body_entered(body: Node2D) -> void:
 
 		print(body.rotation_degrees)
 
-#func _on_snap_body_entered(body: Node2D) -> void:
-	#if Input.is_action_pressed("space") && snapbody == null && gravity_space_override == Area2D.SPACE_OVERRIDE_REPLACE && positiveType == positiveMode:
-	#	if body.is_in_group('Blocks'):
-	#		snapbody = body
-	#		snapbody.set_collision_layer_value(1, false)
 
 
 func _on_freezeit_body_entered(body: Node2D) -> void:
