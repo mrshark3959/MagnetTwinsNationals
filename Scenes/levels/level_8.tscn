@@ -16,7 +16,7 @@
 [ext_resource type="Script" uid="uid://bp5g18teqtn1j" path="res://Scripts/block.gd" id="8_x6t1r"]
 [ext_resource type="Texture2D" uid="uid://dtan0kje752dc" path="res://Assets/images/miscellaneous/MetalPlatform.png" id="9_vmrbc"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5r11s"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5show"]
 texture = ExtResource("1_fef22")
 texture_region_size = Vector2i(17, 17)
 0:0/0 = 0
@@ -29,13 +29,13 @@ texture_region_size = Vector2i(17, 17)
 1:2/0 = 0
 0:2/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8st37"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_osag8"]
 texture = ExtResource("2_c0u7e")
 1:1/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_yb02x"]
-sources/0 = SubResource("TileSetAtlasSource_5r11s")
-sources/1 = SubResource("TileSetAtlasSource_8st37")
+sources/0 = SubResource("TileSetAtlasSource_5show")
+sources/1 = SubResource("TileSetAtlasSource_osag8")
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_vu3hg"]
 a = Vector2(-1.14484, -114.306)
