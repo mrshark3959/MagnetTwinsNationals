@@ -6,20 +6,20 @@
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_p0j4d"]
 
-[node name="cannon" type="Node2D"]
+[node name="main" type="Node2D"]
+
+[node name="canon" type="Node2D" parent="."]
 script = ExtResource("1_m8kfq")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="canon"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="canon/StaticBody2D"]
 shape = SubResource("RectangleShape2D_w0601")
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-visible = false
+[node name="Sprite2D" type="Sprite2D" parent="canon/StaticBody2D"]
 scale = Vector2(20, 20)
 texture = SubResource("PlaceholderTexture2D_p0j4d")
 
-[node name="cannonspawn" type="Marker2D" parent="."]
-position = Vector2(10, 0)
+[node name="Camera2D" type="Camera2D" parent="."]
 
-[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="ready" from="canon" to="canon" method="_on_ready"]

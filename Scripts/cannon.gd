@@ -1,29 +1,19 @@
 extends Node2D
-@export var bulletangle = 20
-@export var bulletspeed = 8
-@export var gravity = 5
-@export var directionalforce = Vector2()
 
-@export var bullet_scene: PackedScene
-@onready var cannonspawn =$cannonspawn
-
-	
-func setbulletangle(value):
-	bulletangle = clamp(value,0,359)
-
-func updatedirectionalforce():
-	directionalforce = Vector2(cos(bulletangle*(PI/180)),sin(bulletangle*(PI/180)))
+@onready var main = get_tree().get_root().get_node("main")
+@onready var ball = load("res://Scenes/enviroment_stuff/bullet_scene.tscn")
 
 
 func _on_ready() -> void:
-	updatedirectionalforce()
-	
-	set_process_input(true)
-	
-	set_process(true)
+	shoot()
+
+
 
 func shoot():
-	var bullet = bullet_scene.instance()
-	bullet.set_global_pos(cannonspawn.get_global_pos())
-	bullet.shoot(directionalforce,gravity)
-	get_parent().add_child(cannonspawn)
+	var instance = ball.instantiate()
+	print(instance)
+	instance.dir = rotation
+	instance.spawnpos = global_position
+	instance.spawnrot = rotation
+	main.add_child.call_deferred(instance)
+	
