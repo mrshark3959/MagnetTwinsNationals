@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=4 uid="uid://dv8035hre2swr"]
+
+[ext_resource type="PackedScene" uid="uid://bcifdcq3e47yi" path="res://Scenes/scenesLevels/tile_map_base.tscn" id="1_mjagp"]
+[ext_resource type="PackedScene" uid="uid://bpfaxyyyooecd" path="res://Scenes/lightsoutpuzzle.tscn" id="2_02ivf"]
+[ext_resource type="PackedScene" uid="uid://cp7uqkbbb6s1f" path="res://Scenes/scenesLevels/ferrus.tscn" id="3_ghxr3"]
+[ext_resource type="PackedScene" uid="uid://xvp1dosioeou" path="res://Scenes/button.tscn" id="4_02ivf"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMapLayer" parent="." instance=ExtResource("1_mjagp")]
+position = Vector2(156, 264)
+tile_map_data = PackedByteArray("AADw//D/AQAAAAEAAADx//D/AQAAAAEAAADy//D/AQAAAAEAAADz//D/AQAAAAEAAAD0//D/AQAAAAEAAAD1//D/AQAAAAEAAAD2//D/AQAAAAEAAAD3//D/AQAAAAEAAAD4//D/AQAAAAEAAAD5//D/AQAAAAEAAAD6//D/AQAAAAEAAAD7//D/AQAAAAEAAAD8//D/AQAAAAEAAAD9//D/AQAAAAEAAAD+//D/AQAAAAEAAAD///D/AQAAAAEAAAAAAPD/AQAAAAEAAAABAPD/AQAAAAEAAAABAPH/AQAAAAEAAAAAAPH/AQAAAAEAAAD///H/AQAAAAEAAAD+//H/AQAAAAEAAAD9//H/AQAAAAEAAAD8//H/AQAAAAEAAAD7//H/AQAAAAEAAAD6//H/AQAAAAEAAAD5//H/AQAAAAEAAAD4//H/AQAAAAEAAAD3//H/AQAAAAEAAAD2//H/AQAAAAEAAAD1//H/AQAAAAEAAAD0//H/AQAAAAEAAADz//H/AQAAAAEAAADy//H/AQAAAAEAAADx//H/AQAAAAEAAADw//H/AQAAAAEAAADv//H/AQAAAAEAAADv//L/AQAAAAEAAADw//L/AQAAAAEAAADx//L/AQAAAAEAAADy//L/AQAAAAEAAADz//L/AQAAAAEAAAD0//L/AQAAAAEAAAD1//L/AQAAAAEAAAD2//L/AQAAAAEAAAD3//L/AQAAAAEAAAD4//L/AQAAAAEAAAD5//L/AQAAAAEAAAD6//L/AQAAAAEAAAD7//L/AQAAAAEAAAD8//L/AQAAAAEAAAD9//L/AQAAAAEAAAD+//L/AQAAAAEAAAD///L/AQAAAAEAAAAAAPL/AQAAAAEAAAABAPL/AQAAAAEAAAACAPL/AQAAAAEAAAACAPH/AQAAAAEAAAA=")
+
+[node name="Node2D" parent="." instance=ExtResource("2_02ivf")]
+position = Vector2(-62, -107)
+
+[node name="Ferrus" parent="." instance=ExtResource("3_ghxr3")]
+position = Vector2(-50, -63)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(54, -30)
+zoom = Vector2(2, 2)
+
+[node name="button" parent="." instance=ExtResource("4_02ivf")]
+position = Vector2(58, -3)

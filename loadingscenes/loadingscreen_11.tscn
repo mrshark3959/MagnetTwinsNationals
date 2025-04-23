@@ -220,6 +220,7 @@ stream = ExtResource("6_jjkin")
 volume_db = -18.0
 
 [node name="Restarts" type="Label" parent="."]
+layout_mode = 0
 offset_left = 233.0
 offset_top = 206.0
 offset_right = 533.0
