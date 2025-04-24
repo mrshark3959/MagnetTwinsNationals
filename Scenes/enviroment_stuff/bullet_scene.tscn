@@ -13,5 +13,5 @@ script = ExtResource("1_h3ehu")
 shape = SubResource("CircleShape2D_y7pgl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(11.2, 10.16)
+scale = Vector2(3.71003, 3.36553)
 texture = SubResource("PlaceholderTexture2D_h3ehu")

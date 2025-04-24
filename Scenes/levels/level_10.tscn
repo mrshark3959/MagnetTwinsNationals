@@ -1,9 +1,16 @@
-[gd_scene load_steps=8 format=4 uid="uid://c46n2rayavl07"]
+[gd_scene load_steps=15 format=4 uid="uid://c46n2rayavl07"]
 
 [ext_resource type="PackedScene" uid="uid://bcifdcq3e47yi" path="res://Scenes/scenesLevels/tile_map_base.tscn" id="1_78qix"]
 [ext_resource type="PackedScene" uid="uid://yxadoe3i8u6k" path="res://Scenes/scenesLevels/magnus.tscn" id="2_uodn6"]
 [ext_resource type="Texture2D" uid="uid://jw8a5oi3c8xj" path="res://Assets/images/miscellaneous/image (35).png" id="3_cxejn"]
 [ext_resource type="Texture2D" uid="uid://do16m4ver0yfh" path="res://Assets/images/miscellaneous/image (36).png" id="4_y3y1y"]
+[ext_resource type="PackedScene" uid="uid://xvp1dosioeou" path="res://Scenes/button.tscn" id="5_ec7up"]
+[ext_resource type="PackedScene" uid="uid://dmjn3upniv24g" path="res://Scenes/Elevator.tscn" id="6_7psd8"]
+[ext_resource type="PackedScene" uid="uid://cp7uqkbbb6s1f" path="res://Scenes/scenesLevels/ferrus.tscn" id="6_tcm7w"]
+[ext_resource type="Texture2D" uid="uid://0aryysln0vla" path="res://Assets/images/miscellaneous/icon.svg" id="8_7psd8"]
+[ext_resource type="PackedScene" uid="uid://bvpqrkh4hrlpn" path="res://Scenes/positivebutton.tscn" id="8_ynvmg"]
+[ext_resource type="PackedScene" uid="uid://cxa3xhhldmmhk" path="res://Scenes/negbutton.tscn" id="9_15nga"]
+[ext_resource type="PackedScene" uid="uid://dgfofnliywbml" path="res://Scenes/enviroment_stuff/cannon.tscn" id="11_15nga"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_px4fi"]
 texture = ExtResource("4_y3y1y")
@@ -33,7 +40,7 @@ tile_map_data = PackedByteArray("AAD4/wQAAAABAAIAAAD5/wQAAAACAAIAAAD6/wQAAAABAAI
 tile_set = SubResource("TileSet_ec7up")
 
 [node name="TileMapLayer" parent="." instance=ExtResource("1_78qix")]
-tile_map_data = PackedByteArray("AAD2/wUAAQABAAMAAAD3/wUAAQABAAAAAAD4/wUAAQABAAAAAAD5/wUAAQABAAAAAAD6/wUAAQABAAAAAAD7/wUAAQABAAAAAAD8/wUAAQABAAAAAAD9/wUAAQABAAAAAAD+/wUAAQABAAAAAAD//wUAAQABAAAAAAAAAAUAAQABAAAAAAABAAUAAQABAAAAAAACAAUAAQABAAAAAAADAAUAAQABAAAAAAAEAAUAAQABAAAAAAAFAAUAAQABAAAAAAAGAAUAAQABAAAAAAAHAAUAAQABAAAAAAAIAAUAAQABAAAAAAAJAAUAAQABAAAAAAAKAAUAAQACAAIAAAAKAAQAAQADAAAAAAAKAAMAAQADAAAAAAAKAAIAAQADAAAAAAAKAAEAAQADAAAAAAAKAAAAAQADAAAAAAAKAP//AQADAAAAAAAKAP7/AQADAAAAAAAKAP3/AQADAAAAAAAKAPz/AQADAAAAAAAKAPv/AQADAAAAAAAKAPr/AQADAAAAAAD2//r/AQABAAEAAAD2//v/AQABAAEAAAD2//z/AQABAAEAAAD2//3/AQABAAEAAAD2//7/AQABAAEAAAD2////AQABAAEAAAD2/wAAAQABAAEAAAD2/wEAAQABAAEAAAD2/wIAAQABAAEAAAD2/wMAAQABAAEAAAD2/wQAAQABAAEAAAD3/wEAAQABAAIAAAD4/wEAAQABAAIAAAD5/wEAAQABAAIAAAD6/wEAAQABAAIAAAD3//3/AQABAAIAAAD4//3/AQABAAIAAAD5//3/AQABAAIAAAD6//3/AQABAAIAAAD2//n/AQAAAAMAAAD3//n/AQADAAEAAAD4//n/AQADAAEAAAD5//n/AQADAAEAAAD6//n/AQADAAEAAAD7//n/AQADAAEAAAD8//n/AQADAAEAAAD9//n/AQADAAEAAAD+//n/AQADAAEAAAD///n/AQADAAEAAAAAAPn/AQADAAEAAAABAPn/AQADAAEAAAACAPn/AQADAAEAAAADAPn/AQADAAEAAAAEAPn/AQADAAEAAAAFAPn/AQADAAEAAAAGAPn/AQADAAEAAAAHAPn/AQADAAEAAAAIAPn/AQADAAEAAAAJAPn/AQADAAEAAAAKAPn/AQADAAIAAAAJAP3/AQABAAIAAAAIAP3/AQABAAIAAAAHAP3/AQABAAIAAAAGAP3/AQABAAIAAAAFAP3/AQABAAIAAAAEAP3/AQABAAIAAAADAP3/AQABAAIAAAACAP3/AQABAAIAAAACAPz/AQABAAMAAAACAPv/AQABAAMAAAACAPr/AQABAAMAAAAHAPz/AQABAAMAAAAHAPv/AQABAAMAAAAHAPr/AQABAAMAAAACAP7/AQABAAMAAAACAP//AQABAAMAAAACAAAAAQABAAMAAAACAAEAAQABAAMAAAADAAEAAQABAAIAAAAIAAEAAQABAAIAAAA=")
+tile_map_data = PackedByteArray("AAD2/wUAAQABAAMAAAD3/wUAAQABAAAAAAD4/wUAAQABAAAAAAD5/wUAAQABAAAAAAD6/wUAAQABAAAAAAD7/wUAAQABAAAAAAD8/wUAAQABAAAAAAD9/wUAAQABAAAAAAD+/wUAAQABAAAAAAD//wUAAQABAAAAAAAAAAUAAQABAAAAAAABAAUAAQABAAAAAAACAAUAAQABAAAAAAADAAUAAQABAAAAAAAEAAUAAQABAAAAAAAFAAUAAQABAAAAAAAGAAUAAQABAAAAAAAHAAUAAQABAAAAAAAIAAUAAQABAAAAAAAJAAUAAQABAAAAAAAKAAUAAQACAAIAAAAKAAQAAQADAAAAAAAKAAMAAQADAAAAAAAKAAIAAQADAAAAAAAKAAEAAQADAAAAAAAKAAAAAQADAAAAAAAKAP//AQADAAAAAAAKAP7/AQADAAAAAAAKAP3/AQADAAAAAAAKAPz/AQADAAAAAAAKAPv/AQADAAAAAAAKAPr/AQADAAAAAAD2//r/AQABAAEAAAD2//v/AQABAAEAAAD2//z/AQABAAEAAAD2//3/AQABAAEAAAD2//7/AQABAAEAAAD2////AQABAAEAAAD2/wAAAQABAAEAAAD2/wEAAQABAAEAAAD2/wIAAQABAAEAAAD2/wMAAQABAAEAAAD2/wQAAQABAAEAAAD3//3/AQABAAIAAAD4//3/AQABAAIAAAD5//3/AQABAAIAAAD6//3/AQABAAIAAAD2//n/AQAAAAMAAAD3//n/AQADAAEAAAD4//n/AQADAAEAAAD5//n/AQADAAEAAAD6//n/AQADAAEAAAD7//n/AQADAAEAAAD8//n/AQADAAEAAAD9//n/AQADAAEAAAD+//n/AQADAAEAAAD///n/AQADAAEAAAAAAPn/AQADAAEAAAABAPn/AQADAAEAAAACAPn/AQADAAEAAAADAPn/AQADAAEAAAAEAPn/AQADAAEAAAAFAPn/AQADAAEAAAAGAPn/AQADAAEAAAAHAPn/AQADAAEAAAAIAPn/AQADAAEAAAAJAPn/AQADAAEAAAAKAPn/AQADAAIAAAAJAP3/AQABAAIAAAAIAP3/AQABAAIAAAAHAP3/AQABAAIAAAAGAP3/AQABAAIAAAAFAP3/AQABAAIAAAAEAP3/AQABAAIAAAADAP3/AQABAAIAAAACAP3/AQABAAIAAAACAPz/AQABAAMAAAACAPv/AQABAAMAAAACAPr/AQABAAMAAAAHAPz/AQABAAMAAAAHAPv/AQABAAMAAAAHAPr/AQABAAMAAAACAP7/AQABAAMAAAACAP//AQABAAMAAAACAAAAAQABAAMAAAACAAEAAQABAAMAAAADAAEAAQABAAIAAAAIAAEAAQABAAIAAAD6/wEAAQABAAIAAAD5/wEAAQABAAIAAAD4/wEAAQABAAIAAAD3/wEAAQABAAIAAAABAP3/AQABAAIAAAAAAP3/AQABAAIAAAD///3/AQABAAIAAAD+//3/AQABAAIAAAA=")
 
 [node name="Magnus" parent="." instance=ExtResource("2_uodn6")]
 position = Vector2(-131, 70)
@@ -41,3 +48,55 @@ position = Vector2(-131, 70)
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(8, -8)
 zoom = Vector2(3.43, 3.13)
+
+[node name="Ferrus" parent="." instance=ExtResource("6_tcm7w")]
+position = Vector2(142, -70)
+
+[node name="Elevator" parent="." instance=ExtResource("6_7psd8")]
+position = Vector2(-336, -46)
+scale = Vector2(0.6, 0.6)
+
+[node name="button4" parent="." instance=ExtResource("5_ec7up")]
+position = Vector2(61, -54)
+
+[node name="button3" parent="." instance=ExtResource("5_ec7up")]
+position = Vector2(80, -54)
+
+[node name="button2" parent="." instance=ExtResource("5_ec7up")]
+position = Vector2(99, -54)
+
+[node name="positivebutton" parent="." instance=ExtResource("8_ynvmg")]
+position = Vector2(9, -54)
+
+[node name="negativebutton" parent="." instance=ExtResource("9_15nga")]
+position = Vector2(-7, -54)
+
+[node name="buttonshowhidden" parent="." instance=ExtResource("5_ec7up")]
+position = Vector2(138, 74)
+
+[node name="main" parent="." instance=ExtResource("11_15nga")]
+position = Vector2(56, 11)
+
+[node name="hiddenblock1" type="StaticBody2D" parent="." groups=["Hidden Block"]]
+position = Vector2(20, 7)
+
+[node name="Sprite2D" type="Sprite2D" parent="hiddenblock1"]
+position = Vector2(-37, 60)
+scale = Vector2(0.144073, 0.144073)
+texture = ExtResource("8_7psd8")
+
+[node name="hiddenblock1" type="StaticBody2D" parent="hiddenblock1" groups=["Hidden Block"]]
+position = Vector2(-27, -13)
+
+[node name="Sprite2D" type="Sprite2D" parent="hiddenblock1/hiddenblock1"]
+position = Vector2(-37, 60)
+scale = Vector2(0.144073, 0.144073)
+texture = ExtResource("8_7psd8")
+
+[node name="hiddenblock2" type="StaticBody2D" parent="hiddenblock1" groups=["Hidden Block"]]
+position = Vector2(-53, -26)
+
+[node name="Sprite2D" type="Sprite2D" parent="hiddenblock1/hiddenblock2"]
+position = Vector2(-37, 60)
+scale = Vector2(0.144073, 0.144073)
+texture = ExtResource("8_7psd8")

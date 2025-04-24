@@ -38,7 +38,7 @@ position = Vector2(579, -93)
 shape = SubResource("RectangleShape2D_som2k")
 
 [node name="HiddenBlock" type="StaticBody2D" parent="." groups=["Hidden Block"]]
-position = Vector2(112, -133)
+position = Vector2(103, -143)
 scale = Vector2(2, 2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HiddenBlock"]
