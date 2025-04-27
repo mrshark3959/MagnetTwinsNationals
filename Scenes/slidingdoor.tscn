@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4mf8fnfqrx3u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3de30"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_3de30"]
+
+[node name="slidingdoor" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_3de30")
+animation = &"idle"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 1.25)
+scale = Vector2(1, 3.5)
+texture = SubResource("PlaceholderTexture2D_3de30")
