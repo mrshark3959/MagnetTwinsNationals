@@ -54,6 +54,11 @@ func _process(delta: float) -> void:
 		pin_joint.node_b = NodePath()  # Remove attached body
 		pin_joint1.node_b = NodePath()  # Remove second joint
 		print("Detached body")
+	for body in get_parent().get_node("freezeit").get_overlapping_bodies():
+		if body is RigidBody2D && Input.is_action_pressed("space"):
+			pin_joint.node_b = body.get_path()  # Attach the rigid body
+			pin_joint1.node_b = body.get_path()
+			print("Attached:", body.name)
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is RigidBody2D:
@@ -72,7 +77,7 @@ func _on_body_entered(body: Node2D) -> void:
 
 
 func _on_freezeit_body_entered(body: Node2D) -> void:
-	if body is RigidBody2D:
+	if body is RigidBody2D && Input.is_action_pressed("space"):
 		pin_joint.node_b = body.get_path()  # Attach the rigid body
 		pin_joint1.node_b = body.get_path()
 		print("Attached:", body.name)

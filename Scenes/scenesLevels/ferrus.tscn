@@ -436,4 +436,3 @@ shape = SubResource("RectangleShape2D_x0lhg")
 [connection signal="body_entered" from="TriggerPositive" to="TriggerPositive" method="_on_body_entered"]
 [connection signal="body_entered" from="TriggerNegitive" to="TriggerNegitive" method="_on_body_entered"]
 [connection signal="animation_finished" from="Texture" to="." method="_on_texture_animation_finished"]
-[connection signal="body_entered" from="freezeit" to="TriggerPositive" method="_on_freezeit_body_entered"]
