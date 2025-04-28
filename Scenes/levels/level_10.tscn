@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://c46n2rayavl07"]
+[gd_scene load_steps=21 format=4 uid="uid://c46n2rayavl07"]
 
 [ext_resource type="PackedScene" uid="uid://bcifdcq3e47yi" path="res://Scenes/scenesLevels/tile_map_base.tscn" id="1_78qix"]
 [ext_resource type="PackedScene" uid="uid://yxadoe3i8u6k" path="res://Scenes/scenesLevels/magnus.tscn" id="2_uodn6"]
@@ -38,6 +38,14 @@ sources/1 = SubResource("TileSetAtlasSource_h25sp")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_emfoc"]
 size = Vector2(18, 18)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_luib5"]
+size = Vector2(4.10691, 36.0684)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ol81e"]
+size = Vector2(16, 4)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_luib5"]
+
 [node name="Node2D" type="Node2D"]
 
 [node name="background" type="TileMapLayer" parent="."]
@@ -48,7 +56,7 @@ tile_set = SubResource("TileSet_ec7up")
 tile_map_data = PackedByteArray("AAD2/wUAAQABAAMAAAD3/wUAAQABAAAAAAD4/wUAAQABAAAAAAD5/wUAAQABAAAAAAD6/wUAAQABAAAAAAD7/wUAAQABAAAAAAD8/wUAAQABAAAAAAD9/wUAAQABAAAAAAD+/wUAAQABAAAAAAD//wUAAQABAAAAAAAAAAUAAQABAAAAAAABAAUAAQABAAAAAAACAAUAAQABAAAAAAADAAUAAQABAAAAAAAEAAUAAQABAAAAAAAFAAUAAQABAAAAAAAGAAUAAQABAAAAAAAHAAUAAQABAAAAAAAIAAUAAQABAAAAAAAJAAUAAQABAAAAAAAKAAUAAQACAAIAAAAKAAQAAQADAAAAAAAKAAMAAQADAAAAAAAKAAIAAQADAAAAAAAKAAEAAQADAAAAAAAKAAAAAQADAAAAAAAKAP//AQADAAAAAAAKAP7/AQADAAAAAAAKAP3/AQADAAAAAAAKAPz/AQADAAAAAAAKAPv/AQADAAAAAAAKAPr/AQADAAAAAAD2//r/AQABAAEAAAD2//v/AQABAAEAAAD2//z/AQABAAEAAAD2//3/AQABAAEAAAD2//7/AQABAAEAAAD2////AQABAAEAAAD2/wAAAQABAAEAAAD2/wEAAQABAAEAAAD2/wIAAQABAAEAAAD2/wMAAQABAAEAAAD2/wQAAQABAAEAAAD3//3/AQABAAIAAAD4//3/AQABAAIAAAD5//3/AQABAAIAAAD6//3/AQABAAIAAAD2//n/AQAAAAMAAAD3//n/AQADAAEAAAD4//n/AQADAAEAAAD5//n/AQADAAEAAAD6//n/AQADAAEAAAD7//n/AQADAAEAAAD8//n/AQADAAEAAAD9//n/AQADAAEAAAD+//n/AQADAAEAAAD///n/AQADAAEAAAAAAPn/AQADAAEAAAABAPn/AQADAAEAAAACAPn/AQADAAEAAAADAPn/AQADAAEAAAAEAPn/AQADAAEAAAAFAPn/AQADAAEAAAAGAPn/AQADAAEAAAAHAPn/AQADAAEAAAAIAPn/AQADAAEAAAAJAPn/AQADAAEAAAAKAPn/AQADAAIAAAAJAP3/AQABAAIAAAAIAP3/AQABAAIAAAAHAP3/AQABAAIAAAAGAP3/AQABAAIAAAAFAP3/AQABAAIAAAAEAP3/AQABAAIAAAADAP3/AQABAAIAAAACAP3/AQABAAIAAAACAP7/AQABAAMAAAACAP//AQABAAMAAAACAAAAAQABAAMAAAACAAEAAQABAAMAAAADAAEAAQABAAIAAAAIAAEAAQABAAIAAAD6/wEAAQABAAIAAAD5/wEAAQABAAIAAAD4/wEAAQABAAIAAAD3/wEAAQABAAIAAAABAP3/AQABAAIAAAAAAP3/AQABAAIAAAD///3/AQABAAIAAAD+//3/AQABAAIAAAA=")
 
 [node name="Magnus" parent="." instance=ExtResource("2_uodn6")]
-position = Vector2(-131, 70)
+position = Vector2(-135, 5)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(8, -8)
@@ -130,3 +138,43 @@ scale = Vector2(-14.1454, -14.1454)
 [node name="slidingdoor2" parent="." instance=ExtResource("12_emfoc")]
 position = Vector2(120, -54)
 scale = Vector2(-14.1454, -14.1454)
+
+[node name="lever" type="Node2D" parent="."]
+
+[node name="handle" type="RigidBody2D" parent="lever"]
+collision_layer = 9
+collision_mask = 9
+mass = 4.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lever/handle"]
+position = Vector2(-104, 6)
+rotation = -3.14159
+scale = Vector2(0.606982, 0.277251)
+shape = SubResource("RectangleShape2D_luib5")
+
+[node name="Sprite2D" type="Sprite2D" parent="lever/handle"]
+position = Vector2(-103.99, 7.49601)
+scale = Vector2(-0.0196081, 0.100954)
+texture = ExtResource("8_7psd8")
+
+[node name="bottom" type="StaticBody2D" parent="lever"]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lever/bottom"]
+position = Vector2(-104, 14)
+shape = SubResource("RectangleShape2D_ol81e")
+
+[node name="Sprite2D" type="Sprite2D" parent="lever/bottom"]
+position = Vector2(-104, 14)
+scale = Vector2(-15.8891, 3.91908)
+texture = SubResource("PlaceholderTexture2D_luib5")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="lever"]
+position = Vector2(-104, 12)
+scale = Vector2(0.0852912, 0.0852912)
+node_a = NodePath("../bottom")
+node_b = NodePath("../handle")
+disable_collision = false
+angular_limit_lower = -0.0872665
+angular_limit_upper = 0.0872665
