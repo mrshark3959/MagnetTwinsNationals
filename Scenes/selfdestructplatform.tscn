@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://ct2lgp0iiroy7"]
+
+[ext_resource type="Texture2D" uid="uid://0aryysln0vla" path="res://Assets/images/miscellaneous/icon.svg" id="1_5bbce"]
+[ext_resource type="Script" uid="uid://d8hfmb1xxbdx" path="res://Scenes/crumblingplatform.gd" id="1_8k3ql"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8k3ql"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5bbce"]
+size = Vector2(128, 20)
+
+[node name="crumblingplatform" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+script = ExtResource("1_8k3ql")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("1_5bbce")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_8k3ql")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -74)
+shape = SubResource("RectangleShape2D_5bbce")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="ready" from="StaticBody2D" to="StaticBody2D" method="_on_ready"]
+[connection signal="body_entered" from="Area2D" to="StaticBody2D" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="StaticBody2D" method="_on_timer_timeout"]
