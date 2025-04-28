@@ -67,7 +67,10 @@ color = Color(0.235893, 0.234733, 0.441374, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="resume" type="Button" parent="pausebackground"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.0296402
+anchor_bottom = 0.0296403
 offset_left = 12.5161
 offset_top = 3.62848
 offset_right = 82.5161
