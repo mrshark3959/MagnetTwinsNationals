@@ -51,6 +51,8 @@ animation = &"off"
 
 [node name="Area2D" type="Area2D" parent="00"]
 position = Vector2(61, -40)
+collision_layer = 11
+collision_mask = 11
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="00/Area2D"]
 shape = SubResource("RectangleShape2D_dvaqo")
@@ -69,6 +71,8 @@ animation = &"off"
 
 [node name="Area2D" type="Area2D" parent="01"]
 position = Vector2(61, -40)
+collision_layer = 11
+collision_mask = 11
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="01/Area2D"]
 shape = SubResource("RectangleShape2D_dvaqo")
@@ -87,6 +91,8 @@ animation = &"off"
 
 [node name="Area2D" type="Area2D" parent="02"]
 position = Vector2(61, -40)
+collision_layer = 11
+collision_mask = 11
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="02/Area2D"]
 shape = SubResource("RectangleShape2D_dvaqo")
@@ -105,6 +111,8 @@ animation = &"off"
 
 [node name="Area2D" type="Area2D" parent="10"]
 position = Vector2(61, -40)
+collision_layer = 11
+collision_mask = 11
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="10/Area2D"]
 shape = SubResource("RectangleShape2D_dvaqo")
@@ -123,6 +131,8 @@ animation = &"off"
 
 [node name="Area2D" type="Area2D" parent="11"]
 position = Vector2(61, -40)
+collision_layer = 11
+collision_mask = 11
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="11/Area2D"]
 shape = SubResource("RectangleShape2D_dvaqo")
@@ -141,6 +151,8 @@ animation = &"off"
 
 [node name="Area2D" type="Area2D" parent="12"]
 position = Vector2(61, -40)
+collision_layer = 11
+collision_mask = 11
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="12/Area2D"]
 shape = SubResource("RectangleShape2D_dvaqo")
@@ -159,6 +171,8 @@ animation = &"off"
 
 [node name="Area2D" type="Area2D" parent="20"]
 position = Vector2(61, -40)
+collision_layer = 11
+collision_mask = 11
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="20/Area2D"]
 shape = SubResource("RectangleShape2D_dvaqo")
@@ -177,6 +191,8 @@ animation = &"off"
 
 [node name="Area2D" type="Area2D" parent="21"]
 position = Vector2(61, -40)
+collision_layer = 11
+collision_mask = 11
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="21/Area2D"]
 shape = SubResource("RectangleShape2D_dvaqo")
@@ -195,6 +211,18 @@ animation = &"off"
 
 [node name="Area2D" type="Area2D" parent="22"]
 position = Vector2(61, -40)
+collision_layer = 11
+collision_mask = 11
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="22/Area2D"]
 shape = SubResource("RectangleShape2D_dvaqo")
+
+[connection signal="body_entered" from="00/Area2D" to="." method="_on_00_body_entered"]
+[connection signal="body_entered" from="01/Area2D" to="." method="_on_01_body_entered"]
+[connection signal="body_entered" from="02/Area2D" to="." method="_on_02_body_entered"]
+[connection signal="body_entered" from="10/Area2D" to="." method="_on_10_body_entered"]
+[connection signal="body_entered" from="11/Area2D" to="." method="_on_11_body_entered"]
+[connection signal="body_entered" from="12/Area2D" to="." method="_on_12_body_entered"]
+[connection signal="body_entered" from="20/Area2D" to="." method="_on_20_body_entered"]
+[connection signal="body_entered" from="21/Area2D" to="." method="_on_21_body_entered"]
+[connection signal="body_entered" from="22/Area2D" to="." method="_on_22_body_entered"]

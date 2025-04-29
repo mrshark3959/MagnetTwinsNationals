@@ -2,6 +2,7 @@ extends Node2D
 var grid = []
 var grid_width = 3
 var grid_height = 3
+var validated = false
 
 func _init():
 	grid=Array()
@@ -52,7 +53,7 @@ func validate_grid():
 func edgeChecker(x, y): # broken
 	var verifyX = (x >= 0 && x < grid_width)
 	var verifyY = (y >= 0 && y < grid_height)
-	print(verifyX && verifyY)
+	#print(verifyX && verifyY)
 	return verifyX && verifyY
 	
 func adjacentFlip(x, y):  
@@ -77,21 +78,63 @@ func _ready():
 	_init()
 
 func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed("space"):
-		userFlip(1, 1)
-	if Input.is_action_just_pressed("w"):
-		userFlip(1, 0)
-	if Input.is_action_just_pressed("d"):
-		userFlip(2, 1)
-	if Input.is_action_just_pressed("a"):
-		userFlip(0, 1) 
-	if Input.is_action_just_pressed("s"):
-		userFlip(1, 2)
-	if Input.is_action_just_pressed("up"):
+	if validate_grid() and !validated:
+		validated = true
+		print("all lit up")
+		#then activate door
+
+
+
+
+#THE CODE BEHEMOTH
+func _on_00_body_entered(body: Node2D) -> void:
+	#print("in")
+	if body.is_in_group("Player"):
 		userFlip(0, 0)
-	if Input.is_action_just_pressed("right"):
+
+func _on_01_body_entered(body: Node2D) -> void:
+	#print("in")
+	if body.is_in_group("Player"):
+		userFlip(1, 0)
+
+
+func _on_02_body_entered(body: Node2D) -> void:
+	#print("in")
+	if body.is_in_group("Player"):
 		userFlip(2, 0)
-	if Input.is_action_just_pressed("down"):
-		userFlip(2, 2)
-	if Input.is_action_just_pressed("left"):
+
+
+func _on_10_body_entered(body: Node2D) -> void:
+	#print("in")
+	if body.is_in_group("Player"):
+		userFlip(0, 1)
+
+
+func _on_11_body_entered(body: Node2D) -> void:
+	#print("in")
+	if body.is_in_group("Player"):
+		userFlip(1, 1)
+
+
+func _on_12_body_entered(body: Node2D) -> void:
+	#print("in")
+	if body.is_in_group("Player"):
+		userFlip(2, 1)
+
+
+func _on_20_body_entered(body: Node2D) -> void:
+	#print("in")
+	if body.is_in_group("Player"):
 		userFlip(0, 2)
+
+
+func _on_21_body_entered(body: Node2D) -> void:
+	#print("in")
+	if body.is_in_group("Player"):
+		userFlip(1, 2)
+
+
+func _on_22_body_entered(body: Node2D) -> void:
+	#print("in")
+	if body.is_in_group("Player"):
+		userFlip(2, 2)
