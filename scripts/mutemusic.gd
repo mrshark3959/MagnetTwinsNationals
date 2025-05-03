@@ -4,7 +4,7 @@ extends TextureButton
 
 func _ready() -> void:
 	AudioServer.set_bus_layout(load("res://defaultbus.tres"))
-
+	print(AudioBusLayout)
 func _on_pressed() -> void:
 	print("Mute button pressed")
 	$"../click".play()
