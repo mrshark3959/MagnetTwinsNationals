@@ -3,6 +3,7 @@ extends Node2D
 
 func _on_leftactivation_body_entered(body: RigidBody2D) -> void:
 	if body.name  == "handle":
+		$"../slidingdoor2".get_node("AnimatableBody2D").open()
 		$"../crumblingplatform2".visible = true
 		$"../crumblingplatform".visible = true
 		$"../crumblingplatform3".visible = true
@@ -23,6 +24,11 @@ func _on_leftactivation_body_entered(body: RigidBody2D) -> void:
 	
 func _on_rightactivation_body_entered(body: RigidBody2D) -> void:
 	if body.name  == "handle":
+		$"../slidingdoor2".get_node("AnimatableBody2D").close()
+		$"../crumblingplatform2".get_node("StaticBody2D").reset()
+		$"../crumblingplatform3".get_node("StaticBody2D").reset()
+		$"../crumblingplatform4".get_node("StaticBody2D").reset()
+		$"../crumblingplatform".get_node("StaticBody2D").reset()
 		_on_ready()
 
 

@@ -18,12 +18,14 @@ func _process(delta: float) -> void:
 func _on_timer_timeout() -> void:
 	visible = false
 	set_physics_process(false)
+	set_process(true)
 	timer.stop()
-	
+	$CollisionShape2D.disabled = true
+	$"../Area2D/CollisionShape2D".disabled = true
 func reset():
 	visible = true
 	set_physics_process(true)
 	set_process(false)
 	timer.stop()
-	$"StaticBody2D/CollisionShape2D".disabled = false
-	$"Area2D/CollisionShape2D".disabled = false
+	$CollisionShape2D.disabled = false
+	$"../Area2D/CollisionShape2D".disabled = false
