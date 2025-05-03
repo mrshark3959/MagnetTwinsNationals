@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dgfofnliywbml"]
+[gd_scene load_steps=5 format=3 uid="uid://dgfofnliywbml"]
 
 [ext_resource type="Script" uid="uid://oempqaips70h" path="res://Scripts/cannon.gd" id="1_m8kfq"]
+[ext_resource type="Script" uid="uid://desi1exi53sp5" path="res://Scripts/rotatecannon.gd" id="2_p0j4d"]
 [ext_resource type="Texture2D" uid="uid://0aryysln0vla" path="res://Assets/images/miscellaneous/icon.svg" id="2_w0601"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w0601"]
@@ -12,6 +13,7 @@ scale = Vector2(0.538289, 0.538289)
 script = ExtResource("1_m8kfq")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="canon"]
+script = ExtResource("2_p0j4d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="canon/StaticBody2D"]
 shape = SubResource("RectangleShape2D_w0601")

@@ -7,6 +7,7 @@
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_h3ehu"]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+scale = Vector2(1.72, 1.72)
 script = ExtResource("1_h3ehu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

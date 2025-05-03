@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://c46n2rayavl07"]
+[gd_scene load_steps=34 format=4 uid="uid://c46n2rayavl07"]
 
 [ext_resource type="PackedScene" uid="uid://bcifdcq3e47yi" path="res://Scenes/scenesLevels/tile_map_base.tscn" id="1_78qix"]
 [ext_resource type="PackedScene" uid="uid://yxadoe3i8u6k" path="res://Scenes/scenesLevels/magnus.tscn" id="2_uodn6"]
@@ -8,8 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://dmjn3upniv24g" path="res://Scenes/Elevator.tscn" id="6_7psd8"]
 [ext_resource type="PackedScene" uid="uid://cp7uqkbbb6s1f" path="res://Scenes/scenesLevels/ferrus.tscn" id="6_tcm7w"]
 [ext_resource type="Texture2D" uid="uid://0aryysln0vla" path="res://Assets/images/miscellaneous/icon.svg" id="8_7psd8"]
+[ext_resource type="Script" uid="uid://2wfb7nwb8cgy" path="res://Scenes/buttonrotate1.gd" id="8_ohi87"]
 [ext_resource type="PackedScene" uid="uid://bvpqrkh4hrlpn" path="res://Scenes/positivebutton.tscn" id="8_ynvmg"]
 [ext_resource type="PackedScene" uid="uid://cxa3xhhldmmhk" path="res://Scenes/negbutton.tscn" id="9_15nga"]
+[ext_resource type="Script" uid="uid://gonmjfnqhno2" path="res://Scripts/rightrotatecannon.gd" id="9_vneb8"]
 [ext_resource type="Script" uid="uid://c11342jc4ccqm" path="res://Scripts/freeferrisbutton.gd" id="9_wivcb"]
 [ext_resource type="Script" uid="uid://dvxv8kexrpijh" path="res://Scripts/buttonsh.gd" id="10_ol81e"]
 [ext_resource type="PackedScene" uid="uid://dgfofnliywbml" path="res://Scenes/enviroment_stuff/cannon.tscn" id="11_15nga"]
@@ -73,28 +75,29 @@ tile_set = SubResource("TileSet_ec7up")
 [node name="TileMapLayer" parent="." instance=ExtResource("1_78qix")]
 tile_map_data = PackedByteArray("AAD2/wUAAQABAAMAAAD3/wUAAQABAAAAAAD4/wUAAQABAAAAAAD5/wUAAQABAAAAAAD6/wUAAQABAAAAAAD7/wUAAQABAAAAAAD8/wUAAQABAAAAAAD9/wUAAQABAAAAAAD+/wUAAQABAAAAAAD//wUAAQABAAAAAAAAAAUAAQABAAAAAAABAAUAAQABAAAAAAACAAUAAQABAAAAAAADAAUAAQABAAAAAAAEAAUAAQABAAAAAAAFAAUAAQABAAAAAAAGAAUAAQABAAAAAAAHAAUAAQABAAAAAAAIAAUAAQABAAAAAAAJAAUAAQABAAAAAAAKAAUAAQACAAIAAAAKAAQAAQADAAAAAAAKAAMAAQADAAAAAAAKAAIAAQADAAAAAAAKAAEAAQADAAAAAAAKAAAAAQADAAAAAAAKAP//AQADAAAAAAAKAP7/AQADAAAAAAAKAP3/AQADAAAAAAAKAPz/AQADAAAAAAAKAPv/AQADAAAAAAAKAPr/AQADAAAAAAD2//r/AQABAAEAAAD2//v/AQABAAEAAAD2//z/AQABAAEAAAD2//3/AQABAAEAAAD2//7/AQABAAEAAAD2////AQABAAEAAAD2/wAAAQABAAEAAAD2/wEAAQABAAEAAAD2/wIAAQABAAEAAAD2/wMAAQABAAEAAAD2/wQAAQABAAEAAAD3//3/AQABAAIAAAD4//3/AQABAAIAAAD5//3/AQABAAIAAAD6//3/AQABAAIAAAD2//n/AQAAAAMAAAD3//n/AQADAAEAAAD4//n/AQADAAEAAAD5//n/AQADAAEAAAD6//n/AQADAAEAAAD7//n/AQADAAEAAAD8//n/AQADAAEAAAD9//n/AQADAAEAAAD+//n/AQADAAEAAAD///n/AQADAAEAAAAAAPn/AQADAAEAAAABAPn/AQADAAEAAAACAPn/AQADAAEAAAADAPn/AQADAAEAAAAEAPn/AQADAAEAAAAFAPn/AQADAAEAAAAGAPn/AQADAAEAAAAHAPn/AQADAAEAAAAIAPn/AQADAAEAAAAJAPn/AQADAAEAAAAKAPn/AQADAAIAAAAJAP3/AQABAAIAAAAIAP3/AQABAAIAAAAHAP3/AQABAAIAAAAGAP3/AQABAAIAAAAFAP3/AQABAAIAAAAEAP3/AQABAAIAAAADAP3/AQABAAIAAAACAP3/AQABAAIAAAACAP7/AQABAAMAAAACAP//AQABAAMAAAACAAAAAQABAAMAAAACAAEAAQABAAMAAAADAAEAAQABAAIAAAAIAAEAAQABAAIAAAD6/wEAAQABAAIAAAD5/wEAAQABAAIAAAD4/wEAAQABAAIAAAD3/wEAAQABAAIAAAABAP3/AQABAAIAAAAAAP3/AQABAAIAAAD///3/AQABAAIAAAD+//3/AQABAAIAAAAHAAAAAQABAAIAAAAJAAAAAQABAAIAAAA=")
 
+[node name="Elevator" parent="." instance=ExtResource("6_7psd8")]
+position = Vector2(-336, -46)
+scale = Vector2(0.6, 0.6)
+
 [node name="Magnus" parent="." instance=ExtResource("2_uodn6")]
-position = Vector2(-109, 69)
+position = Vector2(-132, 73)
+
+[node name="Ferrus" parent="." instance=ExtResource("6_tcm7w")]
+position = Vector2(142, -70)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(8, -8)
 zoom = Vector2(3.43, 3.13)
 
-[node name="Ferrus" parent="." instance=ExtResource("6_tcm7w")]
-position = Vector2(142, -70)
-
-[node name="Elevator" parent="." instance=ExtResource("6_7psd8")]
-position = Vector2(-336, -46)
-scale = Vector2(0.6, 0.6)
-
 [node name="button4" parent="." instance=ExtResource("5_ec7up")]
-position = Vector2(61, -54)
+position = Vector2(72, -54)
+script = ExtResource("8_ohi87")
+rotation_speed = 1.0
 
 [node name="button3" parent="." instance=ExtResource("5_ec7up")]
-position = Vector2(80, -54)
-
-[node name="button2" parent="." instance=ExtResource("5_ec7up")]
-position = Vector2(99, -54)
+position = Vector2(89, -54)
+script = ExtResource("9_vneb8")
+rotation_speed = 1.0
 
 [node name="positivebutton" parent="." instance=ExtResource("8_ynvmg")]
 position = Vector2(137, 10)
