@@ -198,11 +198,11 @@ text = "Thanks for Playing"
 
 [node name="Time" type="Label" parent="."]
 layout_mode = 0
-offset_left = 231.0
-offset_top = 128.0
-offset_right = 531.0
-offset_bottom = 151.0
-scale = Vector2(2.82412, 2.82412)
+offset_left = 418.0
+offset_top = 121.0
+offset_right = 718.0
+offset_bottom = 144.0
+scale = Vector2(2.00424, 2.00424)
 theme_override_fonts/font = ExtResource("2_h8qhh")
 text = "Time:"
 
@@ -221,10 +221,10 @@ volume_db = -18.0
 
 [node name="Restarts" type="Label" parent="."]
 layout_mode = 0
-offset_left = 233.0
-offset_top = 206.0
-offset_right = 533.0
-offset_bottom = 229.0
-scale = Vector2(2.82412, 2.82412)
+offset_left = 420.0
+offset_top = 175.0
+offset_right = 720.0
+offset_bottom = 198.0
+scale = Vector2(2.00479, 2.00479)
 theme_override_fonts/font = ExtResource("2_h8qhh")
 text = "Restarts:"
