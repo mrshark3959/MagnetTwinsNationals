@@ -1,0 +1,76 @@
+[gd_scene load_steps=10 format=3 uid="uid://cvaak1bmyagqp"]
+
+[ext_resource type="Script" uid="uid://gj7drxso3ty8" path="res://Scripts/shootbutton.gd" id="1_xte86"]
+[ext_resource type="Texture2D" uid="uid://cri013skb34o" path="res://image (94).png" id="2_do2wv"]
+[ext_resource type="AudioStream" uid="uid://da3lr7vtb5y0r" path="res://Assets/audios/677860__el_boss__ui-button-click-snap.wav" id="3_do2wv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_068wk"]
+atlas = ExtResource("2_do2wv")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xte86"]
+atlas = ExtResource("2_do2wv")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_068wk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_068wk")
+}],
+"loop": false,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xte86")
+}],
+"loop": false,
+"name": &"up",
+"speed": 17.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dk8dh"]
+size = Vector2(13, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eap7h"]
+size = Vector2(2.99604, 9.00387)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oaanx"]
+size = Vector2(7, 1)
+
+[node name="shootbutton" type="Node2D"]
+script = ExtResource("1_xte86")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+scale = Vector2(12.7247, 12.7247)
+collision_layer = 7
+collision_mask = 7
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D" groups=["negative"]]
+scale = Vector2(0.493611, 0.493611)
+sprite_frames = SubResource("SpriteFrames_068wk")
+animation = &"down"
+
+[node name="collisionshapebase" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.5, 3)
+shape = SubResource("RectangleShape2D_dk8dh")
+
+[node name="collisionshapetop" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.515742, -0.499938)
+rotation = -1.57473
+shape = SubResource("RectangleShape2D_eap7h")
+
+[node name="topchecker" type="Area2D" parent="StaticBody2D"]
+collision_layer = 0
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/topchecker"]
+position = Vector2(-0.5, -2.5)
+shape = SubResource("RectangleShape2D_oaanx")
+
+[node name="buttonclick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_do2wv")
+
+[connection signal="body_entered" from="StaticBody2D/topchecker" to="." method="_on_topchecker_body_entered"]
