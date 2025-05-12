@@ -1,10 +1,9 @@
 [gd_scene load_steps=4 format=3 uid="uid://5e5v0ckkbcq"]
 
-[ext_resource type="Script" uid="uid://c0cmpweh77hdi" path="res://Scripts/ballbullet.gd" id="1_h3ehu"]
+[ext_resource type="Script" path="res://Scripts/ballbullet.gd" id="1_h3ehu"]
+[ext_resource type="Texture2D" uid="uid://ctsg1xb615cgn" path="res://Assets/image (98).png" id="2_wf0uk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y7pgl"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_h3ehu"]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 scale = Vector2(1.72, 1.72)
@@ -15,5 +14,7 @@ scale = Vector2(0.173209, 0.173209)
 shape = SubResource("CircleShape2D_y7pgl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.64261, 0.582939)
-texture = SubResource("PlaceholderTexture2D_h3ehu")
+position = Vector2(0, 8.47033e-22)
+scale = Vector2(0.285485, 0.311965)
+texture = ExtResource("2_wf0uk")
+offset = Vector2(-20.2666, 5.58339)

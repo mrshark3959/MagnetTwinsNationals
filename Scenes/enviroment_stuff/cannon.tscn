@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dgfofnliywbml"]
+[gd_scene load_steps=6 format=3 uid="uid://dgfofnliywbml"]
 
-[ext_resource type="Script" uid="uid://oempqaips70h" path="res://Scripts/cannon.gd" id="1_m8kfq"]
-[ext_resource type="Script" uid="uid://desi1exi53sp5" path="res://Scripts/rotatecannon.gd" id="2_p0j4d"]
-[ext_resource type="Texture2D" uid="uid://0aryysln0vla" path="res://Assets/images/miscellaneous/icon.svg" id="2_w0601"]
+[ext_resource type="Script" path="res://Scripts/cannon.gd" id="1_m8kfq"]
+[ext_resource type="Script" path="res://Scripts/rotatecannon.gd" id="2_p0j4d"]
+[ext_resource type="Texture2D" uid="uid://kow3xsnv282f" path="res://Assets/image (99).png" id="3_fjs18"]
+[ext_resource type="Texture2D" uid="uid://bv0m4s4dcvgqj" path="res://Assets/image (97).png" id="4_fjs18"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w0601"]
 
@@ -20,7 +21,16 @@ shape = SubResource("RectangleShape2D_w0601")
 disabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="canon/StaticBody2D"]
-scale = Vector2(0.157971, 0.157971)
-texture = ExtResource("2_w0601")
+z_index = 1
+position = Vector2(3.71548, 1.85774)
+rotation = -1.57178
+scale = Vector2(0.765928, 0.765928)
+texture = ExtResource("3_fjs18")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(0.413396, 0.413396)
+texture = ExtResource("4_fjs18")
+offset = Vector2(0.852092, 13.6335)
 
 [connection signal="ready" from="canon" to="canon" method="_on_ready"]
