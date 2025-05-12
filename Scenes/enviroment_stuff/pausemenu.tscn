@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://duphc74iim2wu"]
+[gd_scene load_steps=12 format=3 uid="uid://duphc74iim2wu"]
 
 [ext_resource type="Script" uid="uid://jkg7j2iv7n81" path="res://Scenes/enviroment_stuff/pausemenu.gd" id="1_spkq2"]
 [ext_resource type="Script" uid="uid://vpw1ce724t7g" path="res://Scripts/resume.gd" id="2_id5y3"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dcb7yxw34m1p8" path="res://Assets/image - 2025-05-12T180559.733.png" id="3_spkq2"]
 [ext_resource type="Script" uid="uid://cb07hycaek41x" path="res://Scripts/restart.gd" id="4_u0mjo"]
 [ext_resource type="Script" uid="uid://bc2suyy1y82j" path="res://Scripts/quit.gd" id="5_spkq2"]
+[ext_resource type="Texture2D" uid="uid://cic15ehoy7djv" path="res://Assets/image - 2025-05-12T185435.987.png" id="8_5it3o"]
 
 [sub_resource type="Animation" id="Animation_bub1d"]
 length = 0.001
@@ -70,6 +71,7 @@ color = Color(0.235893, 0.234733, 0.441374, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="resume" type="Button" parent="pausebackground"]
+z_index = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.0808336
@@ -79,7 +81,7 @@ anchor_bottom = 2.62312
 offset_left = 11.5774
 offset_top = 4.66007
 offset_right = 81.5774
-offset_bottom = 35.6601
+offset_bottom = 35.6605
 grow_horizontal = 2
 scale = Vector2(0.0526089, 0.0526089)
 icon = ExtResource("2_umbad")
@@ -87,6 +89,7 @@ flat = true
 script = ExtResource("2_id5y3")
 
 [node name="restart" type="Button" parent="pausebackground"]
+z_index = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.114731
@@ -95,8 +98,8 @@ anchor_right = 9.53527
 anchor_bottom = 2.61224
 offset_left = 13.0376
 offset_top = 16.3282
-offset_right = 83.0376
-offset_bottom = 47.3282
+offset_right = 83.0382
+offset_bottom = 47.3284
 scale = Vector2(0.0521613, 0.0521613)
 icon = ExtResource("3_bub1d")
 flat = true
@@ -104,6 +107,7 @@ script = ExtResource("4_u0mjo")
 metadata/_edit_use_anchors_ = true
 
 [node name="quit" type="Button" parent="pausebackground"]
+z_index = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.117339
@@ -111,7 +115,7 @@ anchor_right = 9.53266
 anchor_bottom = 2.625
 offset_left = 13.0376
 offset_top = 27.2136
-offset_right = 83.0376
+offset_right = 83.0381
 offset_bottom = 58.2136
 scale = Vector2(0.0520347, 0.0520347)
 icon = ExtResource("3_spkq2")
@@ -119,10 +123,21 @@ flat = true
 script = ExtResource("5_spkq2")
 metadata/_edit_use_anchors_ = true
 
+[node name="Sprite2D" type="Sprite2D" parent="pausebackground"]
+position = Vector2(20.0257, 22.0073)
+scale = Vector2(0.104301, 0.114621)
+texture = ExtResource("8_5it3o")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_umbad")
 }
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 392.0
+offset_top = 144.0
+offset_right = 432.0
+offset_bottom = 184.0
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
