@@ -7,13 +7,13 @@
 [ext_resource type="PackedScene" uid="uid://xvp1dosioeou" path="res://Scenes/button.tscn" id="5_ec7up"]
 [ext_resource type="PackedScene" uid="uid://dmjn3upniv24g" path="res://Scenes/Elevator.tscn" id="6_7psd8"]
 [ext_resource type="PackedScene" uid="uid://cp7uqkbbb6s1f" path="res://Scenes/scenesLevels/ferrus.tscn" id="6_tcm7w"]
-[ext_resource type="Texture2D" uid="uid://0aryysln0vla" path="res://Assets/images/miscellaneous/icon.svg" id="8_7psd8"]
 [ext_resource type="Script" path="res://Scenes/buttonrotate1.gd" id="8_ohi87"]
 [ext_resource type="Script" path="res://Scripts/rightrotatecannon.gd" id="9_vneb8"]
 [ext_resource type="Script" path="res://Scripts/buttonsh.gd" id="10_ol81e"]
 [ext_resource type="PackedScene" uid="uid://dgfofnliywbml" path="res://Scenes/enviroment_stuff/cannon.tscn" id="11_15nga"]
 [ext_resource type="PackedScene" uid="uid://c4mf8fnfqrx3u" path="res://Scenes/slidingdoor.tscn" id="12_emfoc"]
 [ext_resource type="PackedScene" uid="uid://cvaak1bmyagqp" path="res://Scenes/enviroment_stuff/shootbutton.tscn" id="12_hxhqw"]
+[ext_resource type="Texture2D" uid="uid://diuxmf3tlehy2" path="res://Assets/image - 2025-05-12T183846.477.png" id="13_hxhqw"]
 [ext_resource type="PackedScene" uid="uid://ct2lgp0iiroy7" path="res://Scenes/selfdestructplatform.tscn" id="14_luib5"]
 [ext_resource type="Script" uid="uid://cqnt4k1gwlia6" path="res://Scripts/lever.gd" id="14_pohtw"]
 [ext_resource type="Script" uid="uid://bp5g18teqtn1j" path="res://Scripts/block.gd" id="16_2ugyl"]
@@ -114,8 +114,8 @@ position = Vector2(20, 7)
 
 [node name="Sprite2D" type="Sprite2D" parent="hiddenblock1"]
 position = Vector2(-37, 60)
-scale = Vector2(0.144073, 0.144073)
-texture = ExtResource("8_7psd8")
+scale = Vector2(0.578298, 0.578298)
+texture = ExtResource("13_hxhqw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hiddenblock1"]
 position = Vector2(-37, 60)
@@ -127,8 +127,8 @@ position = Vector2(-27, -13)
 
 [node name="Sprite2D" type="Sprite2D" parent="hiddenblock1/hiddenblock1"]
 position = Vector2(-37, 60)
-scale = Vector2(0.144073, 0.144073)
-texture = ExtResource("8_7psd8")
+scale = Vector2(0.556955, 0.556955)
+texture = ExtResource("13_hxhqw")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="hiddenblock1/hiddenblock1"]
 position = Vector2(-63, 47)
@@ -140,8 +140,8 @@ position = Vector2(-53, -26)
 
 [node name="Sprite2D" type="Sprite2D" parent="hiddenblock1/hiddenblock2"]
 position = Vector2(-37, 60)
-scale = Vector2(0.144073, 0.144073)
-texture = ExtResource("8_7psd8")
+scale = Vector2(0.537284, 0.537284)
+texture = ExtResource("13_hxhqw")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="hiddenblock1/hiddenblock2"]
 position = Vector2(-11, 73)
