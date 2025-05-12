@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ct2lgp0iiroy7"]
 
-[ext_resource type="Texture2D" uid="uid://0aryysln0vla" path="res://Assets/images/miscellaneous/icon.svg" id="1_5bbce"]
-[ext_resource type="Script" uid="uid://d8hfmb1xxbdx" path="res://Scenes/crumblingplatform.gd" id="1_8k3ql"]
+[ext_resource type="Script" path="res://Scenes/crumblingplatform.gd" id="1_8k3ql"]
+[ext_resource type="Texture2D" uid="uid://vmx1ty72jiay" path="res://Assets/image - 2025-05-12T183604.220.png" id="2_8k3ql"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8k3ql"]
 size = Vector2(128, 128)
@@ -15,7 +15,8 @@ size = Vector2(128, 20)
 script = ExtResource("1_8k3ql")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-texture = ExtResource("1_5bbce")
+scale = Vector2(3.99412, 3.99412)
+texture = ExtResource("2_8k3ql")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("RectangleShape2D_8k3ql")
