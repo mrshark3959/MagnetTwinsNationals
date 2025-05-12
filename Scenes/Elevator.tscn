@@ -662,7 +662,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3d0k1"]
-size = Vector2(4.90234, 44.9317)
+size = Vector2(23.5313, 44.9317)
 
 [node name="Elevator" type="Node2D"]
 
@@ -689,7 +689,7 @@ sprite_frames = SubResource("SpriteFrames_moiph")
 animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Nextlevel2"]
-position = Vector2(0.214722, 10.4542)
+position = Vector2(-0.275513, 10.4542)
 shape = SubResource("RectangleShape2D_3d0k1")
 
 [node name="Timer" type="Timer" parent="Nextlevel2"]
