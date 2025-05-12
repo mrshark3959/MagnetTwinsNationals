@@ -18,3 +18,4 @@ func shoot():
 	instance.spawnrot = angle
 	
 	main.add_child.call_deferred(instance)
+	$"../AudioStreamPlayer".play()
