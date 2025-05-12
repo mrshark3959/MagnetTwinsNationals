@@ -1,9 +1,16 @@
 extends Node2D
 
-
+var t = 0 
 func _on_leftactivation_body_entered(body: RigidBody2D) -> void:
 	if body.name  == "handle":
-		$"../slidingdoor2".get_node("AnimatableBody2D").open()
+		
+		if t == 0:
+			$"../slidingdoor2".get_node("AnimatableBody2D").open()
+			t = t + 1 
+			print(t)
+		else:
+			print("door already opened")
+			$"../slidingdoor2".get_node("AnimatableBody2D").visible = false
 		$"../crumblingplatform2".visible = true
 		$"../crumblingplatform".visible = true
 		$"../crumblingplatform3".visible = true
@@ -24,7 +31,6 @@ func _on_leftactivation_body_entered(body: RigidBody2D) -> void:
 	
 func _on_rightactivation_body_entered(body: RigidBody2D) -> void:
 	if body.name  == "handle":
-		$"../slidingdoor2".get_node("AnimatableBody2D").close()
 		$"../crumblingplatform2".get_node("StaticBody2D").reset()
 		$"../crumblingplatform3".get_node("StaticBody2D").reset()
 		$"../crumblingplatform4".get_node("StaticBody2D").reset()
