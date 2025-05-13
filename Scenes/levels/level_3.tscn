@@ -55,6 +55,7 @@ tile_map_data = PackedByteArray("AAD2//7/AQABAAAAAAD2////AQAAAAEAAAD2/wAAAQAAAAE
 
 [node name="Ferrus" parent="." instance=ExtResource("5_tm25r")]
 position = Vector2(-107, -32)
+collision_mask = 11
 
 [node name="Block" parent="." instance=ExtResource("6_1smvs")]
 position = Vector2(-53, -28)

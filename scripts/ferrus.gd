@@ -6,7 +6,7 @@ var is_color_red = true
 var input_direction
 var frozen = false
 
-@onready var pin_joint = $"PinJoint2D"
+var pin_joints
 
 func _ready() -> void:
 	pass
@@ -31,6 +31,10 @@ func get_input():
 			get_node("Texture/AnimationPlayer").queue("to_red")
 			get_node("Texture/AnimationPlayer").queue("red_idle")
 			print("turning red")
+			
+	var tn = $"TriggerPositive".pin_joint
+	var tp = $"TriggerNegitive".pin_joint
+	pin_joints = tn + tp;
 
 func _physics_process(_delta):
 	if frozen:
@@ -39,27 +43,21 @@ func _physics_process(_delta):
 
 	var fakearea = ShapeCast2D.new()
 	get_input()
-
-	if pin_joint.node_b != NodePath():
-		if get_node(pin_joint.node_b) is RigidBody2D:
-			var target_node = get_node(pin_joint.node_b)
-			var collision_shape = target_node.get_node("CollisionShape2D")
-
-			fakearea.shape = collision_shape.shape
-			fakearea.transform = collision_shape.transform
-			fakearea.position = collision_shape.position
-			fakearea.target_position = (velocity * 160 * _delta)
-			fakearea.add_exception(target_node)
-
-			target_node.add_child(fakearea)
-			fakearea.force_shapecast_update()
-
-			if not fakearea.is_colliding():
-				move_and_collide(velocity * 160 * _delta)
-
-			target_node.remove_child(fakearea)
+	if pin_joints != []:
+		#print(pin_joints)
+		for pin_joint in pin_joints:
+				#get_node("freezeit/CollisionShape2D").disabled = true
+				
+				if get_node(pin_joint.node_b) is RigidBody2D:
+					var target_node = get_node(pin_joint.node_b)
+					var collision_shape = target_node.get_node("CollisionShape2D")
+					fakearea = target_node.move_and_collide(velocity * 160 * _delta, true)
+					if fakearea != null:
+						break
 	else:
 		move_and_collide(velocity * 160 * _delta)
+	if fakearea == null:
+		move_and_collide(velocity * 160 * _delta, false, 1)
 
 func freeze():
 	frozen = true
