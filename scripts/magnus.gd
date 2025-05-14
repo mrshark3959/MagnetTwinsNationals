@@ -54,7 +54,7 @@ func _physics_process(delta: float) -> void:
 	
 	for i in get_slide_collision_count():
 		var c = get_slide_collision(i)
-		if c.get_collider() is RigidBody2D:
+		if c.get_collider() is RigidBody2D and not c.get_collider().is_in_group("partsofbalance"):
 			var push_force = (PUSH_FORCE*velocity.length() / SPEED) + MIN_PUSH_FORCE
 			c.get_collider().apply_central_impulse(-c.get_normal()*push_force)
 var stored_velocity = Vector2.ZERO

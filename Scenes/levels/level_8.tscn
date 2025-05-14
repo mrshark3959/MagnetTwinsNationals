@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://phfxu6m8dnu3"]
+[gd_scene load_steps=26 format=4 uid="uid://phfxu6m8dnu3"]
 
 [ext_resource type="PackedScene" uid="uid://bcifdcq3e47yi" path="res://Scenes/scenesLevels/tile_map_base.tscn" id="1_8x81d"]
 [ext_resource type="Texture2D" uid="uid://do16m4ver0yfh" path="res://Assets/images/miscellaneous/image (36).png" id="1_fef22"]
@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://c3sdq3rg2kfg5" path="res://Assets/images/miscellaneous/image (50).png" id="6_8ntes"]
 [ext_resource type="Texture2D" uid="uid://br18edtx7a7jv" path="res://Assets/images/miscellaneous/image (68).png" id="6_65fux"]
 [ext_resource type="Texture2D" uid="uid://crjgllpsfq1eg" path="res://Assets/images/miscellaneous/image (67).png" id="6_oe3bd"]
-[ext_resource type="Script" uid="uid://c1psbhr4x2q3l" path="res://Scenes/levels/rope1.gd" id="7_3wrd1"]
 [ext_resource type="Texture2D" uid="uid://cks3at8y6isn5" path="res://Assets/images/miscellaneous/image (48).png" id="8_cpbsm"]
 [ext_resource type="PackedScene" uid="uid://bw36xaya82uc2" path="res://Scenes/enviroment_stuff/circleblock.tscn" id="8_k027y"]
 [ext_resource type="Script" uid="uid://bp5g18teqtn1j" path="res://Scripts/block.gd" id="8_x6t1r"]
@@ -37,9 +36,8 @@ texture = ExtResource("2_c0u7e")
 sources/0 = SubResource("TileSetAtlasSource_5show")
 sources/1 = SubResource("TileSetAtlasSource_osag8")
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_vu3hg"]
-a = Vector2(-1.14484, -114.306)
-b = Vector2(-1.12056, 136.609)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a22qi"]
+size = Vector2(3.44871, 234.919)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ufcxt"]
 a = Vector2(-117, -116)
@@ -57,9 +55,6 @@ size = Vector2(38, 10)
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_2nrn4"]
 a = Vector2(14, 67)
 b = Vector2(14, 70)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ygrtk"]
-size = Vector2(2, 13.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cl5ep"]
 size = Vector2(29.1711, 9.27193)
@@ -102,9 +97,9 @@ scale = Vector2(1.14545, -0.784202)
 texture = ExtResource("6_oe3bd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="baseofbalance"]
-position = Vector2(593, 277)
+position = Vector2(577.659, 296.249)
 scale = Vector2(13.4, 1)
-shape = SubResource("SegmentShape2D_vu3hg")
+shape = SubResource("RectangleShape2D_a22qi")
 
 [node name="anchor" type="StaticBody2D" parent="."]
 position = Vector2(194, 26)
@@ -140,7 +135,7 @@ position = Vector2(-204.5, -93.14)
 scale = Vector2(0.76, 0.76)
 shape = SubResource("RectangleShape2D_8ot0n")
 
-[node name="rightbalanceplatform2" type="RigidBody2D" parent="topofbalance"]
+[node name="rightbalanceplatform2" type="RigidBody2D" parent="topofbalance" groups=["partsofbalance"]]
 position = Vector2(-161, -68)
 collision_layer = 513
 collision_mask = 513
@@ -154,7 +149,7 @@ position = Vector2(-6, 70)
 scale = Vector2(0.544327, 0.224988)
 texture = ExtResource("6_8ntes")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="topofbalance/rightbalanceplatform2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="topofbalance/rightbalanceplatform2" groups=["partsofbalance"]]
 position = Vector2(-6, 77)
 scale = Vector2(28.2842, 393.191)
 shape = SubResource("RectangleShape2D_1w08p")
@@ -172,44 +167,21 @@ position = Vector2(0, -1)
 position = Vector2(-6, 71)
 shape = SubResource("RectangleShape2D_clsog")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="topofbalance/rightbalanceplatform2"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="topofbalance/rightbalanceplatform2" groups=["partsofbalance"]]
 shape = SubResource("SegmentShape2D_2nrn4")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="topofbalance/rightbalanceplatform2"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="topofbalance/rightbalanceplatform2" groups=["partsofbalance"]]
 position = Vector2(-40, 0)
 shape = SubResource("SegmentShape2D_2nrn4")
 
-[node name="rope" type="RigidBody2D" parent="topofbalance/rightbalanceplatform2"]
-position = Vector2(-599, 197)
-collision_layer = 32768
-collision_mask = 32768
-mass = 0.001
-script = ExtResource("7_3wrd1")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="topofbalance/rightbalanceplatform2/rope"]
-position = Vector2(593, -152.375)
-shape = SubResource("RectangleShape2D_ygrtk")
-
-[node name="PinJoint2D" type="PinJoint2D" parent="topofbalance/rightbalanceplatform2/rope"]
-position = Vector2(592, -217.5)
-scale = Vector2(0.120234, 0.120234)
-node_a = NodePath("../..")
-node_b = NodePath("..")
-bias = 0.101
-softness = 0.02
-
-[node name="Sprite2D" type="Sprite2D" parent="topofbalance/rightbalanceplatform2/rope"]
+[node name="Sprite2D2" type="Sprite2D" parent="topofbalance/rightbalanceplatform2"]
 texture_filter = 1
-position = Vector2(592.92, -174.855)
-scale = Vector2(-0.117678, -0.491665)
+position = Vector2(-6.08002, 22.145)
+rotation = 3.14159
+scale = Vector2(0.117678, 0.491665)
 texture = ExtResource("8_cpbsm")
 
-[node name="PinJoint2D2" type="PinJoint2D" parent="topofbalance/rightbalanceplatform2/rope"]
-position = Vector2(593, -135)
-node_a = NodePath("../..")
-node_b = NodePath("..")
-
-[node name="leftbalanceplatform" type="RigidBody2D" parent="topofbalance"]
+[node name="leftbalanceplatform" type="RigidBody2D" parent="topofbalance" groups=["partsofbalance"]]
 position = Vector2(-236, -68)
 collision_layer = 513
 collision_mask = 513
@@ -223,7 +195,7 @@ position = Vector2(-6, 70)
 scale = Vector2(0.553982, 0.228979)
 texture = ExtResource("6_8ntes")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="topofbalance/leftbalanceplatform"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="topofbalance/leftbalanceplatform" groups=["partsofbalance"]]
 position = Vector2(-6, 77)
 scale = Vector2(28.2842, 393.191)
 shape = SubResource("RectangleShape2D_1w08p")
@@ -241,43 +213,20 @@ position = Vector2(0, -1)
 position = Vector2(-6, 71)
 shape = SubResource("RectangleShape2D_clsog")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="topofbalance/leftbalanceplatform"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="topofbalance/leftbalanceplatform" groups=["partsofbalance"]]
 position = Vector2(0, 1)
 shape = SubResource("SegmentShape2D_2nrn4")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="topofbalance/leftbalanceplatform"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="topofbalance/leftbalanceplatform" groups=["partsofbalance"]]
 position = Vector2(-40, 1)
 shape = SubResource("SegmentShape2D_2nrn4")
 
-[node name="rope" type="RigidBody2D" parent="topofbalance/leftbalanceplatform"]
-position = Vector2(-599, 197)
-collision_layer = 32768
-collision_mask = 32768
-mass = 0.001
-script = ExtResource("7_3wrd1")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="topofbalance/leftbalanceplatform/rope"]
-position = Vector2(593, -152.375)
-shape = SubResource("RectangleShape2D_ygrtk")
-
-[node name="PinJoint2D" type="PinJoint2D" parent="topofbalance/leftbalanceplatform/rope"]
-position = Vector2(592, -217.5)
-scale = Vector2(0.120234, 0.120234)
-node_a = NodePath("../..")
-node_b = NodePath("..")
-bias = 0.101
-softness = 0.02
-
-[node name="Sprite2D" type="Sprite2D" parent="topofbalance/leftbalanceplatform/rope"]
+[node name="Sprite2D3" type="Sprite2D" parent="topofbalance/leftbalanceplatform"]
 texture_filter = 1
-position = Vector2(592.92, -174.855)
-scale = Vector2(-0.117678, -0.491665)
+position = Vector2(-6.08002, 22.145)
+rotation = -3.14159
+scale = Vector2(0.117678, 0.491665)
 texture = ExtResource("8_cpbsm")
-
-[node name="PinJoint2D2" type="PinJoint2D" parent="topofbalance/leftbalanceplatform/rope"]
-position = Vector2(593, -135)
-node_a = NodePath("../..")
-node_b = NodePath("..")
 
 [node name="circleblock" parent="." instance=ExtResource("8_k027y")]
 position = Vector2(154, -63)
@@ -286,6 +235,7 @@ position = Vector2(154, -63)
 position = Vector2(-141, -72)
 collision_layer = 5
 collision_mask = 3
+mass = 5.0
 continuous_cd = 1
 contact_monitor = true
 max_contacts_reported = 4
