@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://c28vj2k2dsc82"]
+
+[ext_resource type="Script" uid="uid://1n2syggxvxfp" path="res://Scenes/logicgatepuzzle.gd" id="1_3oeg2"]
+[ext_resource type="Texture2D" uid="uid://bjivt0esquv4c" path="res://Assets/images/miscellaneous/PowerSourceOff.png" id="1_m1lv3"]
+[ext_resource type="PackedScene" uid="uid://xvp1dosioeou" path="res://Scenes/button.tscn" id="3_62hv5"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_3oeg2")
+
+[node name="lower" type="Sprite2D" parent="."]
+position = Vector2(308, 0)
+scale = Vector2(1.4375, 1.4375)
+texture = ExtResource("1_m1lv3")
+
+[node name="buttonA" parent="." instance=ExtResource("3_62hv5")]
+position = Vector2(-175, -4)
+
+[node name="buttonB" parent="." instance=ExtResource("3_62hv5")]
+position = Vector2(-121, -4)
+
+[node name="buttonC" parent="." instance=ExtResource("3_62hv5")]
+position = Vector2(-72, -4)
+
+[node name="buttonD" parent="." instance=ExtResource("3_62hv5")]
+position = Vector2(-28, -4)
+
+[node name="buttonE" parent="." instance=ExtResource("3_62hv5")]
+position = Vector2(24, -4)
+
+[node name="buttonF" parent="." instance=ExtResource("3_62hv5")]
+position = Vector2(80, -4)
+
+[node name="buttonG" parent="." instance=ExtResource("3_62hv5")]
+position = Vector2(128, -4)
+
+[node name="buttonH" parent="." instance=ExtResource("3_62hv5")]
+position = Vector2(172, -4)
+
+[connection signal="button_pressed" from="buttonA" to="." method="_on_button_a_button_pressed"]
+[connection signal="button_pressed" from="buttonB" to="." method="_on_button_b_button_pressed"]
+[connection signal="button_pressed" from="buttonC" to="." method="_on_button_c_button_pressed"]
+[connection signal="button_pressed" from="buttonD" to="." method="_on_button_d_button_pressed"]
+[connection signal="button_pressed" from="buttonE" to="." method="_on_button_e_button_pressed"]
+[connection signal="button_pressed" from="buttonF" to="." method="_on_button_f_button_pressed"]
+[connection signal="button_pressed" from="buttonG" to="." method="_on_button_g_button_pressed"]
+[connection signal="button_pressed" from="buttonH" to="." method="_on_button_h_button_pressed"]
