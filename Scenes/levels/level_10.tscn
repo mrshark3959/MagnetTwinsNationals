@@ -113,12 +113,12 @@ visible = false
 position = Vector2(20, 7)
 
 [node name="Sprite2D" type="Sprite2D" parent="hiddenblock1"]
-position = Vector2(-37, 60)
+position = Vector2(-43.5906, 59.4094)
 scale = Vector2(0.578298, 0.578298)
 texture = ExtResource("13_hxhqw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hiddenblock1"]
-position = Vector2(-37, 60)
+position = Vector2(-43.5906, 59.4094)
 shape = SubResource("RectangleShape2D_emfoc")
 disabled = true
 
@@ -131,7 +131,7 @@ scale = Vector2(0.556955, 0.556955)
 texture = ExtResource("13_hxhqw")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="hiddenblock1/hiddenblock1"]
-position = Vector2(-63, 47)
+position = Vector2(-58, 47)
 shape = SubResource("RectangleShape2D_emfoc")
 disabled = true
 
@@ -139,7 +139,7 @@ disabled = true
 position = Vector2(-53, -26)
 
 [node name="Sprite2D" type="Sprite2D" parent="hiddenblock1/hiddenblock2"]
-position = Vector2(-37, 60)
+position = Vector2(-32, 60)
 scale = Vector2(0.537284, 0.537284)
 texture = ExtResource("13_hxhqw")
 
