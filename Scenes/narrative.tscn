@@ -2,7 +2,7 @@
 
 [ext_resource type="Shader" uid="uid://b3vbe5hmus8n0" path="res://Scenes/scroll.gdshader" id="1_6hb0f"]
 [ext_resource type="Texture2D" uid="uid://88v2edklehx4" path="res://Assets/images/sprites (characters)/Ferrus/Red/Farus Idle Red.png" id="1_fs8pe"]
-[ext_resource type="VideoStream" path="res://Assets/output2.ogv" id="1_fsr6b"]
+[ext_resource type="VideoStream" uid="uid://b2elwvsrreuet" path="res://Assets/output2.ogv" id="1_fsr6b"]
 [ext_resource type="Texture2D" uid="uid://bjgxb0leo4m66" path="res://Assets/images/background images/background_effect (1).png" id="2_7jyqe"]
 [ext_resource type="Texture2D" uid="uid://ds563nm3woodf" path="res://Assets/images/sprites (characters)/Magnus/Idles/Magnus (idles) (blue).png" id="2_dq6kf"]
 [ext_resource type="Script" uid="uid://bmcbkscufewuc" path="res://Scripts/video_stream_player.gd" id="2_fsr6b"]
