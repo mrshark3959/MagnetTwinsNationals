@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://phfxu6m8dnu3"]
+[gd_scene load_steps=28 format=4 uid="uid://phfxu6m8dnu3"]
 
 [ext_resource type="PackedScene" uid="uid://bcifdcq3e47yi" path="res://Scenes/scenesLevels/tile_map_base.tscn" id="1_8x81d"]
 [ext_resource type="Texture2D" uid="uid://do16m4ver0yfh" path="res://Assets/images/miscellaneous/image (36).png" id="1_fef22"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://jw8a5oi3c8xj" path="res://Assets/images/miscellaneous/image (35).png" id="2_c0u7e"]
 [ext_resource type="PackedScene" uid="uid://dmjn3upniv24g" path="res://Scenes/Elevator.tscn" id="4_jspcl"]
 [ext_resource type="PackedScene" uid="uid://cp7uqkbbb6s1f" path="res://Scenes/scenesLevels/ferrus.tscn" id="4_n0n33"]
+[ext_resource type="Texture2D" uid="uid://b4nxa1ggcr7sf" path="res://Assets/image - 2025-05-16T162941.189.png" id="8_a22qi"]
 [ext_resource type="Script" uid="uid://cjy0nx27kefv0" path="res://Scripts/rotate_2.gd" id="9_klued"]
 [ext_resource type="Script" uid="uid://bomdds6a452sh" path="res://Scripts/rotate_3.gd" id="9_qipqe"]
 [ext_resource type="Texture2D" uid="uid://dtan0kje752dc" path="res://Assets/images/miscellaneous/MetalPlatform.png" id="9_vmrbc"]
@@ -38,12 +39,8 @@ sources/1 = SubResource("TileSetAtlasSource_osag8")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qipqe"]
 size = Vector2(61, 7)
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_4hbb3"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_klued"]
 size = Vector2(69, 4)
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_qipqe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a22qi"]
 size = Vector2(15.3333, 5.74502)
@@ -91,15 +88,13 @@ position = Vector2(-375, 2)
 scale = Vector2(0.639091, 0.639091)
 
 [node name="Magnus" parent="." instance=ExtResource("2_3ny4d")]
-position = Vector2(-126, -13)
+position = Vector2(163, 81)
 
 [node name="Ferrus" parent="." instance=ExtResource("4_n0n33")]
 position = Vector2(-155, 95)
 
 [node name="rotate2" type="StaticBody2D" parent="."]
 position = Vector2(-66, -10)
-collision_layer = 9
-collision_mask = 9
 script = ExtResource("9_klued")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="rotate2"]
@@ -108,13 +103,11 @@ shape = SubResource("RectangleShape2D_qipqe")
 
 [node name="Sprite2D" type="Sprite2D" parent="rotate2"]
 position = Vector2(-0.83577, -0.630733)
-scale = Vector2(-60.3285, -6.73853)
-texture = SubResource("PlaceholderTexture2D_4hbb3")
+scale = Vector2(-0.479432, -0.829676)
+texture = ExtResource("8_a22qi")
 
 [node name="rotate3" type="StaticBody2D" parent="."]
 position = Vector2(5, -7)
-collision_layer = 9
-collision_mask = 9
 script = ExtResource("9_qipqe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="rotate3"]
@@ -122,9 +115,9 @@ position = Vector2(0.499996, 0)
 shape = SubResource("RectangleShape2D_klued")
 
 [node name="Sprite2D" type="Sprite2D" parent="rotate3"]
-position = Vector2(0.499997, 0)
-scale = Vector2(69, 4)
-texture = SubResource("PlaceholderTexture2D_qipqe")
+position = Vector2(0.499997, 3.57628e-07)
+scale = Vector2(0.538505, 0.5)
+texture = ExtResource("8_a22qi")
 
 [node name="level8squareblock5" type="RigidBody2D" parent="."]
 position = Vector2(-151, -70)
