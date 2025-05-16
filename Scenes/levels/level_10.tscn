@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://c46n2rayavl07"]
+[gd_scene load_steps=34 format=4 uid="uid://c46n2rayavl07"]
 
 [ext_resource type="PackedScene" uid="uid://bcifdcq3e47yi" path="res://Scenes/scenesLevels/tile_map_base.tscn" id="1_78qix"]
 [ext_resource type="PackedScene" uid="uid://yxadoe3i8u6k" path="res://Scenes/scenesLevels/magnus.tscn" id="2_uodn6"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://ckhqgoedu2bhm" path="res://Assets/image - 2025-05-12T171915.101.png" id="17_vneb8"]
 [ext_resource type="Texture2D" uid="uid://yoadym4o8nch" path="res://Assets/images/image (100).png" id="19_nvft5"]
 [ext_resource type="PackedScene" uid="uid://7d44781nab1c" path="res://Scenes/enviroment_stuff/releasebutton.tscn" id="20_nvft5"]
+[ext_resource type="FontFile" uid="uid://bl8cj75xnw7n7" path="res://Assets/fonts/FFFFORWA.TTF" id="23_hxhqw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_px4fi"]
 texture = ExtResource("4_y3y1y")
@@ -297,6 +298,18 @@ shape = SubResource("RectangleShape2D_nvft5")
 [node name="releasebutton" parent="." instance=ExtResource("20_nvft5")]
 position = Vector2(136.689, 9.74916)
 scale = Vector2(0.0867297, 0.0857413)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -34.0
+offset_top = -84.0
+offset_right = 122.0
+offset_bottom = -37.0
+scale = Vector2(0.331315, 0.331315)
+theme_override_fonts/font = ExtResource("23_hxhqw")
+text = "You only
+get one shot"
+horizontal_alignment = 1
+uppercase = true
 
 [connection signal="ready" from="lever" to="lever" method="_on_ready"]
 [connection signal="body_entered" from="lever/leftactivation" to="lever" method="_on_leftactivation_body_entered"]
