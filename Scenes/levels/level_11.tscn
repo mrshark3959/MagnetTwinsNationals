@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://b3rehhloj2bi7"]
+[gd_scene load_steps=15 format=4 uid="uid://b3rehhloj2bi7"]
 
 [ext_resource type="PackedScene" uid="uid://bcifdcq3e47yi" path="res://Scenes/scenesLevels/tile_map_base.tscn" id="1_1w73f"]
 [ext_resource type="Texture2D" uid="uid://do16m4ver0yfh" path="res://Assets/images/miscellaneous/image (36).png" id="1_b3614"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://yxadoe3i8u6k" path="res://Scenes/scenesLevels/magnus.tscn" id="4_vngim"]
 [ext_resource type="PackedScene" uid="uid://cp7uqkbbb6s1f" path="res://Scenes/scenesLevels/ferrus.tscn" id="5_o0hyj"]
 [ext_resource type="Texture2D" uid="uid://drb27qi13xigu" path="res://Assets/images/miscellaneous/PowerSourceOn.png" id="7_1m86d"]
+[ext_resource type="Script" uid="uid://rs78tow7fn4q" path="res://Scenes/levels/elevator_detector.gd" id="7_dampq"]
 [ext_resource type="PackedScene" uid="uid://bpfaxyyyooecd" path="res://Scenes/lightsoutpuzzle.tscn" id="7_vngim"]
 [ext_resource type="Texture2D" uid="uid://bjivt0esquv4c" path="res://Assets/images/miscellaneous/PowerSourceOff.png" id="8_igdwj"]
 [ext_resource type="PackedScene" uid="uid://xvp1dosioeou" path="res://Scenes/button.tscn" id="10_igdwj"]
@@ -27,6 +28,9 @@ texture_region_size = Vector2i(17, 17)
 [sub_resource type="TileSet" id="TileSet_cr72h"]
 sources/1 = SubResource("TileSetAtlasSource_vngim")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_igdwj"]
+radius = 17.2627
+
 [node name="Node2D" type="Node2D"]
 
 [node name="background" type="TileMapLayer" parent="."]
@@ -45,10 +49,10 @@ position = Vector2(-88, -115)
 position = Vector2(-153, -163)
 
 [node name="Ferrus" parent="." instance=ExtResource("5_o0hyj")]
-position = Vector2(-284, -163)
+position = Vector2(232, -182)
 
 [node name="Magnus" parent="." instance=ExtResource("4_vngim")]
-position = Vector2(-308, -151)
+position = Vector2(208, -170)
 
 [node name="Camera2D" type="Camera2D" parent="Magnus"]
 zoom = Vector2(2, 2)
@@ -56,6 +60,12 @@ limit_left = -380
 limit_top = -380
 limit_right = 380
 limit_bottom = 100
+
+[node name="elevator detector" type="Area2D" parent="Magnus"]
+script = ExtResource("7_dampq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Magnus/elevator detector"]
+shape = SubResource("CircleShape2D_igdwj")
 
 [node name="upper" type="Sprite2D" parent="."]
 position = Vector2(226, -269)
@@ -72,3 +82,5 @@ position = Vector2(-116, -314)
 
 [node name="button" parent="." instance=ExtResource("10_igdwj")]
 position = Vector2(170, -218)
+
+[connection signal="area_entered" from="Magnus/elevator detector" to="Magnus/elevator detector" method="_on_area_entered"]
