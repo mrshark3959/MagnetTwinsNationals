@@ -4,7 +4,7 @@ extends Control
 
 @export var level_name: String = "Level 11"
 @export var tip_text: String = "Fun Fact: turning on your light creates a small magnetic field."
-@export var next_scene: String = 'res://Scenes/levels/level_10.tscn'
+@export var next_scene: String = 'res://Scenes/levels/level_11.tscn'
 
 # UI Elements
 @onready var level_label = $levellabel

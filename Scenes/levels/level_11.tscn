@@ -49,10 +49,10 @@ position = Vector2(-88, -115)
 position = Vector2(-153, -163)
 
 [node name="Ferrus" parent="." instance=ExtResource("5_o0hyj")]
-position = Vector2(232, -182)
+position = Vector2(-298, -164)
 
 [node name="Magnus" parent="." instance=ExtResource("4_vngim")]
-position = Vector2(208, -170)
+position = Vector2(-322, -152)
 
 [node name="Camera2D" type="Camera2D" parent="Magnus"]
 zoom = Vector2(2, 2)
