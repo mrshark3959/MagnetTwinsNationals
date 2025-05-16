@@ -10,7 +10,7 @@
 [ext_resource type="FontFile" uid="uid://bl8cj75xnw7n7" path="res://Assets/fonts/FFFFORWA.TTF" id="3_wcupf"]
 [ext_resource type="Script" uid="uid://5nw0ic3xkwj8" path="res://Scenes/button.gd" id="4_f2e82"]
 [ext_resource type="AudioStream" uid="uid://c6uwx8dqju3vl" path="res://Assets/audios/342200__christopherderp__videogame-menu-button-click.wav" id="8_3flus"]
-[ext_resource type="Texture2D" uid="uid://biijnydb27prg" path="res://Assets/images/miscellaneous/image (83).png" id="8_hgmg3"]
+[ext_resource type="Texture2D" uid="uid://4g6hul7qvuon" path="res://Assets/image - 2025-05-16T163309.734.png" id="10_fsr6b"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hkcsk"]
 shader = ExtResource("1_6hb0f")
@@ -123,9 +123,10 @@ script = ExtResource("4_f2e82")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Button"]
 position = Vector2(25.6843, 10.2737)
-scale = Vector2(0.217477, 0.217477)
-texture = ExtResource("8_hgmg3")
+scale = Vector2(0.238143, 0.238143)
+texture = ExtResource("10_fsr6b")
 vframes = 2
+frame = 1
 
 [node name="click" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_3flus")
