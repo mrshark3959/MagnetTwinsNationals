@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://phfxu6m8dnu3"]
+[gd_scene load_steps=29 format=4 uid="uid://phfxu6m8dnu3"]
 
 [ext_resource type="PackedScene" uid="uid://bcifdcq3e47yi" path="res://Scenes/scenesLevels/tile_map_base.tscn" id="1_8x81d"]
 [ext_resource type="Texture2D" uid="uid://do16m4ver0yfh" path="res://Assets/images/miscellaneous/image (36).png" id="1_fef22"]
@@ -60,6 +60,18 @@ size = Vector2(8.33333, 8)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eguss"]
 size = Vector2(8, 8)
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_a22qi"]
+a = Vector2(42, -49)
+b = Vector2(43, 29)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_q607w"]
+a = Vector2(-117, 29)
+b = Vector2(53, 29)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_5show"]
+a = Vector2(-116, 15)
+b = Vector2(-116, 30)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="background" type="TileMapLayer" parent="."]
@@ -72,20 +84,22 @@ scale = Vector2(1, 1.24)
 zoom = Vector2(3.01, 2.8)
 
 [node name="TileMapLayer" parent="." instance=ExtResource("1_8x81d")]
-tile_map_data = PackedByteArray("AAD0/wYAAQABAAMAAAD1/wYAAQABAAAAAAD2/wYAAQABAAAAAAD3/wYAAQABAAAAAAD4/wYAAQABAAAAAAAJAAYAAQABAAAAAAAKAAYAAQABAAAAAAALAAYAAQACAAIAAAALAAUAAQADAAAAAAALAAQAAQADAAAAAAALAAMAAQADAAAAAAALAAIAAQADAAAAAAALAAEAAQADAAAAAAALAAAAAQADAAAAAAALAP//AQADAAAAAAALAP7/AQADAAAAAAALAP3/AQADAAAAAAALAPz/AQADAAAAAAALAPv/AQADAAAAAAALAPr/AQADAAAAAAALAPn/AQADAAAAAAD0//r/AQABAAEAAAD0//v/AQABAAEAAAD0//z/AQABAAEAAAD0//3/AQABAAEAAAD0//7/AQABAAEAAAD0////AQABAAEAAAD0/wEAAQABAAEAAAD0/wAAAQABAAEAAAD0/wIAAQABAAEAAAD0/wMAAQABAAEAAAD0/wQAAQABAAEAAAD0/wUAAQABAAEAAAD1/wAAAQABAAAAAAD2/wAAAQABAAAAAAD3/wAAAQABAAAAAAD4/wAAAQABAAAAAAD1//z/AQABAAAAAAD2//z/AQABAAAAAAD3//z/AQABAAAAAAD4//z/AQABAAAAAAD5//z/AQABAAAAAAD6//z/AQABAAAAAAAIAAYAAQABAAAAAAAHAAYAAQABAAAAAAD0//n/AQABAAEAAAD0//j/AQAAAAMAAAD1//j/AQADAAEAAAD2//j/AQADAAEAAAD3//j/AQADAAEAAAD4//j/AQADAAEAAAD5//j/AQADAAEAAAD6//j/AQADAAEAAAD7//j/AQADAAEAAAD8//j/AQADAAEAAAD9//j/AQADAAEAAAD+//j/AQADAAEAAAD///j/AQADAAEAAAAAAPj/AQADAAEAAAABAPj/AQADAAEAAAACAPj/AQADAAEAAAADAPj/AQADAAEAAAAEAPj/AQADAAEAAAAFAPj/AQADAAEAAAAGAPj/AQADAAEAAAAHAPj/AQADAAEAAAAIAPj/AQADAAEAAAAJAPj/AQADAAEAAAAKAPj/AQADAAEAAAALAPj/AQADAAIAAAAKAPz/AQABAAAAAAAJAPz/AQABAAAAAAAIAPz/AQABAAAAAAAHAPz/AQABAAAAAAAGAPz/AQABAAAAAAD5/wYAAQABAAAAAAD6/wYAAQABAAAAAAD7/wYAAQABAAAAAAD8/wYAAQABAAAAAAD9/wYAAQABAAAAAAD+/wYAAQABAAAAAAD//wYAAQABAAAAAAAAAAYAAQABAAAAAAABAAYAAQABAAAAAAACAAYAAQABAAAAAAADAAYAAQABAAAAAAAEAAYAAQABAAAAAAAFAAYAAQABAAAAAAAGAAYAAQABAAAAAAD7//z/AQABAAAAAAD8//z/AQABAAAAAAD9//z/AQABAAAAAAD+//z/AQABAAAAAAD///z/AQABAAAAAAAAAPz/AQABAAAAAAABAPz/AQABAAAAAAA=")
+tile_map_data = PackedByteArray("AAD0/wYAAQABAAMAAAD1/wYAAQABAAAAAAD2/wYAAQABAAAAAAD3/wYAAQABAAAAAAD4/wYAAQABAAAAAAAJAAYAAQABAAAAAAAKAAYAAQABAAAAAAALAAYAAQACAAIAAAALAAUAAQADAAAAAAALAAQAAQADAAAAAAALAAMAAQADAAAAAAALAAIAAQADAAAAAAALAAEAAQADAAAAAAALAAAAAQADAAAAAAALAP//AQADAAAAAAALAP7/AQADAAAAAAALAP3/AQADAAAAAAALAPz/AQADAAAAAAALAPv/AQADAAAAAAALAPr/AQADAAAAAAALAPn/AQADAAAAAAD0//r/AQABAAEAAAD0//v/AQABAAEAAAD0//z/AQABAAEAAAD0//3/AQABAAEAAAD0//7/AQABAAEAAAD0////AQABAAEAAAD0/wEAAQABAAEAAAD0/wAAAQABAAEAAAD0/wIAAQABAAEAAAD0/wMAAQABAAEAAAD0/wQAAQABAAEAAAD0/wUAAQABAAEAAAD1/wAAAQABAAAAAAD2/wAAAQABAAAAAAD3/wAAAQABAAAAAAD4/wAAAQABAAAAAAD1//z/AQABAAAAAAD2//z/AQABAAAAAAD3//z/AQABAAAAAAD4//z/AQABAAAAAAD5//z/AQABAAAAAAD6//z/AQABAAAAAAAIAAYAAQABAAAAAAAHAAYAAQABAAAAAAD0//n/AQABAAEAAAD0//j/AQAAAAMAAAD1//j/AQADAAEAAAD2//j/AQADAAEAAAD3//j/AQADAAEAAAD4//j/AQADAAEAAAD5//j/AQADAAEAAAD6//j/AQADAAEAAAD7//j/AQADAAEAAAD8//j/AQADAAEAAAD9//j/AQADAAEAAAD+//j/AQADAAEAAAD///j/AQADAAEAAAAAAPj/AQADAAEAAAABAPj/AQADAAEAAAACAPj/AQADAAEAAAADAPj/AQADAAEAAAAEAPj/AQADAAEAAAAFAPj/AQADAAEAAAAGAPj/AQADAAEAAAAHAPj/AQADAAEAAAAIAPj/AQADAAEAAAAJAPj/AQADAAEAAAAKAPj/AQADAAEAAAALAPj/AQADAAIAAAAKAPz/AQABAAAAAAAJAPz/AQABAAAAAAAIAPz/AQABAAAAAAAHAPz/AQABAAAAAAD5/wYAAQABAAAAAAD6/wYAAQABAAAAAAD7/wYAAQABAAAAAAD8/wYAAQABAAAAAAD9/wYAAQABAAAAAAD+/wYAAQABAAAAAAD//wYAAQABAAAAAAAAAAYAAQABAAAAAAABAAYAAQABAAAAAAACAAYAAQABAAAAAAADAAYAAQABAAAAAAAEAAYAAQABAAAAAAAFAAYAAQABAAAAAAAGAAYAAQABAAAAAAD7//z/AQABAAAAAAD8//z/AQABAAAAAAD9//z/AQABAAAAAAD+//z/AQABAAAAAAD///z/AQABAAAAAAAAAPz/AQABAAAAAAABAPz/AQABAAAAAAACAPz/AQABAAAAAAA=")
 
 [node name="Elevator" parent="." instance=ExtResource("4_jspcl")]
 position = Vector2(-375, 2)
 scale = Vector2(0.639091, 0.639091)
 
 [node name="Magnus" parent="." instance=ExtResource("2_3ny4d")]
-position = Vector2(161, 91)
+position = Vector2(-126, -13)
 
 [node name="Ferrus" parent="." instance=ExtResource("4_n0n33")]
 position = Vector2(-155, 95)
 
 [node name="rotate2" type="StaticBody2D" parent="."]
-position = Vector2(-66, 15)
+position = Vector2(-66, -10)
+collision_layer = 9
+collision_mask = 9
 script = ExtResource("9_klued")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="rotate2"]
@@ -99,6 +113,8 @@ texture = SubResource("PlaceholderTexture2D_4hbb3")
 
 [node name="rotate3" type="StaticBody2D" parent="."]
 position = Vector2(5, -7)
+collision_layer = 9
+collision_mask = 9
 script = ExtResource("9_qipqe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="rotate3"]
@@ -286,7 +302,6 @@ collision_mask = 7
 script = ExtResource("14_osag8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="level8squareblock/Magnefreezer"]
-visible = false
 position = Vector2(-5.96046e-07, 0)
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_eguss")
@@ -312,3 +327,24 @@ text = "Make
 Parkour here"
 horizontal_alignment = 1
 uppercase = true
+
+[node name="blockblocker2" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blockblocker2"]
+shape = SubResource("SegmentShape2D_a22qi")
+
+[node name="blockblocker1" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="blockblocker" type="CollisionShape2D" parent="blockblocker1"]
+shape = SubResource("SegmentShape2D_q607w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blockblocker1"]
+shape = SubResource("SegmentShape2D_5show")
+
+[connection signal="body_entered" from="level8squareblock/Magnefreezer" to="level8squareblock/Magnefreezer" method="_on_body_entered"]
+[connection signal="body_exited" from="level8squareblock/Magnefreezer" to="level8squareblock/Magnefreezer" method="_on_body_exited"]
+[connection signal="body_exited" from="level8squareblock/FreezerHelper" to="level8squareblock/Magnefreezer" method="_on_freezer_helper_body_exited"]

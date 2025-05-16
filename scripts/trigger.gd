@@ -88,20 +88,35 @@ func _physics_process(delta: float) -> void:
 					s.global_transform = body.get_node_or_null("CollisionShape2D").global_transform
 					s.scale = s.scale * 1.05
 					print("Attached:", body.name)
-
-func _on_body_entered(body: Node2D) -> void:
-	if body is RigidBody2D:
-		magnetism_sfx.play();
-		
-		body.apply_central_impulse(Vector2(0.1, 0.1))
-		var target_rotation = 0
-		var angular_difference = lerp_angle(body.rotation_degrees, target_rotation, 1)
-
-		# Apply torque to rotate towards 0 degrees
+				# Apply torque to rotate towards 0 degrees
 		#body.apply_torque_impulse(angular_difference * 5)  # Adjust the multiplier for strength
 		#body.apply_central_impulse(Vector2(0.1, 0.1))
+func _on_body_entered(body: Node2D) -> void:
+	if body == $"../../rotate2" or body == $"../../rotate3":
+		fublockspace()
+		return
+	else:
+		if body is RigidBody2D:
+			
+			magnetism_sfx.play();
+			
+			body.apply_central_impulse(Vector2(0.1, 0.1))
+			var target_rotation = 0
+			var angular_difference = lerp_angle(body.rotation_degrees, target_rotation, 1)
+			print(body.rotation_degrees)
+func fublockspace():
+	if Input.is_action_pressed("space"):
+		print("rotational device found")
+		get_node_or_null("CollisionShape2D").disabled = true
+		get_node_or_null("CollisionShape2D").disabled = true
+		get_parent().get_node_or_null("freezeit").set_collision_mask_value(3, false)
+		get_parent().get_node_or_null("freezeit").set_collision_mask_value(4, false)
+		_clearpins()
+		
 
-		print(body.rotation_degrees)
+		
+
+		
 		
 		
 func _clearpins() -> void:
@@ -120,3 +135,25 @@ func _clearpins() -> void:
 			if !i.is_in_group("Player"):
 				shapegroup.remove_child(i)
 				i = null
+
+
+
+
+	
+	
+
+
+func _on_trigger_positive_body_entered(body: Node2D) -> void:
+	if body == $"../../rotate2" or body == $"../../rotate3":
+		print("FERRIS HIT BY ROTATION")
+		fublockspace()
+		return
+	else:
+		if body is RigidBody2D:
+			
+			magnetism_sfx.play();
+			
+			body.apply_central_impulse(Vector2(0.1, 0.1))
+			var target_rotation = 0
+			var angular_difference = lerp_angle(body.rotation_degrees, target_rotation, 1)
+			print(body.rotation_degrees)
