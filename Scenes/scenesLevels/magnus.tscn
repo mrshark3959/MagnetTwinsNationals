@@ -132,3 +132,8 @@ volume_db = -10.0
 
 [node name="CanvasLayer" parent="." instance=ExtResource("5_m2kfw")]
 visible = true
+
+[node name="coyotetimer" type="Timer" parent="."]
+wait_time = 0.3
+
+[connection signal="timeout" from="coyotetimer" to="." method="_on_coyotetimer_timeout"]
