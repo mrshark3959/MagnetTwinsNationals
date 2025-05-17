@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @onready var _animated_sprite = $AnimatedSprite2D
 
+var can_jump = true
 
 
 const SPEED = 100
@@ -23,12 +24,18 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-
+	
+	if can_jump == false and is_on_floor():
+		can_jump = true
+	
+	if (is_on_floor() == false) and can_jump and $coyotetimer.is_stopped():
+		$coyotetimer.start()
 
 
 	# Handle jump.
-	if Input.is_action_just_pressed("w") and is_on_floor():
+	if Input.is_action_just_pressed("w") and can_jump:
 		velocity.y = JUMP_VELOCITY
+		can_jump = false
 		$AudioStreamPlayer.play()
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -75,3 +82,6 @@ func reset_scene():
 		get_tree().reload_current_scene()
 	else:
 		push_warning("Current scene does not have a valid file path.")
+
+func _on_coyotetimer_timeout() -> void:
+	can_jump = false

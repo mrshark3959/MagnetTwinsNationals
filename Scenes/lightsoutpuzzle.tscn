@@ -1,7 +1,35 @@
-[gd_scene load_steps=7 format=3 uid="uid://bpfaxyyyooecd"]
+[gd_scene load_steps=11 format=3 uid="uid://bpfaxyyyooecd"]
 
 [ext_resource type="Script" uid="uid://c5kwsyk5news2" path="res://scripts/lightsout.gd" id="1_0axa0"]
+[ext_resource type="Texture2D" uid="uid://c3xsa206gr38e" path="res://Assets/images/miscellaneous/PowerSource.png" id="2_dvaqo"]
 [ext_resource type="Texture2D" uid="uid://mufavwr8mnk2" path="res://Assets/images/background images/placeholderlights.png" id="2_f8e03"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0lgm5"]
+atlas = ExtResource("2_dvaqo")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5tel"]
+atlas = ExtResource("2_dvaqo")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rxfyx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0lgm5")
+}],
+"loop": true,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g5tel")
+}],
+"loop": true,
+"name": &"on",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dvaqo"]
 size = Vector2(16, 16)
@@ -35,6 +63,12 @@ animations = [{
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_0axa0")
+
+[node name="powersource" type="AnimatedSprite2D" parent="."]
+position = Vector2(342, 45)
+scale = Vector2(1.4375, 1.4375)
+sprite_frames = SubResource("SpriteFrames_rxfyx")
+animation = &"off"
 
 [node name="00" type="StaticBody2D" parent="."]
 position = Vector2(-5, 0)
