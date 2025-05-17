@@ -4,6 +4,8 @@ var grid_width = 3
 var grid_height = 3
 var validated = false
 
+signal lights_solved(state: bool)
+
 func _init():
 	grid=Array()
 	grid.resize(grid_height)
@@ -46,7 +48,9 @@ func validate_grid():
 	for row in grid:
 		for col in row:
 			if col == false:
+				#$"powersource".play("off")
 				return false
+	$"powersource".play("on")
 	return true
 
 
@@ -81,7 +85,8 @@ func _physics_process(delta: float) -> void:
 	if validate_grid() and !validated:
 		validated = true
 		print("all lit up")
-		#then activate door
+		emit_signal("lights_solved", true)
+		$"../slidingdoortop".get_node("AnimatableBody2D").open()
 
 
 

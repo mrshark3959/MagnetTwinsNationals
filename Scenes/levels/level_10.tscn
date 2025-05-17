@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://cvaak1bmyagqp" path="res://Scenes/enviroment_stuff/shootbutton.tscn" id="12_hxhqw"]
 [ext_resource type="Texture2D" uid="uid://diuxmf3tlehy2" path="res://Assets/image - 2025-05-12T183846.477.png" id="13_hxhqw"]
 [ext_resource type="PackedScene" uid="uid://ct2lgp0iiroy7" path="res://Scenes/selfdestructplatform.tscn" id="14_luib5"]
-[ext_resource type="Script" uid="uid://cqnt4k1gwlia6" path="res://scripts/lever.gd" id="14_pohtw"]
+[ext_resource type="Script" uid="uid://cqnt4k1gwlia6" path="res://Scripts/lever.gd" id="14_pohtw"]
 [ext_resource type="Script" uid="uid://bp5g18teqtn1j" path="res://scripts/block.gd" id="16_2ugyl"]
 [ext_resource type="Texture2D" uid="uid://s82h3fyjguym" path="res://Assets/image - 2025-05-12T171704.781.png" id="16_ohi87"]
 [ext_resource type="Texture2D" uid="uid://cb4ps4el00pmw" path="res://Assets/images/miscellaneous/image (52).png" id="17_o3wsd"]

@@ -131,3 +131,4 @@ stream = ExtResource("4_gnux2")
 volume_db = -10.0
 
 [node name="CanvasLayer" parent="." instance=ExtResource("5_m2kfw")]
+visible = true

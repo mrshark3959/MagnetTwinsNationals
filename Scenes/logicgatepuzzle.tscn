@@ -1,40 +1,506 @@
-[gd_scene load_steps=4 format=3 uid="uid://c28vj2k2dsc82"]
+[gd_scene load_steps=15 format=3 uid="uid://c28vj2k2dsc82"]
 
 [ext_resource type="Script" uid="uid://1n2syggxvxfp" path="res://Scenes/logicgatepuzzle.gd" id="1_3oeg2"]
-[ext_resource type="Texture2D" uid="uid://bjivt0esquv4c" path="res://Assets/images/miscellaneous/PowerSourceOff.png" id="1_m1lv3"]
+[ext_resource type="Texture2D" uid="uid://c3xsa206gr38e" path="res://Assets/images/miscellaneous/PowerSource.png" id="2_jbhr5"]
 [ext_resource type="PackedScene" uid="uid://xvp1dosioeou" path="res://Scenes/button.tscn" id="3_62hv5"]
+[ext_resource type="Texture2D" uid="uid://mufavwr8mnk2" path="res://Assets/images/background images/placeholderlights.png" id="4_lc7yx"]
+[ext_resource type="Texture2D" uid="uid://bom52blihal7f" path="res://Assets/images/miscellaneous/lv11/not.png" id="5_1mtvf"]
+[ext_resource type="Texture2D" uid="uid://c6wk2copysk20" path="res://Assets/images/miscellaneous/lv11/or.png" id="6_8iw5k"]
+[ext_resource type="Texture2D" uid="uid://c5gxlqokmtnf4" path="res://Assets/images/miscellaneous/lv11/and.png" id="7_jbhr5"]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0lgm5"]
+atlas = ExtResource("2_jbhr5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5tel"]
+atlas = ExtResource("2_jbhr5")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k0uor"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0lgm5")
+}],
+"loop": true,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g5tel")
+}],
+"loop": true,
+"name": &"on",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1mtvf"]
+size = Vector2(16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0axa0"]
+atlas = ExtResource("4_lc7yx")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8e03"]
+atlas = ExtResource("4_lc7yx")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ddt3q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0axa0")
+}],
+"loop": true,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f8e03")
+}],
+"loop": true,
+"name": &"on",
+"speed": 5.0
+}]
+
+[node name="botpuzzle" type="Node2D"]
 script = ExtResource("1_3oeg2")
 
-[node name="lower" type="Sprite2D" parent="."]
-position = Vector2(308, 0)
+[node name="powersource" type="AnimatedSprite2D" parent="."]
+position = Vector2(142, -37)
 scale = Vector2(1.4375, 1.4375)
-texture = ExtResource("1_m1lv3")
+sprite_frames = SubResource("SpriteFrames_k0uor")
+animation = &"off"
 
 [node name="buttonA" parent="." instance=ExtResource("3_62hv5")]
-position = Vector2(-175, -4)
+position = Vector2(-187, -4)
 
 [node name="buttonB" parent="." instance=ExtResource("3_62hv5")]
-position = Vector2(-121, -4)
+position = Vector2(-135, -4)
 
 [node name="buttonC" parent="." instance=ExtResource("3_62hv5")]
-position = Vector2(-72, -4)
+position = Vector2(-89, -4)
 
 [node name="buttonD" parent="." instance=ExtResource("3_62hv5")]
-position = Vector2(-28, -4)
+position = Vector2(-41, -4)
 
 [node name="buttonE" parent="." instance=ExtResource("3_62hv5")]
-position = Vector2(24, -4)
+position = Vector2(3, -4)
 
 [node name="buttonF" parent="." instance=ExtResource("3_62hv5")]
-position = Vector2(80, -4)
+position = Vector2(56, -4)
 
-[node name="buttonG" parent="." instance=ExtResource("3_62hv5")]
-position = Vector2(128, -4)
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(-84, 39)
 
-[node name="buttonH" parent="." instance=ExtResource("3_62hv5")]
-position = Vector2(172, -4)
+[node name="a" type="StaticBody2D" parent="Node2D"]
+position = Vector2(-163, 19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/a"]
+position = Vector2(61, -40)
+shape = SubResource("RectangleShape2D_1mtvf")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/a"]
+position = Vector2(61, -40)
+sprite_frames = SubResource("SpriteFrames_ddt3q")
+animation = &"off"
+
+[node name="b" type="StaticBody2D" parent="Node2D"]
+position = Vector2(-163, 51)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/b"]
+position = Vector2(61, -40)
+shape = SubResource("RectangleShape2D_1mtvf")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/b"]
+position = Vector2(61, -40)
+sprite_frames = SubResource("SpriteFrames_ddt3q")
+animation = &"off"
+
+[node name="c" type="StaticBody2D" parent="Node2D"]
+position = Vector2(-163, 83)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/c"]
+position = Vector2(61, -40)
+shape = SubResource("RectangleShape2D_1mtvf")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/c"]
+position = Vector2(61, -40)
+sprite_frames = SubResource("SpriteFrames_ddt3q")
+animation = &"off"
+
+[node name="d" type="StaticBody2D" parent="Node2D"]
+position = Vector2(-163, 115)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/d"]
+position = Vector2(61, -40)
+shape = SubResource("RectangleShape2D_1mtvf")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/d"]
+position = Vector2(61, -40)
+sprite_frames = SubResource("SpriteFrames_ddt3q")
+animation = &"off"
+
+[node name="e" type="StaticBody2D" parent="Node2D"]
+position = Vector2(-163, 147)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/e"]
+position = Vector2(61, -40)
+shape = SubResource("RectangleShape2D_1mtvf")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/e"]
+position = Vector2(61, -40)
+sprite_frames = SubResource("SpriteFrames_ddt3q")
+animation = &"off"
+
+[node name="na" type="StaticBody2D" parent="Node2D"]
+position = Vector2(-115, 19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/na"]
+position = Vector2(61, -40)
+shape = SubResource("RectangleShape2D_1mtvf")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/na"]
+position = Vector2(61, -40)
+sprite_frames = SubResource("SpriteFrames_ddt3q")
+animation = &"off"
+
+[node name="bc" type="StaticBody2D" parent="Node2D"]
+position = Vector2(-115, 67)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/bc"]
+position = Vector2(61, -40)
+shape = SubResource("RectangleShape2D_1mtvf")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/bc"]
+position = Vector2(61, -40)
+sprite_frames = SubResource("SpriteFrames_ddt3q")
+animation = &"off"
+
+[node name="ne" type="StaticBody2D" parent="Node2D"]
+position = Vector2(-115, 147)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/ne"]
+position = Vector2(61, -40)
+shape = SubResource("RectangleShape2D_1mtvf")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/ne"]
+position = Vector2(61, -40)
+sprite_frames = SubResource("SpriteFrames_ddt3q")
+animation = &"off"
+
+[node name="de" type="StaticBody2D" parent="Node2D"]
+position = Vector2(-67, 131)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/de"]
+position = Vector2(61, -40)
+shape = SubResource("RectangleShape2D_1mtvf")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/de"]
+position = Vector2(61, -40)
+sprite_frames = SubResource("SpriteFrames_ddt3q")
+animation = &"off"
+
+[node name="abc" type="StaticBody2D" parent="Node2D"]
+position = Vector2(-19, 51)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/abc"]
+position = Vector2(61, -40)
+shape = SubResource("RectangleShape2D_1mtvf")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/abc"]
+position = Vector2(61, -40)
+sprite_frames = SubResource("SpriteFrames_ddt3q")
+animation = &"off"
+
+[node name="f" type="StaticBody2D" parent="Node2D"]
+position = Vector2(-163, 179)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/f"]
+position = Vector2(61, -40)
+shape = SubResource("RectangleShape2D_1mtvf")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/f"]
+position = Vector2(61, -40)
+sprite_frames = SubResource("SpriteFrames_ddt3q")
+animation = &"off"
+
+[node name="def" type="StaticBody2D" parent="Node2D"]
+position = Vector2(-19, 147)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/def"]
+position = Vector2(61, -40)
+shape = SubResource("RectangleShape2D_1mtvf")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/def"]
+position = Vector2(61, -40)
+sprite_frames = SubResource("SpriteFrames_ddt3q")
+animation = &"off"
+
+[node name="ndef" type="StaticBody2D" parent="Node2D"]
+position = Vector2(-19, 99)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/ndef"]
+position = Vector2(61, -40)
+shape = SubResource("RectangleShape2D_1mtvf")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/ndef"]
+position = Vector2(61, -40)
+sprite_frames = SubResource("SpriteFrames_ddt3q")
+animation = &"off"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -116.0
+offset_top = 114.0
+offset_right = -76.0
+offset_bottom = 154.0
+
+[node name="not" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = -1608.0
+offset_top = -107.0
+offset_right = -1600.0
+offset_bottom = -99.0
+texture = ExtResource("5_1mtvf")
+
+[node name="or" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = -1608.0
+offset_top = -98.0
+offset_right = -1600.0
+offset_bottom = -90.0
+texture = ExtResource("6_8iw5k")
+
+[node name="and" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = -1608.0
+offset_top = -89.0
+offset_right = -1600.0
+offset_bottom = -81.0
+texture = ExtResource("7_jbhr5")
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = -62.0
+offset_top = -97.0
+offset_right = -30.0
+offset_bottom = -95.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = -71.0
+offset_top = -56.0
+offset_right = -69.0
+offset_bottom = -40.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = -71.0
+offset_top = -56.0
+offset_right = -69.0
+offset_bottom = -40.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = -71.0
+offset_top = -49.0
+offset_right = -30.0
+offset_bottom = -47.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = -23.0
+offset_top = -88.0
+offset_right = -21.0
+offset_bottom = -56.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = -62.0
+offset_top = 31.0
+offset_right = -30.0
+offset_bottom = 33.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 31.0
+offset_right = 66.0
+offset_bottom = 33.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect13" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 3.0
+offset_bottom = 33.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect12" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 24.0
+offset_right = 27.0
+offset_bottom = 65.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = -14.0
+offset_top = 31.0
+offset_right = 1.0
+offset_bottom = 33.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = -62.0
+offset_top = -1.0
+offset_right = 3.0
+offset_bottom = 1.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect10" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_top = 15.0
+offset_right = 18.0
+offset_bottom = 17.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect11" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = -62.0
+offset_top = 63.0
+offset_right = 27.0
+offset_bottom = 65.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect14" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = -23.0
+offset_top = -65.0
+offset_right = 258.0
+offset_bottom = -63.0
+color = Color(0, 0, 0, 1)
+
+[node name="or2" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 12.0
+offset_right = 6.0
+offset_bottom = 20.0
+texture = ExtResource("6_8iw5k")
+
+[node name="and2" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = -74.0
+offset_top = -52.0
+offset_right = -66.0
+offset_bottom = -44.0
+texture = ExtResource("7_jbhr5")
+
+[node name="not2" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = -50.0
+offset_top = -100.0
+offset_right = -42.0
+offset_bottom = -92.0
+texture = ExtResource("5_1mtvf")
+
+[node name="and3" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = -26.0
+offset_top = -68.0
+offset_right = -18.0
+offset_bottom = -60.0
+texture = ExtResource("7_jbhr5")
+
+[node name="not3" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = -50.0
+offset_top = 28.0
+offset_right = -42.0
+offset_bottom = 36.0
+texture = ExtResource("5_1mtvf")
+
+[node name="or3" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 28.0
+offset_right = 30.0
+offset_bottom = 36.0
+texture = ExtResource("6_8iw5k")
+
+[node name="ColorRect15" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = 73.0
+offset_top = -8.0
+offset_right = 75.0
+offset_bottom = 24.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect15" type="ColorRect" parent="Control/ColorRect15"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = -9.0
+offset_right = 34.0
+offset_bottom = -7.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect15" type="ColorRect" parent="Control/ColorRect15/ColorRect15"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = -46.0
+offset_right = 25.0
+offset_bottom = 2.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect16" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = -129.0
+offset_right = 261.0
+offset_bottom = -63.0
+color = Color(0, 0, 0, 1)
+
+[node name="not4" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 4.0
+offset_right = 78.0
+offset_bottom = 12.0
+texture = ExtResource("5_1mtvf")
+
+[node name="and4" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 102.0
+offset_top = -68.0
+offset_right = 110.0
+offset_bottom = -60.0
+texture = ExtResource("7_jbhr5")
 
 [connection signal="button_pressed" from="buttonA" to="." method="_on_button_a_button_pressed"]
 [connection signal="button_pressed" from="buttonB" to="." method="_on_button_b_button_pressed"]
@@ -42,5 +508,3 @@ position = Vector2(172, -4)
 [connection signal="button_pressed" from="buttonD" to="." method="_on_button_d_button_pressed"]
 [connection signal="button_pressed" from="buttonE" to="." method="_on_button_e_button_pressed"]
 [connection signal="button_pressed" from="buttonF" to="." method="_on_button_f_button_pressed"]
-[connection signal="button_pressed" from="buttonG" to="." method="_on_button_g_button_pressed"]
-[connection signal="button_pressed" from="buttonH" to="." method="_on_button_h_button_pressed"]
