@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c28vj2k2dsc82" path="res://Scenes/logicgatepuzzle.tscn" id="12_mj1nj"]
 [ext_resource type="PackedScene" uid="uid://c4mf8fnfqrx3u" path="res://Scenes/slidingdoor.tscn" id="13_5036d"]
 [ext_resource type="FontFile" uid="uid://bl8cj75xnw7n7" path="res://Assets/fonts/FFFFORWA.TTF" id="13_rbvtp"]
-[ext_resource type="Script" uid="uid://bp5g18teqtn1j" path="res://scripts/block.gd" id="14_nyl1m"]
+[ext_resource type="Script" uid="uid://bp5g18teqtn1j" path="res://Scripts/block.gd" id="14_nyl1m"]
 [ext_resource type="Texture2D" uid="uid://cb4ps4el00pmw" path="res://Assets/images/miscellaneous/image (52).png" id="15_ocdqq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vngim"]
