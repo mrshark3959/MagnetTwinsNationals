@@ -92,18 +92,14 @@ func _physics_process(delta: float) -> void:
 		#body.apply_torque_impulse(angular_difference * 5)  # Adjust the multiplier for strength
 		#body.apply_central_impulse(Vector2(0.1, 0.1))
 func _on_body_entered(body: Node2D) -> void:
-	if body == $"../../rotate2" or body == $"../../rotate3":
-		fublockspace()
-		return
-	else:
-		if body is RigidBody2D:
+	if body is RigidBody2D:
 			
-			magnetism_sfx.play();
+		magnetism_sfx.play();
 			
-			body.apply_central_impulse(Vector2(0.1, 0.1))
-			var target_rotation = 0
-			var angular_difference = lerp_angle(body.rotation_degrees, target_rotation, 1)
-			print(body.rotation_degrees)
+		body.apply_central_impulse(Vector2(0.1, 0.1))
+		var target_rotation = 0
+		var angular_difference = lerp_angle(body.rotation_degrees, target_rotation, 1)
+		print(body.rotation_degrees)
 func fublockspace():
 	if Input.is_action_pressed("space"):
 		print("rotational device found")
@@ -144,16 +140,12 @@ func _clearpins() -> void:
 
 
 func _on_trigger_positive_body_entered(body: Node2D) -> void:
-	if body == $"../../rotate2" or body == $"../../rotate3":
-		print("FERRIS HIT BY ROTATION")
-		fublockspace()
-		return
-	else:
-		if body is RigidBody2D:
+	
+	if body is RigidBody2D:
 			
-			magnetism_sfx.play();
+		magnetism_sfx.play();
 			
-			body.apply_central_impulse(Vector2(0.1, 0.1))
-			var target_rotation = 0
-			var angular_difference = lerp_angle(body.rotation_degrees, target_rotation, 1)
-			print(body.rotation_degrees)
+		body.apply_central_impulse(Vector2(0.1, 0.1))
+		var target_rotation = 0
+		var angular_difference = lerp_angle(body.rotation_degrees, target_rotation, 1)
+		print(body.rotation_degrees)
