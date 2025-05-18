@@ -673,7 +673,8 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Sprite2D3" type="Sprite2D" parent="."]
-position = Vector2(579, 327)
+position = Vector2(577.5, 325.5)
+scale = Vector2(1.0026, 1.00463)
 texture = ExtResource("1_tyesc")
 
 [node name="effect" type="TextureRect" parent="."]

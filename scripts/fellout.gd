@@ -15,10 +15,7 @@ func respawn():
 
 func _on_timer_timeout():
 	# This function is called when the timer finishes
-	var current_scene = get_tree().current_scene
-	if current_scene:
-		var scene_path = current_scene.scene_file_path
-		get_tree().change_scene_to_file(scene_path)
+	call_deferred("_reload_scene")
 
 func _on_area_entered(area: Area2D) -> void:
 	print(area.name)
@@ -33,3 +30,10 @@ func _on_area_entered(area: Area2D) -> void:
 func _on_body_entered(body) -> void:
 	if body is PhysicsBody2D:
 		respawn()
+
+
+func _reload_scene():
+	var current_scene = get_tree().current_scene
+	if current_scene:
+		var scene_path = current_scene.scene_file_path
+		get_tree().change_scene_to_file(scene_path)
