@@ -12,6 +12,7 @@ func time_convert(toConv):
 	
 	var array = str(toConv).split(".")
 	var msec = int(array[1].left(2))
+
 	#returns a string with the format "HH:MM:SS"
 	return "%02d:%02d.%02d" % [minutes, seconds, msec]
 	
