@@ -95,4 +95,5 @@ tile_map_data = PackedByteArray("AAD3/wQAAQABAAMAAAD4/wQAAQABAAAAAAD5/wQAAQABAAA
 [node name="Block" parent="." instance=ExtResource("5_3p486")]
 physics_interpolation_mode = 1
 position = Vector2(-88, -23)
+mass = 20.0
 continuous_cd = 2
