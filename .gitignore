@@ -18,3 +18,11 @@ GameVersions/web/game/index.png.import
 GameVersions/web/game/index.wasm
 GameVersions/web/game/index.worker.js
 export_presets.cfg
+*.wasm
+*.html
+*.js
+*.import
+GameVersions/game/index.icon.png
+GameVersions/game/index.png
+GameVersions/game/index.pck
+GameVersions/game/index.apple-touch-icon.png
