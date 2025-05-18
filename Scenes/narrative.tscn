@@ -799,6 +799,7 @@ texture = ExtResource("17_46cic")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 volume_db = -6.3
+bus = &"cutsce"
 
 [node name="Sprite2D10" type="Sprite2D" parent="."]
 position = Vector2(745, 268)
@@ -847,8 +848,10 @@ vframes = 2
 frame = 1
 
 [node name="0512(2)" type="AudioStreamPlayer" parent="."]
+bus = &"cutsce"
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+bus = &"cutsce"
 
 [connection signal="timeout" from="Timer1" to="Button" method="_on_timer_1_timeout"]
 [connection signal="animation_finished" from="AnimationPlayer" to="AnimationPlayer" method="_on_animation_finished"]

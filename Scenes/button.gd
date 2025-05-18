@@ -13,8 +13,11 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed() -> void:
-	$"../AnimationPlayer".pause()
-	$Sprite2D3.frame = 0
+	AudioServer.set_bus_layout(load("res://defaultbus.tres"))
+	var current_volume = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("cutsce"))
+	
+
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("cutsce"), -80)  # Mute
 	$"../click".play()
 	$"../Timer1".start()
 	
@@ -22,4 +25,5 @@ func _on_pressed() -> void:
 	
 	
 func _on_timer_1_timeout() -> void:
+	pass
 	get_tree().change_scene_to_file("res://loadingscenes/loadingscreen_1.tscn")
