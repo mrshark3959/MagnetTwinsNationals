@@ -1,6 +1,7 @@
-[gd_scene load_steps=25 format=4 uid="uid://c8fxc46qjrrm8"]
+[gd_scene load_steps=26 format=4 uid="uid://c8fxc46qjrrm8"]
 
 [ext_resource type="Texture2D" uid="uid://do16m4ver0yfh" path="res://Assets/images/miscellaneous/image (36).png" id="1_3651u"]
+[ext_resource type="Script" uid="uid://d0fmi2nr18o35" path="res://Scripts/level_5.gd" id="1_ufwjq"]
 [ext_resource type="Texture2D" uid="uid://jw8a5oi3c8xj" path="res://Assets/images/miscellaneous/image (35).png" id="2_8dvbg"]
 [ext_resource type="PackedScene" uid="uid://dxkdy0bcpdolj" path="res://Scenes/Felloutofworld.tscn" id="3_gf3sh"]
 [ext_resource type="PackedScene" uid="uid://b8a7wm3a02hhh" path="res://Scenes/pulley.tscn" id="4_vifty"]
@@ -86,6 +87,7 @@ size = Vector2(16.0132, 15.8509)
 size = Vector2(36.5384, 32.6922)
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_ufwjq")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)

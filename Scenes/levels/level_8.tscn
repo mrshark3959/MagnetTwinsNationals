@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://b0xfs26mh3lih"]
+[gd_scene load_steps=22 format=4 uid="uid://b0xfs26mh3lih"]
 
 [ext_resource type="PackedScene" uid="uid://bcifdcq3e47yi" path="res://Scenes/scenesLevels/tile_map_base.tscn" id="1_faf0x"]
 [ext_resource type="Texture2D" uid="uid://do16m4ver0yfh" path="res://Assets/images/miscellaneous/image (36).png" id="1_u5jbl"]
@@ -14,6 +14,15 @@
 [ext_resource type="PackedScene" uid="uid://baw3mktt2triq" path="res://Scenes/enviroment_stuff/anchor_block.tscn" id="13_66j7v"]
 [ext_resource type="PackedScene" uid="uid://d008hudx4cwjc" path="res://Scenes/enviroment_stuff/block.tscn" id="14_j2i5u"]
 [ext_resource type="PackedScene" uid="uid://dxkdy0bcpdolj" path="res://Scenes/Felloutofworld.tscn" id="15_3xf1u"]
+
+[sub_resource type="GDScript" id="GDScript_a22qi"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	Global.level = \"res://Scenes/levels/level_8.tscn\"
+"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hhmkx"]
 texture = ExtResource("1_u5jbl")
@@ -46,6 +55,7 @@ size = Vector2(15.1667, 6.33333)
 size = Vector2(48, 0.999998)
 
 [node name="Node2D" type="Node2D"]
+script = SubResource("GDScript_a22qi")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(31, 0)

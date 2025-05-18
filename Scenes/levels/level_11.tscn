@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://b3rehhloj2bi7"]
+[gd_scene load_steps=20 format=4 uid="uid://b3rehhloj2bi7"]
 
 [ext_resource type="PackedScene" uid="uid://bcifdcq3e47yi" path="res://Scenes/scenesLevels/tile_map_base.tscn" id="1_1w73f"]
 [ext_resource type="Texture2D" uid="uid://do16m4ver0yfh" path="res://Assets/images/miscellaneous/image (36).png" id="1_b3614"]
@@ -13,6 +13,14 @@
 [ext_resource type="FontFile" uid="uid://bl8cj75xnw7n7" path="res://Assets/fonts/FFFFORWA.TTF" id="13_rbvtp"]
 [ext_resource type="Script" uid="uid://bp5g18teqtn1j" path="res://Scripts/block.gd" id="14_nyl1m"]
 [ext_resource type="Texture2D" uid="uid://cb4ps4el00pmw" path="res://Assets/images/miscellaneous/image (52).png" id="15_ocdqq"]
+
+[sub_resource type="GDScript" id="GDScript_5036d"]
+script/source = "extends Node2D
+
+
+func _on_ready() -> void:
+	Global.level = \"res://Scenes/levels/level_11.tscn\"
+"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vngim"]
 texture = ExtResource("1_b3614")
@@ -40,6 +48,7 @@ size = Vector2(9, 9.33333)
 size = Vector2(15.1667, 6.33333)
 
 [node name="Node2D" type="Node2D"]
+script = SubResource("GDScript_5036d")
 
 [node name="background" type="TileMapLayer" parent="."]
 position = Vector2(10, -4)

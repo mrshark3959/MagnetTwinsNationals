@@ -2,7 +2,7 @@ extends Node
 
 var speedrun_time = 0.01;
 var restarts = 0;
-
+var level = ''
 func time_convert(toConv):
 
 	var time_in_sec = int(toConv)

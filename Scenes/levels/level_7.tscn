@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://deu1npwmnp6h6"]
+[gd_scene load_steps=26 format=4 uid="uid://deu1npwmnp6h6"]
 
 [ext_resource type="Texture2D" uid="uid://do16m4ver0yfh" path="res://Assets/images/miscellaneous/image (36).png" id="1_cewxi"]
 [ext_resource type="PackedScene" uid="uid://dmjn3upniv24g" path="res://Scenes/Elevator.tscn" id="1_y6xdv"]
@@ -14,6 +14,16 @@
 [ext_resource type="Script" uid="uid://7a7vtunfl1th" path="res://Scenes/levels/door.gd" id="11_b1ixx"]
 [ext_resource type="Texture2D" uid="uid://dycn23garnc6j" path="res://Assets/images/miscellaneous/image (40).png" id="12_2oi75"]
 [ext_resource type="AudioStream" uid="uid://ba68l5jymbf3w" path="res://Assets/audios/117422__joedeshon__dryer_door_opening.wav" id="14_jun4y"]
+
+[sub_resource type="GDScript" id="GDScript_qf82d"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+
+	Global.level = \"res://Scenes/levels/level_7.tscn\"
+"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_80es1"]
 texture = ExtResource("1_cewxi")
@@ -76,6 +86,7 @@ animations = [{
 size = Vector2(7, 19)
 
 [node name="Node2D" type="Node2D"]
+script = SubResource("GDScript_qf82d")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)
