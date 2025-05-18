@@ -13,6 +13,7 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed() -> void:
+	$"../AnimationPlayer".pause()
 	$Sprite2D3.frame = 0
 	$"../click".play()
 	$"../Timer1".start()
