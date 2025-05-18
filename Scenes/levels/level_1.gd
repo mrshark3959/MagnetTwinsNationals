@@ -3,6 +3,8 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	var current_volume = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("cutsce"))
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("cutsce"), -80)  # Mute
 	Backgroundaudio.play_music()
 
 

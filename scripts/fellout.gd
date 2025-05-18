@@ -15,8 +15,10 @@ func respawn():
 
 func _on_timer_timeout():
 	# This function is called when the timer finishes
-	var retree = get_tree()
-	retree.call_deferred("reload_current_scene")
+	var current_scene = get_tree().current_scene
+	if current_scene:
+		var scene_path = current_scene.scene_file_path
+		get_tree().change_scene_to_file(scene_path)
 
 func _on_area_entered(area: Area2D) -> void:
 	print(area.name)

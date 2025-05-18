@@ -323,7 +323,7 @@ tracks/23/keys = {
 
 [sub_resource type="Animation" id="Animation_fsr6b"]
 resource_name = "cutscene"
-length = 24.5
+length = 24.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -490,10 +490,10 @@ tracks/13/path = NodePath("AudioStreamPlayer:volume_db")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
-"times": PackedFloat32Array(0, 22.9196, 24.5),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 22.9196, 24.4333, 24.6333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [-10.0, -10.0, -30.0]
+"values": [-10.0, -25.0, -30.0, -80.0]
 }
 tracks/14/type = "value"
 tracks/14/imported = false
@@ -545,7 +545,7 @@ tracks/17/keys = {
 }
 tracks/18/type = "value"
 tracks/18/imported = false
-tracks/18/enabled = true
+tracks/18/enabled = false
 tracks/18/path = NodePath("Sprite2D5:modulate")
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
@@ -623,7 +623,7 @@ tracks/23/keys = {
 }
 tracks/24/type = "value"
 tracks/24/imported = false
-tracks/24/enabled = true
+tracks/24/enabled = false
 tracks/24/path = NodePath("Sprite2D14:modulate")
 tracks/24/interp = 1
 tracks/24/loop_wrap = true
@@ -635,7 +635,7 @@ tracks/24/keys = {
 }
 tracks/25/type = "value"
 tracks/25/imported = false
-tracks/25/enabled = true
+tracks/25/enabled = false
 tracks/25/path = NodePath("Sprite2D13:modulate")
 tracks/25/interp = 1
 tracks/25/loop_wrap = true
@@ -647,7 +647,7 @@ tracks/25/keys = {
 }
 tracks/26/type = "value"
 tracks/26/imported = false
-tracks/26/enabled = true
+tracks/26/enabled = false
 tracks/26/path = NodePath("Button:modulate")
 tracks/26/interp = 1
 tracks/26/loop_wrap = true
@@ -800,6 +800,7 @@ texture = ExtResource("17_46cic")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 volume_db = -10.0
 bus = &"cutsce"
+playback_type = 2
 
 [node name="Sprite2D10" type="Sprite2D" parent="."]
 position = Vector2(745, 268)

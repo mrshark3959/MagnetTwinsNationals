@@ -19,6 +19,7 @@ config/icon="res://Assets/images/miscellaneous/icon.svg"
 [audio]
 
 buses/default_bus_layout="uid://bk7726s1t7rp2"
+general/default_playback_type=1
 
 [autoload]
 
@@ -110,4 +111,4 @@ common/physics_interpolation=true
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-environment/defaults/default_clear_color=Color(0.351563, 0.351563, 0.351563, 0)
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
