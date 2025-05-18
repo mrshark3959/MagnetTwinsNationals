@@ -6,7 +6,7 @@ extends StaticBody2D
 
 
 
-var rotation_speed = 70
+var rotation_speed = 85
 var direction = 1  # -1 for left, 1 for right, 0 for no rotation
 
 func _process(delta):
