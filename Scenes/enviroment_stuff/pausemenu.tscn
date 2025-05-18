@@ -1,12 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://duphc74iim2wu"]
+[gd_scene load_steps=10 format=3 uid="uid://duphc74iim2wu"]
 
 [ext_resource type="Script" uid="uid://jkg7j2iv7n81" path="res://Scenes/enviroment_stuff/pausemenu.gd" id="1_spkq2"]
 [ext_resource type="Script" uid="uid://vpw1ce724t7g" path="res://Scripts/resume.gd" id="2_id5y3"]
 [ext_resource type="Texture2D" uid="uid://b4lv4knxlu0fj" path="res://Assets/image - 2025-05-12T182350.769.png" id="2_umbad"]
 [ext_resource type="Texture2D" uid="uid://dn6m5g512r4i6" path="res://Assets/image - 2025-05-12T180836.181.png" id="3_bub1d"]
-[ext_resource type="Texture2D" uid="uid://dcb7yxw34m1p8" path="res://Assets/image - 2025-05-12T180559.733.png" id="3_spkq2"]
 [ext_resource type="Script" uid="uid://cb07hycaek41x" path="res://Scripts/restart.gd" id="4_u0mjo"]
-[ext_resource type="Script" uid="uid://bc2suyy1y82j" path="res://Scripts/quit.gd" id="5_spkq2"]
 [ext_resource type="Texture2D" uid="uid://cic15ehoy7djv" path="res://Assets/image - 2025-05-12T185435.987.png" id="8_5it3o"]
 
 [sub_resource type="Animation" id="Animation_bub1d"]
@@ -79,9 +77,9 @@ anchor_top = -0.00188056
 anchor_right = 9.56917
 anchor_bottom = 2.62312
 offset_left = 11.5774
-offset_top = 4.66007
+offset_top = 11.0789
 offset_right = 81.5774
-offset_bottom = 35.6605
+offset_bottom = 42.0793
 grow_horizontal = 2
 scale = Vector2(0.0526089, 0.0526089)
 icon = ExtResource("2_umbad")
@@ -92,35 +90,18 @@ script = ExtResource("2_id5y3")
 z_index = 1
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.114731
-anchor_top = -0.0127619
-anchor_right = 9.53527
-anchor_bottom = 2.61224
+anchor_left = -0.117339
+anchor_top = 0.187825
+anchor_right = 9.53266
+anchor_bottom = 2.81283
 offset_left = 13.0376
-offset_top = 16.3282
+offset_top = 18.1621
 offset_right = 83.0382
-offset_bottom = 47.3284
+offset_bottom = 49.1623
 scale = Vector2(0.0521613, 0.0521613)
 icon = ExtResource("3_bub1d")
 flat = true
 script = ExtResource("4_u0mjo")
-metadata/_edit_use_anchors_ = true
-
-[node name="quit" type="Button" parent="pausebackground"]
-z_index = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.117339
-anchor_right = 9.53266
-anchor_bottom = 2.625
-offset_left = 13.0376
-offset_top = 27.2136
-offset_right = 83.0381
-offset_bottom = 58.2136
-scale = Vector2(0.0520347, 0.0520347)
-icon = ExtResource("3_spkq2")
-flat = true
-script = ExtResource("5_spkq2")
 metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="pausebackground"]
@@ -143,4 +124,3 @@ offset_bottom = 184.0
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="pressed" from="pausebackground/resume" to="pausebackground/resume" method="_on_pressed"]
 [connection signal="pressed" from="pausebackground/restart" to="pausebackground/restart" method="_on_pressed"]
-[connection signal="pressed" from="pausebackground/quit" to="pausebackground/quit" method="_on_pressed"]

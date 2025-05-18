@@ -3,10 +3,11 @@ extends AudioStreamPlayer
 var has_started = false 
 
 func _ready():
+	stop()
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	connect("finished", Callable(self, "_on_finished"))
 
-	stop()
+	
 
 func play_music():
 	if not playing and get_tree().current_scene.scene_file_path == "res://Scenes/levels/level_1.tscn":
