@@ -33,7 +33,4 @@ func _on_body_entered(body) -> void:
 
 
 func _reload_scene():
-	var current_scene = get_tree().current_scene
-	if current_scene:
-		var scene_path = current_scene.scene_file_path
-		get_tree().change_scene_to_file(scene_path)
+	get_tree().change_scene_to_file(Global.level)
