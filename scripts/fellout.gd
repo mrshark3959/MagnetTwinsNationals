@@ -10,12 +10,12 @@ func respawn():
 
 	is_respawning = true  # Set the flag to true
 	sound.play()
-	Global.restarts += 1
 	timer.start()  # Start the timer with a 0.2-second delay
 
 func _on_timer_timeout():
-	# This function is called when the timer finishes
+	print("timer ended")
 	call_deferred("_reload_scene")
+
 
 func _on_area_entered(area: Area2D) -> void:
 	print(area.name)
@@ -33,4 +33,5 @@ func _on_body_entered(body) -> void:
 
 
 func _reload_scene():
-	get_tree().change_scene_to_file(Global.level)
+	await get_tree().process_frame  # Wait a frame to let things settle
+	get_tree().reload_current_scene()

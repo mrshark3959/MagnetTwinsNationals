@@ -1,7 +1,6 @@
-[gd_scene load_steps=13 format=4 uid="uid://d0gwmebrypufh"]
+[gd_scene load_steps=15 format=4 uid="uid://d0gwmebrypufh"]
 
 [ext_resource type="PackedScene" uid="uid://dmjn3upniv24g" path="res://Scenes/Elevator.tscn" id="1_0qgpq"]
-[ext_resource type="PackedScene" uid="uid://dxkdy0bcpdolj" path="res://Scenes/Felloutofworld.tscn" id="1_02osk"]
 [ext_resource type="Script" uid="uid://cwqugjot3bvqk" path="res://Scripts/level_2.gd" id="1_fh68y"]
 [ext_resource type="Texture2D" uid="uid://do16m4ver0yfh" path="res://Assets/images/miscellaneous/image (36).png" id="1_hea7a"]
 [ext_resource type="PackedScene" uid="uid://yxadoe3i8u6k" path="res://Scenes/scenesLevels/magnus.tscn" id="1_hrpeb"]
@@ -9,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://bcifdcq3e47yi" path="res://Scenes/scenesLevels/tile_map_base.tscn" id="2_vi2wc"]
 [ext_resource type="PackedScene" uid="uid://cp7uqkbbb6s1f" path="res://Scenes/scenesLevels/ferrus.tscn" id="3_ghidh"]
 [ext_resource type="PackedScene" uid="uid://baw3mktt2triq" path="res://Scenes/enviroment_stuff/anchor_block.tscn" id="4_ygmbv"]
+[ext_resource type="Script" uid="uid://b8uemfm7xmxqk" path="res://Scripts/fellout.gd" id="9_ym5bi"]
+[ext_resource type="AudioStream" uid="uid://c7vbscwyb3j8y" path="res://Assets/audios/538541__sjonas88__fail-2.wav" id="10_yuh2w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_luv7r"]
 texture = ExtResource("1_hea7a")
@@ -30,6 +31,8 @@ texture = ExtResource("2_urtll")
 [sub_resource type="TileSet" id="TileSet_3kmc3"]
 sources/0 = SubResource("TileSetAtlasSource_luv7r")
 sources/1 = SubResource("TileSetAtlasSource_8n43n")
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fkc1a"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_fh68y")
@@ -63,7 +66,23 @@ position = Vector2(-90, 48)
 position = Vector2(-163, 2)
 scale = Vector2(0.680001, 0.680001)
 
-[node name="Node2D" parent="." instance=ExtResource("1_02osk")]
+[node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-5, 95)
+collision_mask = 255
+script = ExtResource("9_ym5bi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("WorldBoundaryShape2D_fkc1a")
+
+[node name="fallensound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_yuh2w")
+volume_db = 4.005
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.4
+one_shot = true
 
 [connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="Area2D" method="_on_timer_timeout"]
