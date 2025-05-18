@@ -15,7 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://domi2pq58lh7t" path="res://Assets/audios/8-bit-arcade-mode-158814_D♭_major__bpm_90.mp3" id="11_kne3r"]
 [ext_resource type="Script" uid="uid://ccat21blo4oq0" path="res://Scripts/cutscene.gd" id="11_nopba"]
 [ext_resource type="Texture2D" uid="uid://cpokdhln7pjbf" path="res://image - 2025-05-16T200021.356.png" id="12_tyesc"]
-[ext_resource type="Texture2D" uid="uid://bmrdh6ubc7ww5" path="res://image - 2025-05-16T164630.222.png" id="13_46cic"]
+[ext_resource type="Texture2D" uid="uid://o0n44c07c3bb" path="res://Assets/image - 2025-05-18T110937.797.png" id="14_24mcc"]
 [ext_resource type="Texture2D" uid="uid://5p6orbvjebxa" path="res://image - 2025-05-15T222000.596.png" id="14_kne3r"]
 [ext_resource type="Texture2D" uid="uid://diubk7fpu6dn" path="res://image - 2025-05-16T193708.684.png" id="15_wtnop"]
 [ext_resource type="Texture2D" uid="uid://bv38y4xr01q87" path="res://image - 2025-05-16T193658.023.png" id="16_7q5dd"]
@@ -303,6 +303,18 @@ tracks/22/path = NodePath("Sprite2D13:modulate")
 tracks/22/interp = 1
 tracks/22/loop_wrap = true
 tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Button:modulate")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -633,6 +645,18 @@ tracks/25/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
 }
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Button:modulate")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(23, 23.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nopba"]
 _data = {
@@ -750,7 +774,7 @@ texture = ExtResource("12_tyesc")
 [node name="Sprite2D5" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(579, 324)
-texture = ExtResource("13_46cic")
+texture = ExtResource("14_24mcc")
 
 [node name="Sprite2D6" type="Sprite2D" parent="."]
 visible = false
